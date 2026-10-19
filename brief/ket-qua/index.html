@@ -90,7 +90,7 @@
     var k = keyEl.value.trim();
     if (!k) { msg.className = 'msg err'; msg.textContent = 'Nhập mã xem kết quả trước.'; keyEl.focus(); return; }
     msg.className = 'msg'; msg.textContent = 'Đang tải…';
-    fetch('/api/brief?key=' + encodeURIComponent(k), { cache: 'no-store' })
+    fetch('/api/brief-answers?key=' + encodeURIComponent(k), { cache: 'no-store' })
       .then(function (r) { if (r.status === 401) throw new Error('key'); if (!r.ok) throw new Error('net'); return r.json(); })
       .then(function (data) {
         try { localStorage.setItem('sr-brief-key', k); } catch (e) {}

@@ -330,7 +330,7 @@
       name.focus(); return;
     }
     btn.disabled = true; status.className = 'status'; status.textContent = 'Đang gửi…';
-    fetch('/api/brief', {
+    fetch('/api/brief-answers', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: name.value.trim(), answers: collect() })
     }).then(function (r) {
