@@ -15,7 +15,18 @@ export default async function handler(req, res) {
   }
   if (!process.env.BLOB_READ_WRITE_TOKEN) return res.status(503).json({ error: 'storage-not-connected' });
   try {
-    const { put, list } = await import('@vercel/blob');
+    const { put, list, del } = await import('@vercel/blob');
+    if (req.method === 'GET' && req.query.selftest) {
+      // Write, read back and delete one test record (needs Huệ's code)
+      const given = createHash('sha256').update(String(req.query.key || '')).digest('hex');
+      if (given !== KEY_HASH) return res.status(401).json({ error: 'unauthorized' });
+      const t = await put('selftest/check.json', JSON.stringify({ at: Date.now() }), { access: 'public', contentType: 'application/json', addRandomSuffix: true });
+      const back = await fetch(t.url, { cache: 'no-store' }).then((r) => r.ok);
+      await del(t.url);
+      const { blobs } = await list({ prefix: 'brief/' });
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      return res.status(200).send('<!doctype html><title>Self test</title><p>Write OK. Read back: ' + (back ? 'OK' : 'FAIL') + '. Saved briefs: ' + blobs.length + '</p>');
+    }
     if (req.method === 'POST') {
       const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
       if (!body.name || !Array.isArray(body.answers) || body.answers.length > 600) {
