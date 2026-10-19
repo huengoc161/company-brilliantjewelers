@@ -1,36 +1,37 @@
-// Saves brief answers to Vercel Blob (POST) and lists them for Huệ (GET with ?key=)
+// Brief answers for Shine Redefined, stored in a private Vercel Blob store.
+// POST: save one submission. GET ?key=…: list submissions for Huệ. GET ?ping=1: status page.
+// Auth to the store uses Vercel OIDC (the store is connected to this project), so no token is kept in code.
 import { createHash } from 'node:crypto';
 
 // Only the SHA-256 of Huệ's viewing code is stored here, so the public repo does not reveal it
 const KEY_HASH = process.env.BRIEF_ADMIN_KEY_HASH || '8ae08cd71d7fe2a2cea351b2ba6f92f504e08d2c5b3ae75b918249a391339fef';
 
-// Vercel may add the Blob token under a custom prefix (e.g. SHINE_..._READ_WRITE_TOKEN)
-const BLOB_TOKEN = process.env.BLOB_READ_WRITE_TOKEN
-  || Object.entries(process.env).find(([k, v]) => /READ_WRITE_TOKEN$/.test(k) && v)?.[1] || '';
-
 const clip = (v, n) => String(v == null ? '' : v).slice(0, n);
+const keyOk = (req) => createHash('sha256').update(String(req.query.key || '')).digest('hex') === KEY_HASH;
+const storeReady = () => Boolean(process.env.BLOB_STORE_ID || process.env.BLOB_READ_WRITE_TOKEN);
+
+async function readPrivate(get, pathname) {
+  const r = await get(pathname, { access: 'private', useCache: false });
+  if (!r || r.statusCode !== 200) return null;
+  return JSON.parse(await new Response(r.stream).text());
+}
 
 export default async function handler(req, res) {
-  res.setHeader('Cache-Control', 'no-store');
+  res.setHeader('Cache-Control', 'private, no-store');
+
   if (req.method === 'GET' && req.query.ping) {
+    let lib = 'OK';
+    try { await import('@vercel/blob'); } catch (e) { lib = 'ERROR ' + clip(e && e.message, 200); }
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     return res.status(200).send('<!doctype html><title>Brief status</title><p>Brief API is running. Storage connected: '
-      + (BLOB_TOKEN ? 'YES' : 'NO') + '. Env names: ' + Object.keys(process.env).filter((k) => /BLOB|READ_WRITE|STORE/i.test(k)).join(', ') + '. Library: ' + await import('@vercel/blob').then(() => 'OK', (e) => 'ERROR ' + String(e && e.message).slice(0, 200)) + '</p>');
+      + (storeReady() ? 'YES' : 'NO') + '. Library: ' + lib + '.</p>');
   }
-  if (!BLOB_TOKEN) return res.status(503).json({ error: 'storage-not-connected' });
+
+  if (!storeReady()) return res.status(503).json({ error: 'storage-not-connected' });
+
   try {
-    const { put, list, del } = await import('@vercel/blob');
-    if (req.method === 'GET' && req.query.selftest) {
-      // Write, read back and delete one test record (needs Huệ's code)
-      const given = createHash('sha256').update(String(req.query.key || '')).digest('hex');
-      if (given !== KEY_HASH) return res.status(401).json({ error: 'unauthorized' });
-      const t = await put('selftest/check.json', JSON.stringify({ at: Date.now() }), { access: 'public', contentType: 'application/json', addRandomSuffix: true, token: BLOB_TOKEN });
-      const back = await fetch(t.url, { cache: 'no-store' }).then((r) => r.ok);
-      await del(t.url, { token: BLOB_TOKEN });
-      const { blobs } = await list({ prefix: 'brief/', token: BLOB_TOKEN });
-      res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      return res.status(200).send('<!doctype html><title>Self test</title><p>Write OK. Read back: ' + (back ? 'OK' : 'FAIL') + '. Saved briefs: ' + blobs.length + '</p>');
-    }
+    const { put, list, get, del } = await import('@vercel/blob');
+
     if (req.method === 'POST') {
       const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
       if (!body.name || !Array.isArray(body.answers) || body.answers.length > 600) {
@@ -47,21 +48,33 @@ export default async function handler(req, res) {
         }))
       };
       await put(`brief/${Date.now()}.json`, JSON.stringify(record), {
-        access: 'public', contentType: 'application/json', addRandomSuffix: true, token: BLOB_TOKEN
+        access: 'private', contentType: 'application/json', addRandomSuffix: true
       });
       return res.status(200).json({ ok: true });
     }
+
     if (req.method === 'GET') {
-      const given = createHash('sha256').update(String(req.query.key || '')).digest('hex');
-      if (given !== KEY_HASH) return res.status(401).json({ error: 'unauthorized' });
-      const { blobs } = await list({ prefix: 'brief/', token: BLOB_TOKEN });
+      if (!keyOk(req)) return res.status(401).json({ error: 'unauthorized' });
+
+      if (req.query.selftest) {
+        // Write, read back and delete one test record
+        const t = await put('selftest/check.json', JSON.stringify({ at: Date.now() }), {
+          access: 'private', contentType: 'application/json', addRandomSuffix: true
+        });
+        const back = await readPrivate(get, t.pathname);
+        await del(t.url);
+        const { blobs } = await list({ prefix: 'brief/' });
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+        return res.status(200).send('<!doctype html><title>Self test</title><p>Write OK. Read back: '
+          + (back ? 'OK' : 'FAIL') + '. Saved briefs: ' + blobs.length + '.</p>');
+      }
+
+      const { blobs } = await list({ prefix: 'brief/' });
       blobs.sort((a, b) => new Date(b.uploadedAt) - new Date(a.uploadedAt));
-      const items = await Promise.all(blobs.slice(0, 30).map(async (b) => {
-        const r = await fetch(b.url, { cache: 'no-store' });
-        return r.ok ? r.json() : null;
-      }));
+      const items = await Promise.all(blobs.slice(0, 30).map((b) => readPrivate(get, b.pathname).catch(() => null)));
       return res.status(200).json({ items: items.filter(Boolean) });
     }
+
     res.setHeader('Allow', 'GET, POST');
     return res.status(405).json({ error: 'method' });
   } catch (e) {
