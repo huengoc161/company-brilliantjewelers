@@ -211,6 +211,27 @@
   }
   .tracks li:first-child { border-top: 1px solid var(--line-ivory); }
   .tracks sup { font-size: 11px; font-weight: 600; font-stretch: 100%; letter-spacing: .12em; color: var(--gold-deep); margin-right: 8px; vertical-align: top; position: relative; top: .6em; }
+  .track-head {
+    display: block; width: 100%; padding: 0 44px; margin: 0; border: 0; background: none; cursor: pointer; position: relative;
+    font: inherit; color: inherit; text-transform: inherit; letter-spacing: inherit; text-align: center;
+  }
+  .track-head::after {
+    content: '+'; position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+    font-family: var(--sans); font-weight: 300; font-stretch: 100%; font-size: 28px; line-height: 1; color: var(--gold-deep);
+    transition: transform .4s var(--ease-out);
+  }
+  .track-head[aria-expanded="true"]::after { transform: translateY(-50%) rotate(45deg); }
+  .track-head:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+  .track-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s var(--ease-out); }
+  .track-body > div { overflow: hidden; }
+  .track-body p {
+    margin: 0 auto; max-width: 620px; padding: 14px 20px 8px;
+    font-family: var(--sans); font-weight: 400; font-stretch: 100%; font-size: 17px; line-height: 1.6;
+    text-transform: none; letter-spacing: 0; color: var(--muted-on-ivory);
+    opacity: 0; transition: opacity .4s;
+  }
+  .track-head[aria-expanded="true"] + .track-body { grid-template-rows: 1fr; }
+  .track-head[aria-expanded="true"] + .track-body p { opacity: 1; transition-delay: .1s; }
   .tracks em { font-style: italic; font-weight: 400; font-stretch: 85%; text-transform: none; font-size: .42em; letter-spacing: 0; color: var(--muted-on-ivory); margin-left: 8px; }
 
   /* Offer */
@@ -371,8 +392,8 @@
   .btn:hover::after { transform: translateX(130%); }
 
   /* Tracklist hover */
-  .tracks li { transition: color .35s, letter-spacing .5s var(--ease-out), padding-left .5s var(--ease-out); }
-  .tracks li:hover { color: var(--gold-deep); letter-spacing: .01em; }
+  .track-head { transition: color .35s, letter-spacing .5s var(--ease-out); }
+  .track-head:hover, .track-head[aria-expanded="true"] { color: var(--gold-deep); letter-spacing: .01em; }
 
   /* Menu links stagger in */
   .menu-links li { opacity: 0; transform: translateX(40px); transition: opacity .5s, transform .6s var(--ease-out); }
@@ -478,6 +499,9 @@
     .tracks li { font-size: 30px; padding: 14px 0; }
     .tracks sup { display: block; position: static; margin: 0 0 4px; font-size: 10px; }
     .tracks em { display: block; margin: 4px 0 0; font-size: 15px; }
+    .track-head { padding: 0 36px; }
+    .track-head::after { font-size: 24px; }
+    .track-body p { font-size: 15px; padding: 10px 8px 4px; }
 
     /* Offer */
     .offer { padding: 88px 0; }
@@ -871,15 +895,42 @@
   <p class="day-sub">Saturday, December 12 · Full schedule drops [DATE]</p>
   <div class="wrap">
     <ol class="tracks">
-      <li><sup>Arrival</sup>Welcome drinks<em>(flair bar &amp; bites)</em></li>
-      <li><sup>All day</sup>Live DJ<em>(open to close)</em></li>
-      <li><sup>[Time]</sup>Street dance<em>(the opener)</em></li>
-      <li><sup>[Time]</sup>Ribbon cutting<em>(doors officially open)</em></li>
-      <li><sup>[Time]</sup>Lion dance<em>(blessing + offer reveal)</em></li>
-      <li><sup>[Time]</sup>Houston hip-hop<em>(feat. [Artist names])</em></li>
-      <li><sup>[Time]</sup>Car show<em>(slabs &amp; lowriders)</em></li>
-      <li><sup>All day</sup>Photo booth<em>(step into the cover)</em></li>
-      <li><sup>All day</sup>Jewelry cleaning<em>(on the house)</em></li>
+      <li>
+        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-1"><sup>Arrival</sup>Welcome drinks<em>(flair bar &amp; bites)</em></button>
+        <div class="track-body" id="track-1" role="region"><div><p>A flair bartender opens the day with welcome drinks and light bites. Grab a glass and take a first look around the store.</p></div></div>
+      </li>
+      <li>
+        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-2"><sup>All day</sup>Live DJ<em>(open to close)</em></button>
+        <div class="track-body" id="track-2" role="region"><div><p>[DJ name] keeps the music going from the moment doors open until close &mdash; the soundtrack for the whole day.</p></div></div>
+      </li>
+      <li>
+        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-3"><sup>[Time]</sup>Street dance<em>(the opener)</em></button>
+        <div class="track-body" id="track-3" role="region"><div><p>[Crew name] kicks things off at [Time] with a street dance set &mdash; the opener that gets the crowd moving.</p></div></div>
+      </li>
+      <li>
+        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-4"><sup>[Time]</sup>Ribbon cutting<em>(doors officially open)</em></button>
+        <div class="track-body" id="track-4" role="region"><div><p>The official moment: we cut the ribbon and Brilliant Jewelers opens its doors to Sharpstown. Be there for the first look inside.</p></div></div>
+      </li>
+      <li>
+        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-5"><sup>[Time]</sup>Lion dance<em>(blessing + offer reveal)</em></button>
+        <div class="track-body" id="track-5" role="region"><div><p>A traditional lion dance brings luck and blessings to the new store &mdash; and reveals our one-day 12.12 offer.</p></div></div>
+      </li>
+      <li>
+        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-6"><sup>[Time]</sup>Houston hip-hop<em>(feat. [Artist names])</em></button>
+        <div class="track-body" id="track-6" role="region"><div><p>Live sets from Houston artists [Artist names]. Full lineup coming soon &mdash; follow @[HANDLE] so you don&rsquo;t miss it.</p></div></div>
+      </li>
+      <li>
+        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-7"><sup>[Time]</sup>Car show<em>(slabs &amp; lowriders)</em></button>
+        <div class="track-body" id="track-7" role="region"><div><p>Slabs and lowriders lined up all day &mdash; candy paint, chrome and Houston car culture. Want to show your ride? [Car show sign-up details].</p></div></div>
+      </li>
+      <li>
+        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-8"><sup>All day</sup>Photo booth<em>(step into the cover)</em></button>
+        <div class="track-body" id="track-8" role="region"><div><p>Step into the cover: a photo booth made for your grillz and your best angle. Strike a pose and tag @[HANDLE].</p></div></div>
+      </li>
+      <li>
+        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-9"><sup>All day</sup>Jewelry cleaning<em>(on the house)</em></button>
+        <div class="track-body" id="track-9" role="region"><div><p>Bring a piece you love and our team will clean it for free while you look around. On the house, all day.</p></div></div>
+      </li>
     </ol>
   </div>
 </section>
@@ -1056,7 +1107,7 @@
       ['.count .ghost', 'left', 0], ['.timer > div', 'up', .1], ['.venue, .venue-sub, .count .btn', 'up', .1],
       ['.statement p', 'clip', 0], ['.pillar', 'up', .15],
       ['.story h2', 'up', 0], ['.story .cols p', 'up', .12],
-      ['.day-title', 'clip', 0], ['.day-sub', 'up', 0], ['.tracks li', 'up', .06],
+      ['.day-title', 'clip', 0], ['.day-sub', 'up', 0], ['.tracks .track-head', 'up', .06],
       ['.offer .tag, .offer h2 .a', 'up', .12], ['.offer h2 .b', 'fade', 0], ['.offer p, .offer .btn', 'up', .1],
       ['.bill-head > *', 'up', .1], ['.shot', 'clip', .08],
       ['.visit .info > *', 'up', .06], ['.map', 'clip', 0],
@@ -1542,15 +1593,24 @@
       vi: 'Thứ Bảy, 12 tháng 12 · Lịch chi tiết công bố [DATE]',
       zh: '12月12日（周六）· 完整日程将于 [DATE] 公布',
       es: 'Sábado 12 de diciembre · Programa completo el [DATE]' }],
-    ['.tracks li', 0, 'h', { vi: '<sup>Đón khách</sup>Đồ uống chào mừng<em>(quầy bar biểu diễn &amp; món nhẹ)</em>', zh: '<sup>入场</sup>迎宾饮品<em>（花式调酒与小食）</em>', es: '<sup>Llegada</sup>Bebidas de bienvenida<em>(barra flair y bocadillos)</em>' }],
-    ['.tracks li', 1, 'h', { vi: '<sup>Cả ngày</sup>DJ trực tiếp<em>(từ lúc mở đến lúc đóng cửa)</em>', zh: '<sup>全天</sup>现场 DJ<em>（从开门到打烊）</em>', es: '<sup>Todo el día</sup>DJ en vivo<em>(de apertura a cierre)</em>' }],
-    ['.tracks li', 2, 'h', { vi: '<sup>[Giờ]</sup>Nhảy đường phố<em>(màn mở đầu)</em>', zh: '<sup>[时间]</sup>街舞表演<em>（开场）</em>', es: '<sup>[Hora]</sup>Baile urbano<em>(la apertura)</em>' }],
-    ['.tracks li', 3, 'h', { vi: '<sup>[Giờ]</sup>Cắt băng khai trương<em>(chính thức mở cửa)</em>', zh: '<sup>[时间]</sup>剪彩仪式<em>（正式开业）</em>', es: '<sup>[Hora]</sup>Corte de listón<em>(apertura oficial)</em>' }],
-    ['.tracks li', 4, 'h', { vi: '<sup>[Giờ]</sup>Múa lân<em>(cầu may + công bố ưu đãi)</em>', zh: '<sup>[时间]</sup>舞狮<em>（祈福 + 公布优惠）</em>', es: '<sup>[Hora]</sup>Danza del león<em>(bendición + revelación de la oferta)</em>' }],
-    ['.tracks li', 5, 'h', { vi: '<sup>[Giờ]</sup>Hip-hop Houston<em>(cùng [Tên nghệ sĩ])</em>', zh: '<sup>[时间]</sup>休斯顿嘻哈<em>（特邀 [艺人名单]）</em>', es: '<sup>[Hora]</sup>Hip-hop de Houston<em>(con [Artistas])</em>' }],
-    ['.tracks li', 6, 'h', { vi: '<sup>[Giờ]</sup>Triển lãm xe<em>(slab &amp; lowrider)</em>', zh: '<sup>[时间]</sup>改装车展<em>（Slab 与 Lowrider）</em>', es: '<sup>[Hora]</sup>Exhibición de autos<em>(slabs y lowriders)</em>' }],
-    ['.tracks li', 7, 'h', { vi: '<sup>Cả ngày</sup>Photo booth<em>(bước vào trang bìa)</em>', zh: '<sup>全天</sup>拍照亭<em>（登上封面）</em>', es: '<sup>Todo el día</sup>Photo booth<em>(entra a la portada)</em>' }],
-    ['.tracks li', 8, 'h', { vi: '<sup>Cả ngày</sup>Vệ sinh trang sức<em>(miễn phí)</em>', zh: '<sup>全天</sup>珠宝清洗<em>（免费）</em>', es: '<sup>Todo el día</sup>Limpieza de joyas<em>(cortesía de la casa)</em>' }],
+    ['.tracks .track-head', 0, 'h', { vi: '<sup>Đón khách</sup>Đồ uống chào mừng<em>(quầy bar biểu diễn &amp; món nhẹ)</em>', zh: '<sup>入场</sup>迎宾饮品<em>（花式调酒与小食）</em>', es: '<sup>Llegada</sup>Bebidas de bienvenida<em>(barra flair y bocadillos)</em>' }],
+    ['.tracks .track-head', 1, 'h', { vi: '<sup>Cả ngày</sup>DJ trực tiếp<em>(từ lúc mở đến lúc đóng cửa)</em>', zh: '<sup>全天</sup>现场 DJ<em>（从开门到打烊）</em>', es: '<sup>Todo el día</sup>DJ en vivo<em>(de apertura a cierre)</em>' }],
+    ['.tracks .track-head', 2, 'h', { vi: '<sup>[Giờ]</sup>Nhảy đường phố<em>(màn mở đầu)</em>', zh: '<sup>[时间]</sup>街舞表演<em>（开场）</em>', es: '<sup>[Hora]</sup>Baile urbano<em>(la apertura)</em>' }],
+    ['.tracks .track-head', 3, 'h', { vi: '<sup>[Giờ]</sup>Cắt băng khai trương<em>(chính thức mở cửa)</em>', zh: '<sup>[时间]</sup>剪彩仪式<em>（正式开业）</em>', es: '<sup>[Hora]</sup>Corte de listón<em>(apertura oficial)</em>' }],
+    ['.tracks .track-head', 4, 'h', { vi: '<sup>[Giờ]</sup>Múa lân<em>(cầu may + công bố ưu đãi)</em>', zh: '<sup>[时间]</sup>舞狮<em>（祈福 + 公布优惠）</em>', es: '<sup>[Hora]</sup>Danza del león<em>(bendición + revelación de la oferta)</em>' }],
+    ['.tracks .track-head', 5, 'h', { vi: '<sup>[Giờ]</sup>Hip-hop Houston<em>(cùng [Tên nghệ sĩ])</em>', zh: '<sup>[时间]</sup>休斯顿嘻哈<em>（特邀 [艺人名单]）</em>', es: '<sup>[Hora]</sup>Hip-hop de Houston<em>(con [Artistas])</em>' }],
+    ['.tracks .track-head', 6, 'h', { vi: '<sup>[Giờ]</sup>Triển lãm xe<em>(slab &amp; lowrider)</em>', zh: '<sup>[时间]</sup>改装车展<em>（Slab 与 Lowrider）</em>', es: '<sup>[Hora]</sup>Exhibición de autos<em>(slabs y lowriders)</em>' }],
+    ['.tracks .track-head', 7, 'h', { vi: '<sup>Cả ngày</sup>Photo booth<em>(bước vào trang bìa)</em>', zh: '<sup>全天</sup>拍照亭<em>（登上封面）</em>', es: '<sup>Todo el día</sup>Photo booth<em>(entra a la portada)</em>' }],
+    ['.tracks .track-head', 8, 'h', { vi: '<sup>Cả ngày</sup>Vệ sinh trang sức<em>(miễn phí)</em>', zh: '<sup>全天</sup>珠宝清洗<em>（免费）</em>', es: '<sup>Todo el día</sup>Limpieza de joyas<em>(cortesía de la casa)</em>' }],
+    ['.tracks .track-body p', 0, 'h', { vi: 'Bartender biểu diễn mở màn ngày hội với đồ uống chào mừng và món nhẹ. Cầm ly trên tay và dạo một vòng cửa hàng mới.', zh: '花式调酒师以迎宾饮品和小食开启这一天。端起一杯，先逛逛新店。', es: 'Un bartender flair abre el día con bebidas de bienvenida y bocadillos. Toma una copa y date una primera vuelta por la tienda.' }],
+    ['.tracks .track-body p', 1, 'h', { vi: '[Tên DJ] giữ nhạc suốt từ lúc mở cửa đến khi đóng cửa &mdash; nhạc nền cho cả ngày hội.', zh: '[DJ 名字] 从开门到打烊全程打碟 &mdash; 整天的背景音乐。', es: '[Nombre del DJ] pone la música desde que abrimos hasta el cierre &mdash; la banda sonora de todo el día.' }],
+    ['.tracks .track-body p', 2, 'h', { vi: '[Tên nhóm nhảy] mở màn lúc [Giờ] với tiết mục nhảy đường phố &mdash; khởi động cho cả đám đông.', zh: '[舞团名字] 于 [时间] 带来街舞开场，点燃全场气氛。', es: '[Nombre del grupo] arranca a las [Hora] con un show de baile urbano &mdash; la apertura que pone a todos a moverse.' }],
+    ['.tracks .track-body p', 3, 'h', { vi: 'Khoảnh khắc chính thức: cắt băng khai trương, Brilliant Jewelers mở cửa chào Sharpstown. Hãy có mặt để là người đầu tiên bước vào.', zh: '正式时刻：剪彩仪式后，Brilliant Jewelers 正式向 Sharpstown 敞开大门。快来第一个走进店里。', es: 'El momento oficial: cortamos el listón y Brilliant Jewelers abre sus puertas a Sharpstown. Sé de los primeros en entrar.' }],
+    ['.tracks .track-body p', 4, 'h', { vi: 'Múa lân truyền thống mang may mắn và lời chúc phúc cho cửa hàng mới &mdash; đồng thời công bố ưu đãi duy nhất ngày 12.12.', zh: '传统舞狮为新店带来好运与祝福 &mdash; 并揭晓 12.12 一日限定优惠。', es: 'Una danza del león tradicional trae suerte y bendiciones a la nueva tienda &mdash; y revela nuestra oferta de un solo día, el 12.12.' }],
+    ['.tracks .track-body p', 5, 'h', { vi: 'Các nghệ sĩ Houston [Tên nghệ sĩ] biểu diễn trực tiếp. Danh sách đầy đủ sắp công bố &mdash; theo dõi @[HANDLE] để không bỏ lỡ.', zh: '休斯顿艺人 [艺人名单] 现场演出。完整阵容即将公布 &mdash; 关注 @[HANDLE]，不要错过。', es: 'Shows en vivo de artistas de Houston: [Artistas]. El cartel completo muy pronto &mdash; síguenos en @[HANDLE] para no perdértelo.' }],
+    ['.tracks .track-body p', 6, 'h', { vi: 'Dàn xe slab và lowrider trưng bày cả ngày &mdash; sơn bóng, chrome và văn hoá xe Houston. Muốn mang xe đến trưng bày? [Thông tin đăng ký xe].', zh: 'Slab 与 Lowrider 全天展出 &mdash; 亮漆、镀铬与休斯顿汽车文化。想展示你的爱车？[车展报名信息]。', es: 'Slabs y lowriders en exhibición todo el día &mdash; pintura candy, cromo y cultura automotriz de Houston. ¿Quieres mostrar tu carro? [Detalles de inscripción].' }],
+    ['.tracks .track-body p', 7, 'h', { vi: 'Bước vào trang bìa: photo booth dành cho grillz và góc đẹp nhất của bạn. Tạo dáng và tag @[HANDLE].', zh: '登上封面：专为你的 grillz 和最佳角度打造的拍照亭。摆个姿势，并标记 @[HANDLE]。', es: 'Entra a la portada: un photo booth hecho para tus grillz y tu mejor ángulo. Posa y etiqueta a @[HANDLE].' }],
+    ['.tracks .track-body p', 8, 'h', { vi: 'Mang theo món trang sức bạn yêu thích, đội ngũ của chúng tôi sẽ vệ sinh miễn phí trong lúc bạn tham quan. Miễn phí cả ngày.', zh: '带上你心爱的首饰，在你逛店时我们的团队免费为你清洗。全天免费。', es: 'Trae una pieza que ames y nuestro equipo la limpiará gratis mientras recorres la tienda. Cortesía de la casa, todo el día.' }],
 
     ['.offer .tag', 0, 't', { vi: '(04) Ưu đãi — chỉ ngày 12.12', zh: '(04) 限时优惠 — 仅限 12.12', es: '(04) La oferta — solo el 12.12' }],
     ['.offer h2 .a', 0, 't', { vi: 'Mua hàm trên.', zh: '购买上排，', es: 'Compra la superior.' }],
@@ -1646,6 +1706,12 @@
     else if (mode === 'n' || mode === 'l') { var t = textNode(el, mode === 'l'); if (t) t.nodeValue = val; }
     else el.textContent = val;
   }
+  // Schedule: tap a row to open its details
+  document.querySelectorAll('.track-head').forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.setAttribute('aria-expanded', String(b.getAttribute('aria-expanded') !== 'true'));
+    });
+  });
   // Capture English from the page once
   I18N.forEach(function (e) {
     var el = document.querySelectorAll(e[0])[e[1]];
