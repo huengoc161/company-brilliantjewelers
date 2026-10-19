@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brief Landing Page · Shine Redefined</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Layout: one narrow column of section cards on a deep ink ground, gold used only for structure and the submit action */
+  :root {
+    color-scheme: dark;
+    --ink: #0B0B0C;
+    --panel: #151412;
+    --panel-2: #1D1B18;
+    --ivory: #F3EEE3;
+    --muted: #A8A196;
+    --gold: #C9A24E;
+    --gold-light: #E8D296;
+    --line: #2E2B26;
+    --ok: #7FB685;
+    --err: #E58A6E;
+    --display: 'Anton', Impact, sans-serif;
+    --sans: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: var(--ink); color: var(--ivory); font-family: var(--sans); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: var(--gold-light); }
+  .wrap { max-width: 860px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  header.top { padding-block: 56px 32px; border-bottom: 1px solid var(--line);
+    background: radial-gradient(rgba(232,210,150,.12) 1px, transparent 1.3px) 0 0 / 20px 20px; }
+  .eyebrow { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+  h1 { margin: 12px 0 0; font-family: var(--display); font-weight: 400; font-size: clamp(44px, 9vw, 84px); line-height: .95; text-transform: uppercase; text-wrap: balance;
+    background: linear-gradient(100deg, #8C6A26, #F3E2B3 35%, #B8913F 55%, #F3E2B3 75%, #9C7A32); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .lead { margin: 16px 0 0; max-width: 62ch; color: var(--muted); }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 20px; font-size: 13px; color: var(--muted); }
+  .meta b { color: var(--ivory); font-weight: 600; }
+  main { padding-block: 28px 140px; display: flex; flex-direction: column; gap: 18px; }
+  .who { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 22px 20px; }
+  .card h2 { margin: 0 0 6px; display: flex; align-items: baseline; gap: 12px; font-size: 19px; font-weight: 700; line-height: 1.3; text-wrap: balance; }
+  .card h2 .num { font-family: var(--display); font-weight: 400; font-size: 30px; color: var(--gold); min-width: 1.4em; }
+  .card h3 { margin: 18px 0 6px; font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); }
+  .hint { margin: 0 0 12px; color: var(--muted); font-size: 14px; }
+  label { font-size: 14px; }
+  input[type=text], textarea {
+    width: 100%; background: var(--panel-2); color: var(--ivory); border: 1px solid var(--line); border-radius: 4px;
+    padding: 9px 11px; font: 15px/1.45 var(--sans); resize: vertical; min-height: 40px; }
+  input[type=text]:focus, textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,162,78,.2); }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+  .line { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+  .line label { color: var(--ivory); }
+  .tbl { overflow-x: auto; margin-top: 8px; border: 1px solid var(--line); border-radius: 4px; }
+  table { width: 100%; border-collapse: collapse; min-width: 520px; }
+  th { text-align: left; font-size: 12px; font-weight: 600; letter-spacing: .06em; color: var(--gold-light); background: var(--panel-2); padding: 10px; border-bottom: 1px solid var(--line); vertical-align: bottom; }
+  td { padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 14px; }
+  tr:last-child td { border-bottom: 0; }
+  td.fixed { color: var(--ivory); padding-top: 14px; min-width: 130px; }
+  .checks { display: flex; flex-direction: column; gap: 4px; }
+  .chk { display: flex; align-items: flex-start; gap: 12px; padding: 9px 10px; border-radius: 4px; cursor: pointer; transition: background .15s; }
+  .chk:hover { background: var(--panel-2); }
+  .chk input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .chk .box { flex: none; width: 20px; height: 20px; margin-top: 2px; border: 1.5px solid var(--gold); border-radius: 3px; display: grid; place-items: center; transition: background .15s; }
+  .chk input:checked + .box { background: var(--gold); }
+  .chk input:checked + .box::after { content: ""; width: 10px; height: 5px; border-left: 2px solid var(--ink); border-bottom: 2px solid var(--ink); transform: rotate(-45deg) translate(1px, -1px); }
+  .chk input:focus-visible + .box { box-shadow: 0 0 0 3px rgba(201,162,78,.35); }
+  .chk input:checked ~ span:last-child { color: var(--gold-light); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: rgba(11,11,12,.94); backdrop-filter: blur(8px); border-top: 1px solid var(--line);
+    padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .bar .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding-block: 12px; }
+  .status { font-size: 13px; color: var(--muted); }
+  .status.ok { color: var(--ok); } .status.err { color: var(--err); }
+  .btn { min-height: 48px; padding: 0 26px; border: 0; border-radius: 4px; background: var(--gold); color: var(--ink); font: 700 14px var(--sans); letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+  .btn:hover { background: var(--gold-light); }
+  .btn:disabled { opacity: .6; cursor: default; }
+  .btn:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
+  footer { padding-block: 0 24px; color: var(--muted); font-size: 12px; text-align: center; }
+  @media (max-width: 640px) {
+    .tbl { border: 0; overflow: visible; }
+    table, tbody, tr, td { display: block; width: 100%; min-width: 0; }
+    thead { display: none; }
+    tr { border: 1px solid var(--line); border-radius: 4px; padding: 10px 12px; margin-bottom: 10px; background: var(--panel-2); }
+    td { border: 0; padding: 4px 0; }
+    td::before { content: attr(data-col); display: block; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 4px; }
+    td.lead-cell { font-weight: 700; font-size: 15px; padding-top: 0; }
+    td.lead-cell::before { display: none; }
+    td.fixed { min-width: 0; padding-top: 4px; }
+    textarea { background: var(--ink); }
+  }
+  @media (max-width: 520px) { .card { padding: 18px 14px; } .bar .btn { width: 100%; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">Brilliant Jewelers · Grand Opening 12.12.2026</p>
+    <h1>Brief Landing Page</h1>
+    <p class="lead">Anh Khoa tick vào ô hoặc gõ vào các ô trống, rồi bấm <b>Gửi brief</b> ở cuối trang. Câu trả lời được gửi thẳng cho Huệ. Bản đang điền được tự lưu trên máy anh, có thể đóng trang rồi mở lại điền tiếp.</p>
+    <div class="meta"><span>Hạn gửi: <b>21/10/2026</b></span><span>Website nháp: <a href="/" target="_blank" rel="noopener">company-brilliantjewelers.vercel.app</a></span></div>
+  </div>
+</header>
+
+<form id="brief" novalidate>
+<main class="wrap">
+  <section class="card">
+    <div class="who">
+      <div class="field"><label for="who-name">Người điền</label><input type="text" id="who-name" name="who-name" autocomplete="name" required data-q="Người điền" placeholder="VD: Khoa Lý"></div>
+      <div class="field"><label for="who-role">Vai trò</label><input type="text" id="who-role" name="who-role" data-q="Vai trò" placeholder="VD: Event Lead"></div>
+    </div>
+  </section>
+<section class="card" data-s="1. Các trang social của tiệm"><h2><span class="num">1</span>Các trang social của tiệm</h2>
+<div class="tbl"><table><thead><tr><th>Kênh</th><th>Link / handle</th><th>Ghi chú</th></tr></thead><tbody>
+<tr><td class="fixed lead-cell" data-col="Kênh">Facebook</td><td data-col="Link / handle"><label class="sr" for="f1">Facebook — Link / handle</label><textarea id="f1" name="f1" rows="1" data-q="Facebook — Link / handle"></textarea></td><td data-col="Ghi chú"><label class="sr" for="f2">Facebook — Ghi chú</label><textarea id="f2" name="f2" rows="1" data-q="Facebook — Ghi chú"></textarea></td></tr>
+<tr><td class="fixed lead-cell" data-col="Kênh">TikTok</td><td data-col="Link / handle"><label class="sr" for="f3">TikTok — Link / handle</label><textarea id="f3" name="f3" rows="1" data-q="TikTok — Link / handle"></textarea></td><td data-col="Ghi chú"><label class="sr" for="f4">TikTok — Ghi chú</label><textarea id="f4" name="f4" rows="1" data-q="TikTok — Ghi chú"></textarea></td></tr>
+<tr><td class="fixed lead-cell" data-col="Kênh">Instagram</td><td data-col="Link / handle"><label class="sr" for="f5">Instagram — Link / handle</label><textarea id="f5" name="f5" rows="1" data-q="Instagram — Link / handle"></textarea></td><td data-col="Ghi chú"><label class="sr" for="f6">Instagram — Ghi chú</label><textarea id="f6" name="f6" rows="1" data-q="Instagram — Ghi chú"></textarea></td></tr>
+<tr><td class="fixed lead-cell" data-col="Kênh">Google Maps (Google Business Profile)</td><td data-col="Link / handle"><label class="sr" for="f7">Google Maps (Google Business Profile) — Link / handle</label><textarea id="f7" name="f7" rows="1" data-q="Google Maps (Google Business Profile) — Link / handle"></textarea></td><td class="fixed" data-col="Ghi chú">Trang hiện dùng bản đồ theo địa chỉ 300 Sharpstown Center; cần link hồ sơ Google của chính tiệm</td></tr>
+</tbody></table></div>
+</section>
+<section class="card" data-s="2. Ảnh KOL đã được phép dùng chưa"><h2><span class="num">2</span>Ảnh KOL đã được phép dùng chưa</h2>
+<p class="hint">Trang chỉ đăng ảnh KOL khi hợp đồng cho phép dùng trên website.</p>
+<div class="tbl"><table><thead><tr><th>KOL</th><th>Hợp đồng đã ký?</th><th>Cho dùng ảnh trên web?</th><th>Dùng đến ngày</th><th>Ai gửi ảnh</th><th>Ghi credit thế nào</th></tr></thead><tbody>
+<tr><td class="fixed lead-cell" data-col="KOL">Khalilvegas</td><td data-col="Hợp đồng đã ký?"><label class="sr" for="f8">Khalilvegas — Hợp đồng đã ký?</label><textarea id="f8" name="f8" rows="1" data-q="Khalilvegas — Hợp đồng đã ký?"></textarea></td><td data-col="Cho dùng ảnh trên web?"><label class="sr" for="f9">Khalilvegas — Cho dùng ảnh trên web?</label><textarea id="f9" name="f9" rows="1" data-q="Khalilvegas — Cho dùng ảnh trên web?"></textarea></td><td data-col="Dùng đến ngày"><label class="sr" for="f10">Khalilvegas — Dùng đến ngày</label><textarea id="f10" name="f10" rows="1" data-q="Khalilvegas — Dùng đến ngày"></textarea></td><td data-col="Ai gửi ảnh"><label class="sr" for="f11">Khalilvegas — Ai gửi ảnh</label><textarea id="f11" name="f11" rows="1" data-q="Khalilvegas — Ai gửi ảnh"></textarea></td><td data-col="Ghi credit thế nào"><label class="sr" for="f12">Khalilvegas — Ghi credit thế nào</label><textarea id="f12" name="f12" rows="1" data-q="Khalilvegas — Ghi credit thế nào"></textarea></td></tr>
+<tr><td class="fixed lead-cell" data-col="KOL">toxicissue</td><td data-col="Hợp đồng đã ký?"><label class="sr" for="f13">toxicissue — Hợp đồng đã ký?</label><textarea id="f13" name="f13" rows="1" data-q="toxicissue — Hợp đồng đã ký?"></textarea></td><td data-col="Cho dùng ảnh trên web?"><label class="sr" for="f14">toxicissue — Cho dùng ảnh trên web?</label><textarea id="f14" name="f14" rows="1" data-q="toxicissue — Cho dùng ảnh trên web?"></textarea></td><td data-col="Dùng đến ngày"><label class="sr" for="f15">toxicissue — Dùng đến ngày</label><textarea id="f15" name="f15" rows="1" data-q="toxicissue — Dùng đến ngày"></textarea></td><td data-col="Ai gửi ảnh"><label class="sr" for="f16">toxicissue — Ai gửi ảnh</label><textarea id="f16" name="f16" rows="1" data-q="toxicissue — Ai gửi ảnh"></textarea></td><td data-col="Ghi credit thế nào"><label class="sr" for="f17">toxicissue — Ghi credit thế nào</label><textarea id="f17" name="f17" rows="1" data-q="toxicissue — Ghi credit thế nào"></textarea></td></tr>
+<tr><td class="fixed lead-cell" data-col="KOL">nickgeedyrhta</td><td data-col="Hợp đồng đã ký?"><label class="sr" for="f18">nickgeedyrhta — Hợp đồng đã ký?</label><textarea id="f18" name="f18" rows="1" data-q="nickgeedyrhta — Hợp đồng đã ký?"></textarea></td><td data-col="Cho dùng ảnh trên web?"><label class="sr" for="f19">nickgeedyrhta — Cho dùng ảnh trên web?</label><textarea id="f19" name="f19" rows="1" data-q="nickgeedyrhta — Cho dùng ảnh trên web?"></textarea></td><td data-col="Dùng đến ngày"><label class="sr" for="f20">nickgeedyrhta — Dùng đến ngày</label><textarea id="f20" name="f20" rows="1" data-q="nickgeedyrhta — Dùng đến ngày"></textarea></td><td data-col="Ai gửi ảnh"><label class="sr" for="f21">nickgeedyrhta — Ai gửi ảnh</label><textarea id="f21" name="f21" rows="1" data-q="nickgeedyrhta — Ai gửi ảnh"></textarea></td><td data-col="Ghi credit thế nào"><label class="sr" for="f22">nickgeedyrhta — Ghi credit thế nào</label><textarea id="f22" name="f22" rows="1" data-q="nickgeedyrhta — Ghi credit thế nào"></textarea></td></tr>
+<tr><td class="fixed lead-cell" data-col="KOL">Xavier Toliver</td><td data-col="Hợp đồng đã ký?"><label class="sr" for="f23">Xavier Toliver — Hợp đồng đã ký?</label><textarea id="f23" name="f23" rows="1" data-q="Xavier Toliver — Hợp đồng đã ký?"></textarea></td><td data-col="Cho dùng ảnh trên web?"><label class="sr" for="f24">Xavier Toliver — Cho dùng ảnh trên web?</label><textarea id="f24" name="f24" rows="1" data-q="Xavier Toliver — Cho dùng ảnh trên web?"></textarea></td><td data-col="Dùng đến ngày"><label class="sr" for="f25">Xavier Toliver — Dùng đến ngày</label><textarea id="f25" name="f25" rows="1" data-q="Xavier Toliver — Dùng đến ngày"></textarea></td><td data-col="Ai gửi ảnh"><label class="sr" for="f26">Xavier Toliver — Ai gửi ảnh</label><textarea id="f26" name="f26" rows="1" data-q="Xavier Toliver — Ai gửi ảnh"></textarea></td><td data-col="Ghi credit thế nào"><label class="sr" for="f27">Xavier Toliver — Ghi credit thế nào</label><textarea id="f27" name="f27" rows="1" data-q="Xavier Toliver — Ghi credit thế nào"></textarea></td></tr>
+</tbody></table></div>
+</section>
+<section class="card" data-s="3. Chốt tên domain"><h2><span class="num">3</span>Chốt tên domain</h2>
+<div class="tbl"><table><thead><tr><th>Câu hỏi</th><th>Trả lời</th></tr></thead><tbody>
+<tr><td class="fixed lead-cell" data-col="Câu hỏi">Tên domain mong muốn</td><td data-col="Trả lời"><label class="sr" for="f28">Tên domain mong muốn — Trả lời</label><textarea id="f28" name="f28" rows="1" data-q="Tên domain mong muốn — Trả lời"></textarea></td></tr>
+<tr><td class="fixed lead-cell" data-col="Câu hỏi">Phương án dự phòng (nếu tên trên đã có người dùng)</td><td data-col="Trả lời"><label class="sr" for="f29">Phương án dự phòng (nếu tên trên đã có người dùng) — Trả lời</label><textarea id="f29" name="f29" rows="1" data-q="Phương án dự phòng (nếu tên trên đã có người dùng) — Trả lời"></textarea></td></tr>
+<tr><td class="fixed lead-cell" data-col="Câu hỏi">Hay dùng trang con trên website sẵn có của tiệm?</td><td data-col="Trả lời"><label class="sr" for="f30">Hay dùng trang con trên website sẵn có của tiệm? — Trả lời</label><textarea id="f30" name="f30" rows="1" data-q="Hay dùng trang con trên website sẵn có của tiệm? — Trả lời"></textarea></td></tr>
+</tbody></table></div>
+</section>
+<section class="card" data-s="4. Màu sắc"><h2><span class="num">4</span>Màu sắc</h2>
+<p class="hint">Tick 1 phương án. Bản nháp hiện tại đang dùng đen, ngà và vàng kim.</p>
+<div class="checks">
+<label class="chk" for="f31"><input type="checkbox" id="f31" name="f31" data-q="Xanh sapphire + vàng (Sapphire &amp; gold)"><span class="box" aria-hidden="true"></span><span>Xanh sapphire + vàng (Sapphire &amp; gold)</span></label>
+<label class="chk" for="f32"><input type="checkbox" id="f32" name="f32" data-q="Xanh ngọc lục bảo + champagne (Emerald &amp; champagne)"><span class="box" aria-hidden="true"></span><span>Xanh ngọc lục bảo + champagne (Emerald &amp; champagne)</span></label>
+<label class="chk" for="f33"><input type="checkbox" id="f33" name="f33" data-q="Đỏ hồng ngọc + vàng hồng (Ruby &amp; rose gold)"><span class="box" aria-hidden="true"></span><span>Đỏ hồng ngọc + vàng hồng (Ruby &amp; rose gold)</span></label>
+<label class="chk" for="f34"><input type="checkbox" id="f34" name="f34" data-q="Trắng ngọc trai + đen (Pearl &amp; black)"><span class="box" aria-hidden="true"></span><span>Trắng ngọc trai + đen (Pearl &amp; black)</span></label>
+<label class="chk" for="f35"><input type="checkbox" id="f35" name="f35" data-q="Giữ đen + ngà + vàng kim như bản nháp"><span class="box" aria-hidden="true"></span><span>Giữ đen + ngà + vàng kim như bản nháp</span></label>
+<label class="chk" for="f36"><input type="checkbox" id="f36" name="f36" data-q="Theo key visual của Kim"><span class="box" aria-hidden="true"></span><span>Theo key visual của Kim</span></label>
+</div>
+<div class="line"><label for="f37">Khác / ghi chú:</label><input type="text" id="f37" name="f37" data-q="Khác / ghi chú:"></div>
+</section>
+<section class="card" data-s="5. Ngôn ngữ trên website"><h2><span class="num">5</span>Ngôn ngữ trên website</h2>
+<p class="hint">Tick 1 phương án. Bản nháp hiện có nút đổi 4 ngôn ngữ.</p>
+<div class="checks">
+<label class="chk" for="f38"><input type="checkbox" id="f38" name="f38" data-q="Chỉ tiếng Anh"><span class="box" aria-hidden="true"></span><span>Chỉ tiếng Anh</span></label>
+<label class="chk" for="f39"><input type="checkbox" id="f39" name="f39" data-q="Chỉ tiếng Việt"><span class="box" aria-hidden="true"></span><span>Chỉ tiếng Việt</span></label>
+<label class="chk" for="f40"><input type="checkbox" id="f40" name="f40" data-q="Song ngữ Anh – Việt"><span class="box" aria-hidden="true"></span><span>Song ngữ Anh – Việt</span></label>
+<label class="chk" for="f41"><input type="checkbox" id="f41" name="f41" data-q="4 ngôn ngữ: Anh, Hoa, Việt, Tây Ban Nha"><span class="box" aria-hidden="true"></span><span>4 ngôn ngữ: Anh, Hoa, Việt, Tây Ban Nha</span></label>
+</div>
+<div class="line"><label for="f42">Nếu có tiếng Hoa: giản thể hay phồn thể?</label><input type="text" id="f42" name="f42" data-q="Nếu có tiếng Hoa: giản thể hay phồn thể?"></div>
+<div class="line"><label for="f43">Ai duyệt bản dịch?</label><input type="text" id="f43" name="f43" data-q="Ai duyệt bản dịch?"></div>
+</section>
+<section class="card" data-s="6. Người phê duyệt"><h2><span class="num">6</span>Người phê duyệt</h2>
+<p class="hint">Theo file timeline: Ms. Hanh duyệt cuối ưu đãi và key visual, chị Tammy duyệt ở mỗi giai đoạn. Anh xác nhận người duyệt landing page.</p>
+<div class="tbl"><table><thead><tr><th>Hạng mục</th><th>Người duyệt</th><th>Duyệt qua kênh nào (email, Zalo, comment doc)</th></tr></thead><tbody>
+<tr><td class="fixed lead-cell" data-col="Hạng mục">Giao diện (màu, bố cục)</td><td data-col="Người duyệt"><label class="sr" for="f44">Giao diện (màu, bố cục) — Người duyệt</label><textarea id="f44" name="f44" rows="1" data-q="Giao diện (màu, bố cục) — Người duyệt"></textarea></td><td data-col="Duyệt qua kênh nào (email, Zalo, comment doc)"><label class="sr" for="f45">Giao diện (màu, bố cục) — Duyệt qua kênh nào (email, Zalo, comment doc)</label><textarea id="f45" name="f45" rows="1" data-q="Giao diện (màu, bố cục) — Duyệt qua kênh nào (email, Zalo, comment doc)"></textarea></td></tr>
+<tr><td class="fixed lead-cell" data-col="Hạng mục">Nội dung chữ</td><td data-col="Người duyệt"><label class="sr" for="f46">Nội dung chữ — Người duyệt</label><textarea id="f46" name="f46" rows="1" data-q="Nội dung chữ — Người duyệt"></textarea></td><td data-col="Duyệt qua kênh nào (email, Zalo, comment doc)"><label class="sr" for="f47">Nội dung chữ — Duyệt qua kênh nào (email, Zalo, comment doc)</label><textarea id="f47" name="f47" rows="1" data-q="Nội dung chữ — Duyệt qua kênh nào (email, Zalo, comment doc)"></textarea></td></tr>
+<tr><td class="fixed lead-cell" data-col="Hạng mục">Ưu đãi và điều khoản</td><td data-col="Người duyệt"><label class="sr" for="f48">Ưu đãi và điều khoản — Người duyệt</label><textarea id="f48" name="f48" rows="1" data-q="Ưu đãi và điều khoản — Người duyệt"></textarea></td><td data-col="Duyệt qua kênh nào (email, Zalo, comment doc)"><label class="sr" for="f49">Ưu đãi và điều khoản — Duyệt qua kênh nào (email, Zalo, comment doc)</label><textarea id="f49" name="f49" rows="1" data-q="Ưu đãi và điều khoản — Duyệt qua kênh nào (email, Zalo, comment doc)"></textarea></td></tr>
+<tr><td class="fixed lead-cell" data-col="Hạng mục">Bản dịch</td><td data-col="Người duyệt"><label class="sr" for="f50">Bản dịch — Người duyệt</label><textarea id="f50" name="f50" rows="1" data-q="Bản dịch — Người duyệt"></textarea></td><td data-col="Duyệt qua kênh nào (email, Zalo, comment doc)"><label class="sr" for="f51">Bản dịch — Duyệt qua kênh nào (email, Zalo, comment doc)</label><textarea id="f51" name="f51" rows="1" data-q="Bản dịch — Duyệt qua kênh nào (email, Zalo, comment doc)"></textarea></td></tr>
+<tr><td class="fixed lead-cell" data-col="Hạng mục">Duyệt cuối trước khi đăng</td><td data-col="Người duyệt"><label class="sr" for="f52">Duyệt cuối trước khi đăng — Người duyệt</label><textarea id="f52" name="f52" rows="1" data-q="Duyệt cuối trước khi đăng — Người duyệt"></textarea></td><td data-col="Duyệt qua kênh nào (email, Zalo, comment doc)"><label class="sr" for="f53">Duyệt cuối trước khi đăng — Duyệt qua kênh nào (email, Zalo, comment doc)</label><textarea id="f53" name="f53" rows="1" data-q="Duyệt cuối trước khi đăng — Duyệt qua kênh nào (email, Zalo, comment doc)"></textarea></td></tr>
+</tbody></table></div>
+</section>
+<section class="card" data-s="7. 2–3 trang web sếp thích (nếu có)"><h2><span class="num">7</span>2–3 trang web sếp thích (nếu có)</h2>
+<div class="tbl"><table><thead><tr><th>Link</th><th>Sếp thích điểm gì (màu, chữ, hiệu ứng, bố cục)</th></tr></thead><tbody>
+<tr><td data-col="Link"><label class="sr" for="f54">Dòng 1 — Link</label><textarea id="f54" name="f54" rows="1" data-q="Dòng 1 — Link"></textarea></td><td data-col="Sếp thích điểm gì (màu, chữ, hiệu ứng, bố cục)"><label class="sr" for="f55">Dòng 1 — Sếp thích điểm gì (màu, chữ, hiệu ứng, bố cục)</label><textarea id="f55" name="f55" rows="1" data-q="Dòng 1 — Sếp thích điểm gì (màu, chữ, hiệu ứng, bố cục)"></textarea></td></tr>
+<tr><td data-col="Link"><label class="sr" for="f56">Dòng 2 — Link</label><textarea id="f56" name="f56" rows="1" data-q="Dòng 2 — Link"></textarea></td><td data-col="Sếp thích điểm gì (màu, chữ, hiệu ứng, bố cục)"><label class="sr" for="f57">Dòng 2 — Sếp thích điểm gì (màu, chữ, hiệu ứng, bố cục)</label><textarea id="f57" name="f57" rows="1" data-q="Dòng 2 — Sếp thích điểm gì (màu, chữ, hiệu ứng, bố cục)"></textarea></td></tr>
+<tr><td data-col="Link"><label class="sr" for="f58">Dòng 3 — Link</label><textarea id="f58" name="f58" rows="1" data-q="Dòng 3 — Link"></textarea></td><td data-col="Sếp thích điểm gì (màu, chữ, hiệu ứng, bố cục)"><label class="sr" for="f59">Dòng 3 — Sếp thích điểm gì (màu, chữ, hiệu ứng, bố cục)</label><textarea id="f59" name="f59" rows="1" data-q="Dòng 3 — Sếp thích điểm gì (màu, chữ, hiệu ứng, bố cục)"></textarea></td></tr>
+</tbody></table></div>
+</section>
+<section class="card" data-s="8. Kiểu website sếp không thích"><h2><span class="num">8</span>Kiểu website sếp không thích</h2>
+<p class="hint">Tick những điều sếp muốn tránh.</p>
+<h3>Về cảm giác chung</h3>
+<div class="checks">
+<label class="chk" for="f60"><input type="checkbox" id="f60" name="f60" data-q="Trông rẻ tiền, giống trang khuyến mãi siêu thị (chữ &quot;SALE&quot; đỏ to, nhiều dấu chấm than)"><span class="box" aria-hidden="true"></span><span>Trông rẻ tiền, giống trang khuyến mãi siêu thị (chữ &quot;SALE&quot; đỏ to, nhiều dấu chấm than)</span></label>
+<label class="chk" for="f61"><input type="checkbox" id="f61" name="f61" data-q="Giống mẫu template có sẵn (Wix, Canva), ai cũng nhận ra"><span class="box" aria-hidden="true"></span><span>Giống mẫu template có sẵn (Wix, Canva), ai cũng nhận ra</span></label>
+<label class="chk" for="f62"><input type="checkbox" id="f62" name="f62" data-q="Quá &quot;công ty&quot;, cứng nhắc như trang ngân hàng hay bảo hiểm"><span class="box" aria-hidden="true"></span><span>Quá &quot;công ty&quot;, cứng nhắc như trang ngân hàng hay bảo hiểm</span></label>
+<label class="chk" for="f63"><input type="checkbox" id="f63" name="f63" data-q="Quá nữ tính, mềm mại (pastel, hoa lá, chữ uốn lượn), không hợp chất hip-hop"><span class="box" aria-hidden="true"></span><span>Quá nữ tính, mềm mại (pastel, hoa lá, chữ uốn lượn), không hợp chất hip-hop</span></label>
+<label class="chk" for="f64"><input type="checkbox" id="f64" name="f64" data-q="Quá &quot;gangster&quot; lộ liễu (súng, tiền bay, chữ graffiti khắp nơi), mất vẻ sang"><span class="box" aria-hidden="true"></span><span>Quá &quot;gangster&quot; lộ liễu (súng, tiền bay, chữ graffiti khắp nơi), mất vẻ sang</span></label>
+<label class="chk" for="f65"><input type="checkbox" id="f65" name="f65" data-q="Giống trang của tiệm trang sức đối thủ, không có nét riêng"><span class="box" aria-hidden="true"></span><span>Giống trang của tiệm trang sức đối thủ, không có nét riêng</span></label>
+<label class="chk" for="f66"><input type="checkbox" id="f66" name="f66" data-q="Quá trống, tối giản đến nhàm chán"><span class="box" aria-hidden="true"></span><span>Quá trống, tối giản đến nhàm chán</span></label>
+</div>
+<h3>Về màu sắc và hình ảnh</h3>
+<div class="checks">
+<label class="chk" for="f67"><input type="checkbox" id="f67" name="f67" data-q="Màu chói, quá nhiều màu cùng lúc"><span class="box" aria-hidden="true"></span><span>Màu chói, quá nhiều màu cùng lúc</span></label>
+<label class="chk" for="f68"><input type="checkbox" id="f68" name="f68" data-q="Vàng &quot;nhựa&quot;, vàng chanh, không ra vàng kim loại"><span class="box" aria-hidden="true"></span><span>Vàng &quot;nhựa&quot;, vàng chanh, không ra vàng kim loại</span></label>
+<label class="chk" for="f69"><input type="checkbox" id="f69" name="f69" data-q="Hiệu ứng lấp lánh, kim tuyến kiểu thiệp cưới"><span class="box" aria-hidden="true"></span><span>Hiệu ứng lấp lánh, kim tuyến kiểu thiệp cưới</span></label>
+<label class="chk" for="f70"><input type="checkbox" id="f70" name="f70" data-q="Ảnh stock người mẫu cười gượng, nhìn là biết ảnh mua"><span class="box" aria-hidden="true"></span><span>Ảnh stock người mẫu cười gượng, nhìn là biết ảnh mua</span></label>
+<label class="chk" for="f71"><input type="checkbox" id="f71" name="f71" data-q="Ảnh mờ, vỡ, chụp bằng điện thoại thiếu sáng"><span class="box" aria-hidden="true"></span><span>Ảnh mờ, vỡ, chụp bằng điện thoại thiếu sáng</span></label>
+<label class="chk" for="f72"><input type="checkbox" id="f72" name="f72" data-q="Quá nhiều hình minh họa hoạt hình / icon emoji"><span class="box" aria-hidden="true"></span><span>Quá nhiều hình minh họa hoạt hình / icon emoji</span></label>
+</div>
+<h3>Về chữ và nội dung</h3>
+<div class="checks">
+<label class="chk" for="f73"><input type="checkbox" id="f73" name="f73" data-q="Quá nhiều chữ, đoạn văn dài"><span class="box" aria-hidden="true"></span><span>Quá nhiều chữ, đoạn văn dài</span></label>
+<label class="chk" for="f74"><input type="checkbox" id="f74" name="f74" data-q="Chữ nhỏ, khó đọc trên điện thoại"><span class="box" aria-hidden="true"></span><span>Chữ nhỏ, khó đọc trên điện thoại</span></label>
+<label class="chk" for="f75"><input type="checkbox" id="f75" name="f75" data-q="Quá nhiều kiểu font trên một trang"><span class="box" aria-hidden="true"></span><span>Quá nhiều kiểu font trên một trang</span></label>
+<label class="chk" for="f76"><input type="checkbox" id="f76" name="f76" data-q="Giọng văn quảng cáo sáo rỗng (&quot;chất lượng hàng đầu&quot;, &quot;uy tín số 1&quot;)"><span class="box" aria-hidden="true"></span><span>Giọng văn quảng cáo sáo rỗng (&quot;chất lượng hàng đầu&quot;, &quot;uy tín số 1&quot;)</span></label>
+</div>
+<h3>Về cách dùng</h3>
+<div class="checks">
+<label class="chk" for="f77"><input type="checkbox" id="f77" name="f77" data-q="Chạy chậm, nặng trên điện thoại"><span class="box" aria-hidden="true"></span><span>Chạy chậm, nặng trên điện thoại</span></label>
+<label class="chk" for="f78"><input type="checkbox" id="f78" name="f78" data-q="Popup bật lên liên tục (đăng ký, giảm giá, cookie)"><span class="box" aria-hidden="true"></span><span>Popup bật lên liên tục (đăng ký, giảm giá, cookie)</span></label>
+<label class="chk" for="f79"><input type="checkbox" id="f79" name="f79" data-q="Nhạc hoặc video tự phát có tiếng"><span class="box" aria-hidden="true"></span><span>Nhạc hoặc video tự phát có tiếng</span></label>
+<label class="chk" for="f80"><input type="checkbox" id="f80" name="f80" data-q="Animation quá nhiều làm chóng mặt, chờ lâu mới thấy nội dung"><span class="box" aria-hidden="true"></span><span>Animation quá nhiều làm chóng mặt, chờ lâu mới thấy nội dung</span></label>
+<label class="chk" for="f81"><input type="checkbox" id="f81" name="f81" data-q="Phải cuộn rất lâu mới thấy ngày, giờ, địa điểm"><span class="box" aria-hidden="true"></span><span>Phải cuộn rất lâu mới thấy ngày, giờ, địa điểm</span></label>
+<label class="chk" for="f82"><input type="checkbox" id="f82" name="f82" data-q="Nhiều nút bấm, không biết bấm vào đâu"><span class="box" aria-hidden="true"></span><span>Nhiều nút bấm, không biết bấm vào đâu</span></label>
+<label class="chk" for="f83"><input type="checkbox" id="f83" name="f83" data-q="Form đăng ký dài, hỏi quá nhiều thông tin"><span class="box" aria-hidden="true"></span><span>Form đăng ký dài, hỏi quá nhiều thông tin</span></label>
+</div>
+<div class="line"><label for="f84">Khác / link ví dụ sếp không thích:</label><input type="text" id="f84" name="f84" data-q="Khác / link ví dụ sếp không thích:"></div>
+</section>
+<section class="card" data-s="9. Kiểu website sếp mong muốn"><h2><span class="num">9</span>Kiểu website sếp mong muốn</h2>
+<p class="hint">Tick những kiểu sếp thích. Có thể tick nhiều.</p>
+<h3>Kiểu trang tham khảo</h3>
+<div class="checks">
+<label class="chk" for="f85"><input type="checkbox" id="f85" name="f85" data-q="Thương hiệu trang sức cao cấp (kiểu Tiffany &amp; Co., Cartier): nhiều khoảng trắng, ảnh sản phẩm cận cảnh, chữ thanh lịch"><span class="box" aria-hidden="true"></span><span>Thương hiệu trang sức cao cấp (kiểu Tiffany &amp; Co., Cartier): nhiều khoảng trắng, ảnh sản phẩm cận cảnh, chữ thanh lịch</span></label>
+<label class="chk" for="f86"><input type="checkbox" id="f86" name="f86" data-q="Trang tour concert hip-hop: chữ cực lớn, ảnh trắng đen, đếm ngược, nhịp mạnh"><span class="box" aria-hidden="true"></span><span>Trang tour concert hip-hop: chữ cực lớn, ảnh trắng đen, đếm ngược, nhịp mạnh</span></label>
+<label class="chk" for="f87"><input type="checkbox" id="f87" name="f87" data-q="Trang streetwear ra mắt sản phẩm (kiểu Supreme, Kith): cá tính, gọn, tập trung vào &quot;drop&quot;"><span class="box" aria-hidden="true"></span><span>Trang streetwear ra mắt sản phẩm (kiểu Supreme, Kith): cá tính, gọn, tập trung vào &quot;drop&quot;</span></label>
+<label class="chk" for="f88"><input type="checkbox" id="f88" name="f88" data-q="Trang ra mắt sản phẩm công nghệ (kiểu Apple): nền tối, sản phẩm 3D, hiệu ứng khi cuộn"><span class="box" aria-hidden="true"></span><span>Trang ra mắt sản phẩm công nghệ (kiểu Apple): nền tối, sản phẩm 3D, hiệu ứng khi cuộn</span></label>
+<label class="chk" for="f89"><input type="checkbox" id="f89" name="f89" data-q="Tạp chí thời trang: bố cục như bìa tạp chí, ảnh lớn, chữ nghệ thuật"><span class="box" aria-hidden="true"></span><span>Tạp chí thời trang: bố cục như bìa tạp chí, ảnh lớn, chữ nghệ thuật</span></label>
+<label class="chk" for="f90"><input type="checkbox" id="f90" name="f90" data-q="Trang sự kiện / lễ hội âm nhạc: lineup nổi bật, lịch trình rõ, nhiều màu năng lượng"><span class="box" aria-hidden="true"></span><span>Trang sự kiện / lễ hội âm nhạc: lineup nổi bật, lịch trình rõ, nhiều màu năng lượng</span></label>
+</div>
+<h3>Hình ảnh nổi bật</h3>
+<div class="checks">
+<label class="chk" for="f91"><input type="checkbox" id="f91" name="f91" data-q="Video nền toàn màn hình ngay đầu trang"><span class="box" aria-hidden="true"></span><span>Video nền toàn màn hình ngay đầu trang</span></label>
+<label class="chk" for="f92"><input type="checkbox" id="f92" name="f92" data-q="Cận cảnh grillz và kim cương bắt sáng"><span class="box" aria-hidden="true"></span><span>Cận cảnh grillz và kim cương bắt sáng</span></label>
+<label class="chk" for="f93"><input type="checkbox" id="f93" name="f93" data-q="Hình 3D xoay được (grillz, kim cương)"><span class="box" aria-hidden="true"></span><span>Hình 3D xoay được (grillz, kim cương)</span></label>
+<label class="chk" for="f94"><input type="checkbox" id="f94" name="f94" data-q="Ảnh trắng đen nghệ thuật của KOL, nghệ sĩ"><span class="box" aria-hidden="true"></span><span>Ảnh trắng đen nghệ thuật của KOL, nghệ sĩ</span></label>
+<label class="chk" for="f95"><input type="checkbox" id="f95" name="f95" data-q="Chữ cỡ lớn kiểu poster"><span class="box" aria-hidden="true"></span><span>Chữ cỡ lớn kiểu poster</span></label>
+<label class="chk" for="f96"><input type="checkbox" id="f96" name="f96" data-q="Texture kim loại, vàng, kim cương làm nền"><span class="box" aria-hidden="true"></span><span>Texture kim loại, vàng, kim cương làm nền</span></label>
+<label class="chk" for="f97"><input type="checkbox" id="f97" name="f97" data-q="Hình ảnh văn hóa Houston (xe slab, car show)"><span class="box" aria-hidden="true"></span><span>Hình ảnh văn hóa Houston (xe slab, car show)</span></label>
+</div>
+<h3>Tính năng mong muốn</h3>
+<div class="checks">
+<label class="chk" for="f98"><input type="checkbox" id="f98" name="f98" data-q="Đồng hồ đếm ngược đến ngày 12/12"><span class="box" aria-hidden="true"></span><span>Đồng hồ đếm ngược đến ngày 12/12</span></label>
+<label class="chk" for="f99"><input type="checkbox" id="f99" name="f99" data-q="Form đăng ký tham dự (RSVP)"><span class="box" aria-hidden="true"></span><span>Form đăng ký tham dự (RSVP)</span></label>
+<label class="chk" for="f100"><input type="checkbox" id="f100" name="f100" data-q="Gallery KOL và nghệ sĩ"><span class="box" aria-hidden="true"></span><span>Gallery KOL và nghệ sĩ</span></label>
+<label class="chk" for="f101"><input type="checkbox" id="f101" name="f101" data-q="Bản đồ và nút chỉ đường"><span class="box" aria-hidden="true"></span><span>Bản đồ và nút chỉ đường</span></label>
+<label class="chk" for="f102"><input type="checkbox" id="f102" name="f102" data-q="Nút gọi điện / nhắn tin cho tiệm"><span class="box" aria-hidden="true"></span><span>Nút gọi điện / nhắn tin cho tiệm</span></label>
+<label class="chk" for="f103"><input type="checkbox" id="f103" name="f103" data-q="Hiển thị bài Instagram / TikTok mới nhất của tiệm"><span class="box" aria-hidden="true"></span><span>Hiển thị bài Instagram / TikTok mới nhất của tiệm</span></label>
+<label class="chk" for="f104"><input type="checkbox" id="f104" name="f104" data-q="Giới thiệu sản phẩm grillz và bảng giá tham khảo"><span class="box" aria-hidden="true"></span><span>Giới thiệu sản phẩm grillz và bảng giá tham khảo</span></label>
+<label class="chk" for="f105"><input type="checkbox" id="f105" name="f105" data-q="Đặt lịch hẹn lấy dấu răng"><span class="box" aria-hidden="true"></span><span>Đặt lịch hẹn lấy dấu răng</span></label>
+</div>
+<div class="line"><label for="f106">Khác / link ví dụ sếp muốn giống:</label><input type="text" id="f106" name="f106" data-q="Khác / link ví dụ sếp muốn giống:"></div>
+</section>
+<section class="card" data-s="10. Tông tối hay sáng"><h2><span class="num">10</span>Tông tối hay sáng</h2>
+<div class="checks">
+<label class="chk" for="f107"><input type="checkbox" id="f107" name="f107" data-q="Tối (nền đen / tối là chính)"><span class="box" aria-hidden="true"></span><span>Tối (nền đen / tối là chính)</span></label>
+<label class="chk" for="f108"><input type="checkbox" id="f108" name="f108" data-q="Sáng (nền trắng / ngà là chính)"><span class="box" aria-hidden="true"></span><span>Sáng (nền trắng / ngà là chính)</span></label>
+<label class="chk" for="f109"><input type="checkbox" id="f109" name="f109" data-q="Kết hợp, xen kẽ tối và sáng (như bản nháp hiện tại)"><span class="box" aria-hidden="true"></span><span>Kết hợp, xen kẽ tối và sáng (như bản nháp hiện tại)</span></label>
+</div>
+</section>
+<section class="card" data-s="11. Phong cách thiết kế"><h2><span class="num">11</span>Phong cách thiết kế</h2>
+<p class="hint">Tick 1 hoặc 2.</p>
+<div class="checks">
+<label class="chk" for="f110"><input type="checkbox" id="f110" name="f110" data-q="Đơn giản, tối giản"><span class="box" aria-hidden="true"></span><span>Đơn giản, tối giản</span></label>
+<label class="chk" for="f111"><input type="checkbox" id="f111" name="f111" data-q="Sang trọng, luxury"><span class="box" aria-hidden="true"></span><span>Sang trọng, luxury</span></label>
+<label class="chk" for="f112"><input type="checkbox" id="f112" name="f112" data-q="Cá tính, đường phố, hip-hop"><span class="box" aria-hidden="true"></span><span>Cá tính, đường phố, hip-hop</span></label>
+</div>
+<div class="line"><label for="f113">Ghi chú thêm:</label><input type="text" id="f113" name="f113" data-q="Ghi chú thêm:"></div>
+</section>
+<section class="card" data-s="12. Thời gian và bàn giao"><h2><span class="num">12</span>Thời gian và bàn giao</h2>
+<div class="line"><label for="f114">Người nhận bàn giao:</label><input type="text" id="f114" name="f114" data-q="Người nhận bàn giao:"></div>
+<div class="line"><label for="f115">Ai cập nhật trang sau khi bàn giao:</label><input type="text" id="f115" name="f115" data-q="Ai cập nhật trang sau khi bàn giao:"></div>
+</section>
+</main>
+<div class="bar">
+  <div class="wrap">
+    <span class="status" id="status" role="status" aria-live="polite">Bản nháp tự lưu trên máy này.</span>
+    <button class="btn" type="submit" id="send">Gửi brief</button>
+  </div>
+</div>
+</form>
+<footer><div class="wrap">Shine Redefined · Design by RAVO</div></footer>
+
+<script>
+(function () {
+  var form = document.getElementById('brief');
+  var status = document.getElementById('status');
+  var btn = document.getElementById('send');
+  var KEY = 'sr-brief-draft-v1';
+  var fields = Array.prototype.slice.call(form.querySelectorAll('[data-q]'));
+
+  // grow textareas with content
+  function grow(t) { t.style.height = 'auto'; t.style.height = Math.max(40, t.scrollHeight + 2) + 'px'; }
+  form.querySelectorAll('textarea').forEach(function (t) { t.addEventListener('input', function () { grow(t); }); });
+
+  // restore draft
+  try {
+    var d = JSON.parse(localStorage.getItem(KEY) || '{}');
+    fields.forEach(function (f) {
+      if (!(f.id in d)) return;
+      if (f.type === 'checkbox') f.checked = !!d[f.id]; else f.value = d[f.id];
+    });
+    form.querySelectorAll('textarea').forEach(grow);
+  } catch (e) {}
+  function save() {
+    var d = {};
+    fields.forEach(function (f) { d[f.id] = f.type === 'checkbox' ? f.checked : f.value; });
+    try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+  }
+  form.addEventListener('input', save);
+  form.addEventListener('change', save);
+
+  function collect() {
+    var answers = [];
+    fields.forEach(function (f) {
+      var sec = f.closest('[data-s]');
+      var section = sec ? sec.getAttribute('data-s') : 'Thông tin người điền';
+      var v = f.type === 'checkbox' ? (f.checked ? '✓' : '') : f.value.trim();
+      answers.push({ section: section, q: f.getAttribute('data-q'), type: f.type === 'checkbox' ? 'check' : 'text', a: v });
+    });
+    return answers;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('who-name');
+    if (!name.value.trim()) {
+      status.className = 'status err'; status.textContent = 'Anh điền tên người điền ở đầu trang trước khi gửi nhé.';
+      name.focus(); return;
+    }
+    btn.disabled = true; status.className = 'status'; status.textContent = 'Đang gửi…';
+    fetch('/api/brief', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name.value.trim(), answers: collect() })
+    }).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    }).then(function () {
+      status.className = 'status ok';
+      status.textContent = 'Đã gửi cho Huệ lúc ' + new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }) + '. Anh sửa và gửi lại bất cứ lúc nào.';
+    }).catch(function () {
+      status.className = 'status err';
+      status.textContent = 'Chưa gửi được, có thể do mạng. Bản nháp vẫn được lưu, anh bấm Gửi lại sau ít phút.';
+    }).finally(function () { btn.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kết quả Brief · Shine Redefined</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Layout: read-only report of the latest brief, one card per section; checked items listed, typed answers as label/value rows */
+  :root {
+    color-scheme: dark;
+    --ink: #0B0B0C; --panel: #151412; --panel-2: #1D1B18; --ivory: #F3EEE3; --muted: #A8A196;
+    --gold: #C9A24E; --gold-light: #E8D296; --line: #2E2B26; --err: #E58A6E;
+    --display: 'Anton', Impact, sans-serif; --sans: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: var(--ink); color: var(--ivory); font-family: var(--sans); font-size: 15px; line-height: 1.6; }
+  .wrap { max-width: 860px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  header { padding-block: 44px 24px; border-bottom: 1px solid var(--line); }
+  .eyebrow { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+  h1 { margin: 10px 0 0; font-family: var(--display); font-weight: 400; font-size: clamp(40px, 8vw, 72px); line-height: .95; text-transform: uppercase; color: var(--gold-light); }
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; margin-top: 20px; }
+  .controls .field { display: flex; flex-direction: column; gap: 6px; flex: 1 1 220px; }
+  label { color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+  input, select { min-height: 44px; background: var(--panel-2); color: var(--ivory); border: 1px solid var(--line); border-radius: 4px; padding: 8px 11px; font: 15px var(--sans); width: 100%; }
+  input:focus, select:focus { outline: none; border-color: var(--gold); }
+  .btn { min-height: 44px; padding: 0 22px; border: 0; border-radius: 4px; background: var(--gold); color: var(--ink); font: 700 13px var(--sans); letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+  .btn:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
+  .msg { margin-top: 12px; color: var(--muted); font-size: 14px; } .msg.err { color: var(--err); }
+  main { padding-block: 24px 48px; display: flex; flex-direction: column; gap: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 20px; }
+  .card h2 { margin: 0 0 10px; font-size: 18px; font-weight: 700; color: var(--ivory); }
+  .ticks { margin: 0 0 8px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; }
+  .ticks li::before { content: "✓"; color: var(--gold); font-weight: 700; margin-right: 10px; }
+  .row { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 4px 16px; padding: 8px 0; border-top: 1px solid var(--line); }
+  .row .q { color: var(--muted); font-size: 14px; }
+  .row .a { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .empty { color: var(--muted); font-size: 14px; font-style: italic; }
+  @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Shine Redefined · Chỉ dành cho Huệ</p>
+    <h1>Kết quả brief</h1>
+    <div class="controls">
+      <div class="field"><label for="key">Mã xem kết quả</label><input type="password" id="key" autocomplete="current-password"></div>
+      <div class="field" id="pick-wrap" hidden><label for="pick">Lần gửi</label><select id="pick"></select></div>
+      <button class="btn" id="load" type="button">Xem</button>
+    </div>
+    <p class="msg" id="msg" role="status" aria-live="polite">Nhập mã rồi bấm Xem.</p>
+  </div>
+</header>
+<main class="wrap" id="out"></main>
+<script>
+(function () {
+  var keyEl = document.getElementById('key'), msg = document.getElementById('msg'), out = document.getElementById('out');
+  var pick = document.getElementById('pick'), pickWrap = document.getElementById('pick-wrap');
+  var items = [];
+  try { keyEl.value = localStorage.getItem('sr-brief-key') || ''; } catch (e) {}
+  if (location.hash.length > 1) keyEl.value = decodeURIComponent(location.hash.slice(1));
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function fmt(iso) { return new Date(iso).toLocaleString('vi-VN', { dateStyle: 'short', timeStyle: 'short' }); }
+
+  function render(rec) {
+    out.innerHTML = '';
+    var groups = [];
+    rec.answers.forEach(function (x) {
+      var g = groups[groups.length - 1];
+      if (!g || g.name !== x.section) { g = { name: x.section, ticks: [], rows: [] }; groups.push(g); }
+      if (x.type === 'check') { if (x.a) g.ticks.push(x.q); }
+      else if (x.a) g.rows.push(x);
+    });
+    groups.forEach(function (g) {
+      var c = el('section', 'card'); c.appendChild(el('h2', null, g.name));
+      if (g.ticks.length) { var ul = el('ul', 'ticks'); g.ticks.forEach(function (t) { ul.appendChild(el('li', null, t)); }); c.appendChild(ul); }
+      g.rows.forEach(function (r) { var d = el('div', 'row'); d.appendChild(el('div', 'q', r.q)); d.appendChild(el('div', 'a', r.a)); c.appendChild(d); });
+      if (!g.ticks.length && !g.rows.length) c.appendChild(el('p', 'empty', 'Chưa điền mục này.'));
+      out.appendChild(c);
+    });
+  }
+
+  function load() {
+    var k = keyEl.value.trim();
+    if (!k) { msg.className = 'msg err'; msg.textContent = 'Nhập mã xem kết quả trước.'; keyEl.focus(); return; }
+    msg.className = 'msg'; msg.textContent = 'Đang tải…';
+    fetch('/api/brief?key=' + encodeURIComponent(k), { cache: 'no-store' })
+      .then(function (r) { if (r.status === 401) throw new Error('key'); if (!r.ok) throw new Error('net'); return r.json(); })
+      .then(function (data) {
+        try { localStorage.setItem('sr-brief-key', k); } catch (e) {}
+        items = data.items || [];
+        if (!items.length) { out.innerHTML = ''; pickWrap.hidden = true; msg.textContent = 'Chưa có ai gửi brief.'; return; }
+        pick.innerHTML = '';
+        items.forEach(function (it, i) { var o = el('option', null, (i === 0 ? 'Mới nhất · ' : '') + it.name + ' · ' + fmt(it.submittedAt)); o.value = i; pick.appendChild(o); });
+        pickWrap.hidden = false;
+        msg.textContent = items.length + ' lần gửi. Đang xem bản của ' + items[0].name + ', gửi lúc ' + fmt(items[0].submittedAt) + '.';
+        render(items[0]);
+      })
+      .catch(function (e) { msg.className = 'msg err'; msg.textContent = e.message === 'key' ? 'Sai mã xem kết quả.' : 'Không tải được, thử lại sau ít phút.'; });
+  }
+  pick.addEventListener('change', function () { var it = items[+pick.value]; msg.textContent = 'Đang xem bản của ' + it.name + ', gửi lúc ' + fmt(it.submittedAt) + '.'; render(it); });
+  document.getElementById('load').addEventListener('click', load);
+  keyEl.addEventListener('keydown', function (e) { if (e.key === 'Enter') load(); });
+  if (keyEl.value) load();
+})();
+</script>
+</body>
+</html>
