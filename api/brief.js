@@ -9,6 +9,9 @@ const clip = (v, n) => String(v == null ? '' : v).slice(0, n);
 
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
+  if (req.method === 'GET' && req.query.ping) {
+    return res.status(200).json({ ok: true, storageConnected: Boolean(process.env.BLOB_READ_WRITE_TOKEN) });
+  }
   if (!process.env.BLOB_READ_WRITE_TOKEN) return res.status(503).json({ error: 'storage-not-connected' });
   try {
     if (req.method === 'POST') {
