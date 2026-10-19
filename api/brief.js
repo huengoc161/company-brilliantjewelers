@@ -1,5 +1,4 @@
 // Saves brief answers to Vercel Blob (POST) and lists them for Huệ (GET with ?key=)
-import { put, list } from '@vercel/blob';
 import { createHash } from 'node:crypto';
 
 // Only the SHA-256 of Huệ's viewing code is stored here, so the public repo does not reveal it
@@ -12,10 +11,11 @@ export default async function handler(req, res) {
   if (req.method === 'GET' && req.query.ping) {
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     return res.status(200).send('<!doctype html><title>Brief status</title><p>Brief API is running. Storage connected: '
-      + (process.env.BLOB_READ_WRITE_TOKEN ? 'YES' : 'NO') + '</p>');
+      + (process.env.BLOB_READ_WRITE_TOKEN ? 'YES' : 'NO') + '. Library: ' + await import('@vercel/blob').then(() => 'OK', (e) => 'ERROR ' + String(e && e.message).slice(0, 200)) + '</p>');
   }
   if (!process.env.BLOB_READ_WRITE_TOKEN) return res.status(503).json({ error: 'storage-not-connected' });
   try {
+    const { put, list } = await import('@vercel/blob');
     if (req.method === 'POST') {
       const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
       if (!body.name || !Array.isArray(body.answers) || body.answers.length > 600) {
