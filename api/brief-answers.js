@@ -8,7 +8,8 @@ const KEY_HASH = process.env.BRIEF_ADMIN_KEY_HASH || '8ae08cd71d7fe2a2cea351b2ba
 
 const clip = (v, n) => String(v == null ? '' : v).slice(0, n);
 const keyOk = (req) => createHash('sha256').update(String(req.query.key || '')).digest('hex') === KEY_HASH;
-const storeReady = () => Boolean(process.env.BLOB_STORE_ID || process.env.BLOB_READ_WRITE_TOKEN);
+const storeReady = () => Boolean(process.env.BLOB_STORE_ID || process.env.BLOB_READ_WRITE_TOKEN || process.env.VERCEL_OIDC_TOKEN);
+const envNames = () => Object.keys(process.env).filter((k) => /BLOB|OIDC|STORE/i.test(k)).join(' + ') || '[none]';
 
 async function readPrivate(get, pathname) {
   const r = await get(pathname, { access: 'private', useCache: false });
@@ -24,10 +25,10 @@ export default async function handler(req, res) {
     try { await import('@vercel/blob'); } catch (e) { lib = 'ERROR ' + clip(e && e.message, 200); }
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     return res.status(200).send('<!doctype html><title>Brief status</title><p>Brief API is running. Storage connected: '
-      + (storeReady() ? 'YES' : 'NO') + '. Library: ' + lib + '.</p>');
+      + (storeReady() ? 'YES' : 'NO') + '. Library: ' + lib + '. Variables: ' + envNames() + '.</p>');
   }
 
-  if (!storeReady()) return res.status(503).json({ error: 'storage-not-connected' });
+  if (!storeReady() && !req.query.selftest) return res.status(503).json({ error: 'storage-not-connected' });
 
   try {
     const { put, list, get, del } = await import('@vercel/blob');
@@ -79,6 +80,11 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'method' });
   } catch (e) {
     console.error(e);
+    if (req.query && req.query.selftest && keyOk(req)) {
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      return res.status(200).send('<!doctype html><title>Self test</title><p>Self test failed: '
+        + clip(e && (e.name + ': ' + e.message), 400).replace(/</g, '&lt;') + '</p>');
+    }
     return res.status(500).json({ error: 'server' });
   }
 }
