@@ -11,7 +11,8 @@ const keyOk = (req) => createHash('sha256').update(String(req.query.key || '')).
 const storeReady = () => Boolean(process.env.BLOB_STORE_ID || process.env.BLOB_READ_WRITE_TOKEN || process.env.VERCEL_OIDC_TOKEN);
 const envNames = () => Object.keys(process.env).filter((k) => /BLOB|OIDC|STORE/i.test(k)).join(' + ') || '[none]';
 
-const NOTIFY_TO = process.env.BRIEF_NOTIFY_TO || 'hue.nguyen@ravopos.com';
+// Resend's free plan only delivers to the address the Resend account was created with
+const NOTIFY_TO = process.env.BRIEF_NOTIFY_TO || 'huengoc161@gmail.com';
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 // Email Huệ a readable copy of one submission through Resend
