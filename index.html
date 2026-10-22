@@ -3,1051 +3,465 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>document.documentElement.classList.add('js');</script>
-<title>Shine Redefined — Brilliant Jewelers Grand Opening · 12.12.2026</title>
-<meta name="description" content="Brilliant Jewelers grand opening at 300 Sharpstown Center, Houston, TX. Saturday, December 12, 2026. Live DJ, lion dance, Houston hip-hop, car show and a one-day grillz offer.">
-<meta property="og:title" content="Shine Redefined — Brilliant Jewelers Grand Opening">
-<meta property="og:description" content="Redefine Your Style. Smile &amp; Shine! Saturday, December 12, 2026 · 300 Sharpstown Center, Houston, TX">
+<title>Brilliant Jewelers Grand Opening | Shine Redefined, Dec 12</title>
+<meta name="description" content="Join Brilliant Jewelers' grand opening in Sharpstown, Houston on Dec 12. Live music, a car show, and Buy Upper, Get Lower FREE. RSVP now.">
+<link rel="canonical" href="https://company-brilliantjewelers.vercel.app/shine-redefined">
+<meta property="og:title" content="Brilliant Jewelers Grand Opening | Shine Redefined, Dec 12">
+<meta property="og:description" content="Join Brilliant Jewelers' grand opening in Sharpstown, Houston on Dec 12. Live music, a car show, and Buy Upper, Get Lower FREE. RSVP now.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wdth,wght@0,62..125,300..800;1,62..125,300..800&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Brilliant Jewelers Grand Opening — Shine Redefined",
+  "startDate": "2026-12-12T10:00:00-06:00",
+  "endDate": "2026-12-12T18:00:00-06:00",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": "Brilliant Jewelers",
+    "address": { "@type": "PostalAddress", "streetAddress": "300 Sharpstown Center", "addressLocality": "Houston", "addressRegion": "TX", "postalCode": "77036", "addressCountry": "US" }
+  },
+  "description": "Live music, a car show, and Buy Upper, Get Lower FREE — one day only."
+}
+</script>
 <style>
+  /* Minimal luxury: warm white, one ink, one restrained gold accent, hairlines, generous space. */
   :root {
-    --ink: #0A0A0A;
-    --ink-2: #141311;
-    --ivory: #F4F0E8;
-    --paper: #FBF9F4;
-    --gold: #C9A24E;
-    --gold-light: #EAD49A;
-    --gold-deep: #7A5B1C;
-    --muted-on-ink: #A29D92;
-    --muted-on-ivory: #5B574F;
-    --line-ink: #2B2925;
-    --line-ivory: #DCD4C4;
-    --gold-metal: linear-gradient(100deg, #8C6A26 0%, #E9D39A 14%, #B8913F 26%, #F3E2B3 36%, #9C7A32 50%, #E9D39A 64%, #B8913F 76%, #F3E2B3 86%, #8C6A26 100%);
-    --ease-out: cubic-bezier(.2, .8, .2, 1);
-    --ease-io: cubic-bezier(.7, 0, .2, 1);
-    --display: 'Anton', 'Impact', sans-serif;
-    --sans: 'Archivo', system-ui, sans-serif;
-    --black: 'UnifrakturMaguntia', serif;
+    --paper: #FAF8F4;
+    --paper-2: #F3EFE7;
+    --ink: #161513;
+    --text: #2A2724;
+    --muted: #756E66;
+    --line: #E4DED3;
+    --gold: #B0925A;
+    --gold-deep: #8A6E3C;
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --wrap: 1120px;
+    --gutter: clamp(20px, 5vw, 48px);
+    --space: clamp(88px, 12vw, 160px);
+    --ease: cubic-bezier(.22, .61, .36, 1);
   }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  html, body { overflow-x: clip; }
-  body {
-    margin: 0; background: var(--ink); color: var(--ivory);
-    font-family: var(--sans); font-size: 16px; line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 72px; }
+  body { margin: 0; background: var(--paper); color: var(--text); font: 400 16px/1.7 var(--sans); -webkit-font-smoothing: antialiased; }
+  iframe { display: block; max-width: 100%; }
   a { color: inherit; }
-  img { display: block; max-width: 100%; }
-  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  .metal {
-    background: var(--gold-metal); -webkit-background-clip: text; background-clip: text;
-    color: transparent;
-  }
-  .num { font-family: var(--sans); font-size: .22em; font-weight: 500; vertical-align: top; letter-spacing: 0; margin-left: .2em; position: relative; top: .35em; }
-  .tag {
-    font-family: var(--sans); font-size: 12px; font-weight: 600; font-stretch: 80%;
-    letter-spacing: .22em; text-transform: uppercase;
-  }
-  a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  h1, h2, h3, p, ol, ul, dl, dd, figure { margin: 0; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--ink); letter-spacing: -.01em; line-height: 1.05; }
+  button, input, select { font: inherit; color: inherit; }
+  .wrap { width: 100%; max-width: calc(var(--wrap) + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter); }
+  .eyebrow { font: 500 11px/1.5 var(--sans); letter-spacing: .24em; text-transform: uppercase; color: var(--muted); }
+  .accent { color: var(--gold-deep); }
+  .tags { font: 500 12px var(--sans); letter-spacing: .08em; color: var(--gold-deep); }
+  section { padding: var(--space) 0; }
+  .sec-head { max-width: 720px; margin-bottom: clamp(44px, 6vw, 72px); }
+  .sec-head h2 { font-size: clamp(40px, 5.4vw, 72px); margin-top: 18px; }
+  .sec-head p { margin-top: 18px; color: var(--muted); max-width: 520px; }
+  .alt { background: var(--paper-2); }
 
   /* Buttons */
-  .btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    min-height: 52px; padding: 0 28px; border: 1px solid transparent;
-    font: 600 13px var(--sans); font-stretch: 85%; letter-spacing: .2em; text-transform: uppercase;
-    text-decoration: none; cursor: pointer; transition: background .25s, color .25s, border-color .25s;
-  }
-  .btn-gold { background: var(--gold); color: var(--ink); }
-  .btn-gold:hover { background: var(--gold-light); }
-  .btn-ghost { border-color: currentColor; background: transparent; }
-  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 30px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font: 500 11px/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background .3s, color .3s, border-color .3s; }
+  .btn:hover { background: var(--ink); color: var(--paper); }
+  .btn-solid { background: var(--ink); color: var(--paper); }
+  .btn-solid:hover { background: var(--gold-deep); border-color: var(--gold-deep); }
+  .btn-sm { min-height: 40px; padding: 0 18px; }
+  :focus-visible { outline: 1px solid var(--gold-deep); outline-offset: 4px; }
 
-  /* Header */
-  .site-head { position: fixed; inset: 0 0 auto 0; z-index: 30; mix-blend-mode: difference; color: #fff; }
-  .site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; padding-bottom: 18px; }
-  .brand { text-decoration: none; font: 600 13px var(--sans); font-stretch: 80%; letter-spacing: .3em; text-transform: uppercase; }
-  .head-mid { font-family: var(--black); font-size: 30px; line-height: 1; text-decoration: none; }
-  .menu-btn {
-    min-height: 44px; padding: 0 4px; border: 0; background: transparent; color: inherit; cursor: pointer;
-    font: 600 13px var(--sans); font-stretch: 80%; letter-spacing: .3em; text-transform: uppercase;
-  }
+  /* Header with sticky RSVP */
+  .site-head { position: sticky; top: 0; z-index: 30; background: rgba(250, 248, 244, .92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
+  .brand { font: 500 11px var(--sans); letter-spacing: .3em; text-transform: uppercase; text-decoration: none; color: var(--ink); white-space: nowrap; }
+  .nav { display: flex; gap: 28px; list-style: none; padding: 0; }
+  .nav a { font-size: 13px; text-decoration: none; color: var(--muted); transition: color .3s; }
+  .nav a:hover { color: var(--ink); }
+  @media (max-width: 900px) { .nav { display: none; } }
 
-  /* Menu overlay */
-  .menu {
-    position: fixed; inset: 0; z-index: 40; display: flex; justify-content: flex-end;
-    background: rgba(10,10,10,.55); visibility: hidden; opacity: 0; transition: opacity .3s, visibility .3s;
-  }
-  .menu.open { visibility: visible; opacity: 1; }
-  .menu-panel {
-    width: min(600px, 100%); height: 100%; overflow-y: auto; background: var(--ink); border-left: 1px solid var(--line-ink);
-    padding: 24px 32px 32px; display: flex; flex-direction: column; transform: translateX(40px); transition: transform .35s;
-  }
-  .menu.open .menu-panel { transform: none; }
-  .menu-top { display: flex; justify-content: space-between; align-items: center; }
-  .menu-links { list-style: none; margin: 48px 0 auto; padding: 0; }
-  .menu-links li { border-bottom: 1px solid var(--line-ink); }
-  .menu-links a {
-    display: block; padding: 6px 0; text-decoration: none;
-    font: 500 clamp(40px, 7vw, 64px) / 1.05 var(--sans); font-stretch: 70%; text-transform: uppercase; letter-spacing: -.01em;
-  }
-  .menu-links a:hover { color: var(--gold); }
-  .menu-links sup { font-size: 13px; font-stretch: 100%; letter-spacing: 0; margin-left: 6px; color: var(--muted-on-ink); }
-  .menu-foot { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-top: 40px; font-size: 13px; color: var(--muted-on-ink); }
-  .lang { display: flex; gap: 4px; }
-  .lang button {
-    min-width: 44px; height: 44px; border: 1px solid var(--line-ink); background: transparent; color: var(--muted-on-ink);
-    font: 600 12px var(--sans); cursor: pointer;
-  }
-  .lang button[aria-pressed="true"] { border-color: var(--gold); color: var(--ivory); }
+  /* 1 · Hero */
+  .hero { padding: clamp(72px, 11vw, 150px) 0 var(--space); text-align: center; }
+  .kicker { font: italic 400 clamp(20px, 2.2vw, 24px)/1.4 var(--serif); color: var(--muted); }
+  .hero .eyebrow { margin-top: clamp(36px, 5vw, 56px); }
+  .hero h1 { margin-top: 18px; font-size: clamp(60px, 12.5vw, 176px); font-weight: 300; line-height: .9; letter-spacing: .01em; }
+  .hero h1 span { display: block; font-style: italic; color: var(--gold-deep); }
+  .when { margin-top: clamp(28px, 4vw, 44px); font: 500 12px var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--ink); }
+  .when i { font-style: normal; color: var(--gold); margin: 0 12px; }
+  .hero .sub { max-width: 540px; margin: 24px auto 0; color: var(--muted); font-size: 17px; }
+  .cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 40px; }
+  .hero .tags { margin-top: 40px; }
 
-  /* Hero */
-  .hero {
-    position: relative; overflow: hidden; min-height: 100svh; padding: 112px 0 220px;
-    background-color: var(--ink);
-    background-image: radial-gradient(rgba(234,212,154,.16) 1px, transparent 1.3px);
-    background-size: 22px 22px;
-  }
-  .hero-inner { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; }
-  .hero-photo {
-    position: absolute; top: 40px; left: 50%; transform: translateX(-50%);
-    width: min(500px, 74vw); aspect-ratio: 4 / 5; background: #171613; border: 1px solid var(--line-ink);
-    display: flex; align-items: flex-start; justify-content: center; padding: 20px;
-    color: var(--muted-on-ink); font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
-  }
-  .hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.12); }
-  .hero h1 { position: relative; z-index: 2; margin: 120px 0 0; font-weight: 400; line-height: .8; }
-  .hero h1 .shine { display: block; font-family: var(--display); font-size: clamp(120px, 25vw, 380px); letter-spacing: .005em; text-transform: uppercase; }
-  .hero h1 .redefined { display: block; font-family: var(--black); font-size: clamp(60px, 10vw, 156px); color: var(--ivory); margin-top: -.28em; transform: rotate(-4deg); text-shadow: 0 2px 30px rgba(0,0,0,.6); }
-  .slogan { position: relative; z-index: 2; margin: 40px 0 0; font-family: var(--display); font-weight: 400; font-size: clamp(26px, 3.4vw, 46px); line-height: 1.05; letter-spacing: .02em; text-transform: uppercase; color: var(--ivory); }
-  .shot.tall { grid-row: span 2; }
-  .shot.wide { grid-column: span 2; }
-  .shot .cap a { text-decoration: none; }
-  .shot .cap a:hover { color: var(--gold); }
-  .hero-meta { position: relative; z-index: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 28px; margin-top: 48px; color: var(--muted-on-ink); }
-  .hero-lead { position: relative; z-index: 2; margin: 22px 0 0; max-width: 560px; font-size: 18px; color: var(--ivory); }
-  .hero-cta { position: relative; z-index: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 32px; }
-  .badge { position: absolute; z-index: 3; right: 5%; top: 46%; width: 170px; height: 170px; }
-  .badge svg { width: 100%; height: 100%; animation: spin 26s linear infinite; }
-  .badge .core { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--black); font-size: 44px; color: var(--gold); }
-  .cube { position: absolute; left: 6%; top: 22%; width: 120px; opacity: .9; animation: float 9s ease-in-out infinite; }
-  .ribbons { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 240px; }
-  .ribbons path { animation: drift 14s ease-in-out infinite alternate; }
+  /* 2 · Comeback story */
+  .story { border-top: 1px solid var(--line); }
+  .quote { max-width: 980px; margin: 0 auto; text-align: center; font: 300 clamp(32px, 4.8vw, 64px)/1.18 var(--serif); color: var(--ink); }
+  .quote em { color: var(--gold-deep); }
+  .quote .soft { color: var(--muted); }
+  .story .support { max-width: 560px; margin: clamp(36px, 5vw, 56px) auto 0; text-align: center; color: var(--muted); }
+  .story .eyebrow { text-align: center; margin-bottom: 28px; }
 
-  /* Countdown */
-  .count { position: relative; border-top: 1px solid var(--line-ink); padding: 96px 0 104px; text-align: center; overflow: hidden; }
-  .count .ghost {
-    font-family: var(--display); font-size: clamp(80px, 16vw, 250px); line-height: .9; text-transform: uppercase;
-    color: transparent; -webkit-text-stroke: 1px rgba(201,162,78,.55); white-space: nowrap; margin: 0;
-  }
-  .timer { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 820px; margin: -0.55em auto 0; position: relative; font-size: clamp(80px, 16vw, 250px); }
-  .timer div { font-size: 16px; }
-  .timer b { display: block; font-family: var(--display); font-weight: 400; font-size: clamp(56px, 10vw, 128px); line-height: 1; }
-  .timer span { display: block; margin-top: 8px; }
-  .venue { margin: 48px 0 0; font-family: var(--display); font-weight: 400; font-size: clamp(32px, 4.4vw, 56px); text-transform: uppercase; line-height: 1; }
-  .venue-sub { margin: 10px 0 28px; color: var(--muted-on-ink); }
+  /* 3 · Event info */
+  .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 96px); }
+  .facts { border-top: 1px solid var(--ink); }
+  .facts div { display: grid; grid-template-columns: 96px 1fr; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .facts dt { font: 500 11px/1.9 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+  .facts dd { font: 400 21px/1.35 var(--serif); color: var(--ink); }
+  .facts .tbd { font-family: var(--sans); font-size: 14px; color: var(--muted); font-style: italic; }
+  .info-grid .cta { justify-content: flex-start; margin-top: 32px; }
+  .map { margin-top: 40px; border: 1px solid var(--line); }
+  .map iframe { width: 100%; height: 300px; border: 0; filter: grayscale(1) contrast(.92) brightness(1.03); }
+  .happen h3 { font-size: 28px; margin-bottom: 8px; }
+  .happen ul { list-style: none; padding: 0; }
+  .happen li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; padding: 14px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 15px; }
+  .happen li::before { content: "—"; color: var(--gold); }
+  .happen b { font-weight: 500; color: var(--ink); }
+  .happen li.offer-li b { color: var(--gold-deep); }
 
-  /* Ivory sections */
-  .ivory { background: var(--ivory); color: var(--ink); }
-  .ivory .btn-ghost:hover { color: var(--gold-deep); border-color: var(--gold-deep); }
+  /* 4 · Who's coming */
+  .people { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(16px, 2.4vw, 32px); }
+  .person { display: flex; flex-direction: column; }
+  .photo { position: relative; aspect-ratio: 3 / 4; background: var(--paper); border: 1px solid var(--line); overflow: hidden; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
+  .photo .ph { position: absolute; inset: auto 12px 12px; font-size: 11px; line-height: 1.4; color: var(--muted); }
+  .person h3 { margin-top: 18px; font-size: 26px; }
+  .person .role { margin-top: 4px; }
+  .person blockquote { margin: 14px 0 20px; font: italic 400 19px/1.35 var(--serif); color: var(--text); }
+  .person .btn { margin-top: auto; align-self: flex-start; }
 
-  .statement { position: relative; overflow: hidden; padding: 128px 0; }
-  .statement p {
-    position: relative; z-index: 1; margin: 0 auto; max-width: 1100px; text-align: center;
-    font-family: var(--display); font-weight: 400; font-size: clamp(40px, 7vw, 108px); line-height: .98; text-transform: uppercase;
-  }
-  .statement .soft { font-family: var(--sans); font-style: italic; font-weight: 400; font-stretch: 85%; text-transform: none; font-size: .5em; color: var(--gold-deep); vertical-align: middle; }
-  .statement .tilt { display: inline-block; font-family: var(--black); text-transform: none; color: var(--gold-deep); transform: rotate(-8deg); font-size: .85em; }
-  .statement .huge { font-size: 1.4em; }
-  .petal { position: absolute; width: 520px; opacity: .95; pointer-events: none; }
-  .petal.tl { left: -170px; top: -120px; }
-  .petal.br { right: -200px; bottom: -180px; transform: rotate(140deg); }
-  .petal { opacity: 1; filter: drop-shadow(0 18px 28px rgba(40, 30, 10, .22)) drop-shadow(0 2px 3px rgba(40, 30, 10, .25)); }
-  .chain-gl { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;
-    filter: drop-shadow(0 14px 18px rgba(60, 40, 8, .22)) drop-shadow(0 2px 3px rgba(60, 40, 8, .28)); }
-  .statement.gl-on .chain-art { display: none; }
-  .chain-art { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;
-    filter: drop-shadow(0 14px 18px rgba(60, 40, 8, .22)) drop-shadow(0 2px 2px rgba(60, 40, 8, .3)); }
-  .chain-art .spark { fill: #FFFFFF; transform-box: fill-box; transform-origin: center; opacity: 0; animation: twinkle 3.6s ease-in-out infinite; animation-delay: var(--t, 0s); filter: drop-shadow(0 0 4px rgba(255, 244, 210, .95)); }
-  .chain-a { animation: sway-a 9s ease-in-out infinite alternate; transform-origin: 0 0; }
-  .chain-b { animation: sway-b 11s ease-in-out infinite alternate; transform-origin: 1440px 800px; }
-  @keyframes sway-a { to { transform: rotate(1.6deg) translateY(6px); } }
-  @keyframes sway-b { to { transform: rotate(-1.4deg) translateY(-6px); } }
-  .js .chain use, .js .gems use { opacity: 0; transition: opacity .5s ease, translate .9s var(--ease-out); translate: 0 -18px; transition-delay: var(--d, 0s); }
-  .js .statement.in .chain use, .js .statement.in .gems use { opacity: 1; translate: 0 0; }
-  .petal .spark { fill: #FFFFFF; transform-box: fill-box; transform-origin: center; opacity: 0; animation: twinkle 3.6s ease-in-out infinite; animation-delay: var(--t, 0s); filter: drop-shadow(0 0 4px rgba(255, 244, 210, .95)); }
-  @keyframes twinkle { 0%, 100% { opacity: 0; scale: .3; rotate: 0deg; } 45% { opacity: 1; scale: 1; rotate: 45deg; } 60% { opacity: .9; scale: .85; } }
+  /* 5 · Agenda */
+  .agenda { border-top: 1px solid var(--ink); }
+  .agenda li { display: grid; grid-template-columns: 200px 1fr 1.2fr; gap: 8px 32px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid var(--line); }
+  .agenda { list-style: none; padding: 0; }
+  .agenda time { font: 500 12px var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--gold-deep); white-space: nowrap; }
+  .agenda h3 { font-size: clamp(22px, 2.2vw, 27px); }
+  .agenda p { color: var(--muted); font-size: 15px; }
+  .agenda li.quiet h3, .agenda li.quiet time { color: var(--muted); }
+  .footnote { margin-top: 28px; font-size: 13px; color: var(--muted); font-style: italic; }
 
-  .pillars { border-top: 1px solid var(--line-ivory); }
-  .pillars .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .pillar { padding: 56px 32px 64px; }
-  .pillar + .pillar { border-left: 1px solid var(--line-ivory); }
-  .pillar h3 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 52px; line-height: 1; text-transform: uppercase; }
-  .pillar h3 .num { color: var(--gold-deep); }
-  .pillar p { margin: 14px 0 0; color: var(--muted-on-ivory); max-width: 340px; }
-  .ginkgo { width: 54px; margin-bottom: 22px; }
+  /* 6 · Offer + RSVP */
+  .offer-sec { background: var(--ink); color: var(--paper); }
+  .offer-sec .eyebrow { color: #A49D93; }
+  .offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 112px); align-items: start; }
+  .offer-sec h2 { margin-top: 18px; font-size: clamp(46px, 6.4vw, 88px); color: var(--paper); line-height: 1; }
+  .offer-sec h2 span { display: block; font-style: italic; color: var(--gold); }
+  .offer-sec .lead { margin-top: 24px; font: 400 21px/1.45 var(--serif); color: var(--paper); }
+  .offer-sec .body { margin-top: 14px; color: #BDB6AC; }
+  .fine { margin-top: 18px; font-size: 12px; color: #8F887F; }
+  .steps { list-style: none; padding: 0; margin-top: 40px; border-top: 1px solid rgba(250, 248, 244, .16); counter-reset: s; }
+  .steps li { counter-increment: s; display: grid; grid-template-columns: 40px 1fr; padding: 16px 0; border-bottom: 1px solid rgba(250, 248, 244, .16); color: #D9D3C9; }
+  .steps li::before { content: counter(s, decimal-leading-zero); font: 500 12px/1.9 var(--sans); color: var(--gold); }
+  .steps .arrow { color: var(--gold); margin-left: 6px; }
+  .terms { margin-top: 32px; }
+  .terms summary { cursor: pointer; font: 500 11px var(--sans); letter-spacing: .2em; text-transform: uppercase; color: #A49D93; list-style: none; }
+  .terms summary::-webkit-details-marker { display: none; }
+  .terms summary::after { content: " +"; }
+  .terms[open] summary::after { content: " −"; }
+  .terms ul { margin-top: 14px; padding-left: 18px; font-size: 13px; color: #A49D93; }
+  .terms li { margin: 4px 0; }
+  .terms .draft { font-style: italic; }
+  .form-card { background: var(--paper); color: var(--text); padding: clamp(28px, 4vw, 48px); }
 
-  .story { padding: 112px 0; border-top: 1px solid var(--line-ivory); }
-  .story .wrap { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; }
-  .story h2 { flex: 1 1 420px; margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(48px, 6vw, 88px); line-height: .95; text-transform: uppercase; }
-  .story h2 em { font-family: var(--black); font-style: normal; text-transform: none; color: var(--gold-deep); }
-  .story .cols { flex: 1 1 460px; column-width: 240px; column-gap: 36px; color: var(--muted-on-ivory); }
-  .story .cols p { margin: 0 0 14px; }
-  .story .cols p:first-child::first-letter { float: left; font-family: var(--black); font-size: 64px; line-height: .8; margin: 6px 8px 0 0; color: var(--gold-deep); }
+  /* RSVP form (inline + popup share it) */
+  .rsvp-form { display: grid; gap: 22px; }
+  .rsvp-form .intro { color: var(--muted); font-size: 14px; }
+  .rsvp-form h3 { font-size: 30px; }
+  .field { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 6px; row-gap: 8px; font: 500 11px var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+  .field .opt { letter-spacing: .06em; text-transform: none; font-weight: 400; }
+  .field input, .field select { flex: 1 0 100%; width: 100%; padding: 10px 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; font: 400 16px var(--sans); letter-spacing: 0; text-transform: none; color: var(--ink); -webkit-appearance: none; appearance: none; transition: border-color .3s; }
+  .field select { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23756E66'/%3E%3C/svg%3E") no-repeat right 4px center; padding-right: 24px; }
+  .field input:focus, .field select:focus { outline: none; border-bottom-color: var(--ink); }
+  .field input[aria-invalid="true"] { border-bottom-color: #A3412F; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: end; }
+  .consent { display: grid; grid-template-columns: 18px 1fr; gap: 12px; font-size: 13px; line-height: 1.55; color: var(--muted); }
+  .consent input { margin: 3px 0 0; accent-color: var(--ink); width: 16px; height: 16px; }
+  .rsvp-form .btn { width: 100%; }
+  .msg { font-size: 14px; line-height: 1.55; }
+  .msg:empty { display: none; }
+  .msg.ok { padding: 18px; border: 1px solid var(--gold); color: var(--ink); background: #FBF6EC; }
+  .msg.err { color: #A3412F; }
 
-  /* Lineup — tracklist */
-  .day { background: var(--paper); color: var(--ink); padding: 104px 0 120px; overflow: hidden; }
-  .day-title { margin: 0; font-family: var(--sans); font-weight: 500; font-stretch: 70%; font-size: clamp(80px, 15vw, 220px); line-height: .85; text-transform: uppercase; white-space: nowrap; text-align: center; letter-spacing: -.02em; }
-  .day-title sup { font-size: .2em; font-stretch: 100%; margin-left: .15em; color: var(--gold-deep); }
-  .day-sub { text-align: center; margin: 16px 0 48px; color: var(--muted-on-ivory); }
-  .tracks { list-style: none; margin: 0 auto; padding: 0; max-width: 980px; text-align: center; }
-  .tracks li {
-    border-bottom: 1px solid var(--line-ivory); padding: 10px 0;
-    font-family: var(--sans); font-weight: 600; font-stretch: 72%; font-size: clamp(30px, 4.6vw, 58px); line-height: 1.05; text-transform: uppercase; letter-spacing: -.01em;
-  }
-  .tracks li:first-child { border-top: 1px solid var(--line-ivory); }
-  .tracks sup { font-size: 11px; font-weight: 600; font-stretch: 100%; letter-spacing: .12em; color: var(--gold-deep); margin-right: 8px; vertical-align: top; position: relative; top: .6em; }
-  .track-head {
-    display: block; width: 100%; padding: 0 44px; margin: 0; border: 0; background: none; cursor: pointer; position: relative;
-    font: inherit; color: inherit; text-transform: inherit; letter-spacing: inherit; text-align: center;
-  }
-  .track-head::after {
-    content: '+'; position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
-    font-family: var(--sans); font-weight: 300; font-stretch: 100%; font-size: 28px; line-height: 1; color: var(--gold-deep);
-    transition: transform .4s var(--ease-out);
-  }
-  .track-head[aria-expanded="true"]::after { transform: translateY(-50%) rotate(45deg); }
-  .track-head:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
-  .track-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s var(--ease-out); }
-  .track-body > div { overflow: hidden; }
-  .track-body p {
-    margin: 0 auto; max-width: 620px; padding: 14px 20px 8px;
-    font-family: var(--sans); font-weight: 400; font-stretch: 100%; font-size: 17px; line-height: 1.6;
-    text-transform: none; letter-spacing: 0; color: var(--muted-on-ivory);
-    opacity: 0; transition: opacity .4s;
-  }
-  .track-head[aria-expanded="true"] + .track-body { grid-template-rows: 1fr; }
-  .track-head[aria-expanded="true"] + .track-body p { opacity: 1; transition-delay: .1s; }
-  .tracks em { font-style: italic; font-weight: 400; font-stretch: 85%; text-transform: none; font-size: .42em; letter-spacing: 0; color: var(--muted-on-ivory); margin-left: 8px; }
+  /* Popup */
+  dialog.pop { width: min(560px, calc(100% - 32px)); max-height: calc(100% - 32px); padding: 0; border: 0; background: var(--paper); color: var(--text); overflow: auto; }
+  dialog.pop::backdrop { background: rgba(22, 21, 19, .55); }
+  .pop-top { padding: 36px clamp(24px, 5vw, 44px) 28px; background: var(--ink); color: var(--paper); text-align: center; }
+  .pop-top h2 { margin-top: 10px; font-size: clamp(34px, 6vw, 46px); line-height: 1.02; color: var(--paper); }
+  .pop-top h2 span { font-style: italic; color: var(--gold); }
+  .pop-top p { margin-top: 12px; color: #BDB6AC; font-size: 14px; }
+  .pop-top .eyebrow { color: #A49D93; }
+  .pop-body { padding: 28px clamp(24px, 5vw, 44px) 36px; }
+  .pop-close { position: absolute; top: 10px; right: 10px; width: 44px; height: 44px; border: 0; background: none; color: var(--paper); font: 300 26px/1 var(--sans); cursor: pointer; }
+  .pop-close:focus-visible { outline-offset: -8px; outline-color: var(--gold); }
+  .pop-later { display: block; margin: 14px auto 0; border: 0; background: none; font-size: 13px; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 
-  /* Offer */
-  .offer { position: relative; overflow: hidden; padding: 128px 0; text-align: center; }
-  .offer .ribbons { top: 50%; bottom: auto; transform: translateY(-50%); height: 420px; opacity: .55; }
-  .offer-inner { position: relative; z-index: 1; }
-  .offer h2 { margin: 18px 0 0; font-weight: 400; line-height: .85; }
-  .offer h2 .a { display: block; font-family: var(--display); font-size: clamp(80px, 15vw, 230px); text-transform: uppercase; }
-  .offer h2 .b { display: block; font-family: var(--black); font-size: clamp(54px, 8vw, 120px); color: var(--ivory); transform: rotate(-3deg); margin-top: -.1em; }
-  .offer p { margin: 28px auto 0; max-width: 520px; color: var(--muted-on-ink); font-size: 18px; }
-  .offer .terms { margin: 8px auto 32px; font-size: 13px; }
+  /* 7 · FAQ + footer */
+  .faq { border-top: 1px solid var(--ink); max-width: 860px; }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq summary { position: relative; padding: 22px 44px 22px 0; cursor: pointer; list-style: none; font: 400 clamp(21px, 2.2vw, 25px)/1.3 var(--serif); color: var(--ink); }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font: 300 22px var(--sans); color: var(--muted); transition: transform .3s var(--ease); }
+  .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  .faq summary:hover { color: var(--gold-deep); }
+  .faq details p { padding: 0 44px 24px 0; color: var(--muted); max-width: 640px; }
 
-  /* Featuring gallery */
-  .bill { padding: 104px 0; border-top: 1px solid var(--line-ink); }
-  .bill-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 36px; }
-  .bill-head h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(56px, 8vw, 120px); line-height: .9; text-transform: uppercase; }
-  .bill-head p { margin: 0; max-width: 360px; color: var(--muted-on-ink); }
-  .gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 260px; gap: 12px; }
-  .shot { position: relative; overflow: hidden; background: #171613; border: 1px solid var(--line-ink); display: flex; flex-direction: column; justify-content: flex-end; padding: 18px; }
-  .shot.big { grid-column: span 2; grid-row: span 2; }
-  .shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.1); transition: filter .4s, transform .6s; }
-  .shot:hover img { filter: grayscale(0); transform: scale(1.03); }
-  .shot .ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; color: var(--muted-on-ink); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
-  .shot .cap { position: relative; z-index: 1; }
-  .shot .cap b { display: block; font-family: var(--display); font-weight: 400; font-size: 30px; line-height: 1; text-transform: uppercase; }
-  .shot.big .cap b { font-size: 56px; }
-  .shot .cap span { font-size: 13px; color: var(--muted-on-ink); }
+  .site-foot { padding: clamp(72px, 10vw, 120px) 0 40px; border-top: 1px solid var(--line); text-align: center; }
+  .foot-mark { font: italic 300 clamp(44px, 7vw, 88px)/1 var(--serif); color: var(--ink); }
+  .site-foot .tags { margin-top: 20px; }
+  .foot-addr { margin-top: 36px; color: var(--muted); font-size: 14px; }
+  .social { display: flex; justify-content: center; gap: 28px; margin-top: 18px; list-style: none; padding: 0; }
+  .social a { font: 500 11px var(--sans); letter-spacing: .2em; text-transform: uppercase; text-decoration: none; color: var(--ink); transition: color .3s; }
+  .social a:hover { color: var(--gold-deep); }
+  .legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
 
-  /* Visit */
-  .visit { padding: 104px 0; }
-  .visit .wrap { display: flex; flex-wrap: wrap; gap: 56px; }
-  .visit .info { flex: 1 1 380px; }
-  .visit h2 { margin: 12px 0 32px; font-family: var(--display); font-weight: 400; font-size: clamp(56px, 7vw, 104px); line-height: .9; text-transform: uppercase; }
-  .row { display: flex; flex-wrap: wrap; gap: 4px 24px; border-top: 1px solid var(--line-ivory); padding: 16px 0; }
-  .row:last-of-type { border-bottom: 1px solid var(--line-ivory); }
-  .row .k { flex: 0 0 96px; color: var(--gold-deep); }
-  .row .v { flex: 1 1 240px; font-size: 18px; font-weight: 500; }
-  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-  .ivory .btn-gold { background: var(--ink); color: var(--ivory); }
-  .ivory .btn-gold:hover { background: var(--gold-deep); }
-  .map { flex: 999 1 480px; min-width: 0; min-height: 460px; border: 1px solid var(--line-ivory); background: var(--paper); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--muted-on-ivory); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
-  .map iframe { width: 100%; height: 100%; min-height: 460px; border: 0; filter: grayscale(1); }
-
-  /* RSVP */
-  .rsvp { padding: 112px 0; text-align: center; border-top: 1px solid var(--line-ink); }
-  .rsvp h2 { margin: 0; font-weight: 400; line-height: .9; }
-  .rsvp h2 .a { display: block; font-family: var(--display); font-size: clamp(56px, 8vw, 112px); text-transform: uppercase; }
-  .rsvp h2 .b { display: block; font-family: var(--black); font-size: clamp(40px, 5vw, 72px); color: var(--gold); }
-  .rsvp > .wrap > p { margin: 18px auto 0; color: var(--muted-on-ink); }
-  .rsvp form { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; max-width: 760px; margin: 48px auto 0; text-align: left; }
-  .field { display: flex; flex-direction: column; gap: 6px; }
-  .field input { background: transparent; border: 0; border-bottom: 1px solid var(--muted-on-ink); color: var(--ivory); padding: 10px 0; font: 18px var(--sans); width: 100%; }
-  .field input:focus { border-bottom-color: var(--gold); outline: none; }
-  .check { grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted-on-ink); }
-  .check input { width: 20px; height: 20px; accent-color: var(--gold); }
-  .rsvp button[type="submit"] { grid-column: 1 / -1; }
-  .note { grid-column: 1 / -1; margin: 0; min-height: 1.5em; color: var(--gold); text-align: center; }
-
-  /* Footer */
-  .site-foot { border-top: 1px solid var(--line-ink); padding: 48px 0 32px; }
-  .foot-mark { font-family: var(--black); font-size: clamp(56px, 12vw, 180px); line-height: .9; text-align: center; margin: 0 0 40px; }
-  .foot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; font-size: 13px; color: var(--muted-on-ink); }
-  .foot-grid b { display: block; color: var(--ivory); font-weight: 600; margin-bottom: 6px; }
-  .foot-grid a { text-decoration: none; display: block; }
-  .foot-grid a:hover { color: var(--gold); }
-  .tags { color: var(--gold); }
-
-  @keyframes spin { to { transform: rotate(360deg); } }
-  @keyframes float { 50% { transform: translateY(-14px) rotate(6deg); } }
-  @keyframes drift { to { transform: translateX(-60px); } }
-
-  /* ================= LANGUAGES ================= */
-  .day-title { white-space: normal; }
-  /* Blackletter has no Vietnamese/Chinese glyphs: translated lines switch to the sans italic */
-  html:not([lang="en"]) .offer h2 .b,
-  html:not([lang="en"]) .rsvp h2 .b { font-family: var(--sans); font-style: italic; font-weight: 600; font-stretch: 80%; }
-  html:not([lang="en"]) .offer h2 .b { font-size: clamp(44px, 7vw, 104px); }
-  /* Chinese: let CJK fall back to a heavy system face; keep Latin in Anton */
-  html[lang|="zh"] { --display: 'Anton', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif; --sans: 'Archivo', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', system-ui, sans-serif; }
-  html[lang|="zh"] .statement p, html[lang|="zh"] .pillar h3, html[lang|="zh"] .day-title, html[lang|="zh"] .offer h2 .a,
-  html[lang|="zh"] .bill-head h2, html[lang|="zh"] .visit h2, html[lang|="zh"] .rsvp h2 .a, html[lang|="zh"] .tracks li,
-  html[lang|="zh"] .menu-links a { font-weight: 900; font-synthesis: none; letter-spacing: .02em; }
-  html[lang|="zh"] .statement p { line-height: 1.15; }
-
-  /* ================= MOTION ================= */
-  /* Gold sheen sweeping across metal text */
-  .metal { background-size: 200% auto; animation: sheen 7s linear infinite; }
-  @keyframes sheen { to { background-position: -200% center; } }
-
-  /* Hero intro (only when JS runs) */
-  .js .hero-photo { clip-path: inset(100% 0 0 0); transition: clip-path 1.5s var(--ease-io) .15s; }
-  .js .hero h1 .shine { opacity: 0; transform: translateY(60px); transition: opacity 1.2s var(--ease-out) .55s, transform 1.4s var(--ease-out) .55s; }
-  .js .hero h1 .redefined { opacity: 0; transform: rotate(-16deg) scale(.82); transition: opacity 1s var(--ease-out) 1s, transform 1.3s var(--ease-out) 1s; }
-  .js .slogan { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease-out) 1.25s, transform 1s var(--ease-out) 1.25s; }
-  .is-loaded .slogan { opacity: 1; transform: none; }
-  .js .hero-meta, .js .hero-lead, .js .hero-cta, .js .badge, .js .cube { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease-out), transform 1s var(--ease-out); }
-  .js .hero-meta { transition-delay: 1.35s; } .js .hero-lead { transition-delay: 1.5s; } .js .hero-cta { transition-delay: 1.65s; }
-  .js .badge { transition-delay: 1.9s; } .js .cube { transition-delay: 2.1s; }
-  .is-loaded .hero-photo { clip-path: inset(0); }
-  .is-loaded .hero h1 .shine { opacity: 1; transform: none; }
-  .is-loaded .hero h1 .redefined { opacity: 1; transform: rotate(-4deg) scale(1); }
-  .is-loaded .hero-meta, .is-loaded .hero-lead, .is-loaded .hero-cta, .is-loaded .badge { opacity: 1; transform: none; }
-  .is-loaded .cube { opacity: .9; transform: none; }
-  .hero-photo img { transform: scale(1.15); transition: transform 2.4s var(--ease-out) .2s; }
-  .is-loaded .hero-photo img { transform: scale(1); }
-
-  /* Ribbons draw themselves, then drift */
-  .js .ribbons path { stroke-dasharray: 1900; stroke-dashoffset: 1900; animation: draw 2.8s var(--ease-io) forwards, drift 14s ease-in-out infinite alternate; }
-  .js .hero:not(.go) .ribbons path, .js .offer:not(.in) .ribbons path { animation-play-state: paused; }
-  @keyframes draw { to { stroke-dashoffset: 0; } }
-
-  /* Cursor spotlight on hero (desktop) */
-  .glow { position: absolute; left: 0; top: 0; width: 560px; height: 560px; margin: -280px 0 0 -280px; border-radius: 50%; pointer-events: none; z-index: 1;
-    background: radial-gradient(circle, rgba(234,212,154,.16), rgba(234,212,154,0) 62%);
-    transform: translate(var(--mx, 50vw), var(--my, 40vh)); transition: transform .25s linear, opacity .4s; opacity: 0; }
-  .hero:hover .glow { opacity: 1; }
-
-  /* Marquee bands */
-  .marquee { overflow: hidden; border-top: 1px solid var(--line-ink); border-bottom: 1px solid var(--line-ink); padding: 18px 0; background: var(--ink); }
-  .marquee.gold { background: var(--gold); border-color: var(--gold); color: var(--ink); }
-  .marquee-track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
-  .marquee.rev .marquee-track { animation-direction: reverse; animation-duration: 26s; }
-  .marquee-track > div { display: flex; align-items: center; gap: 36px; padding-right: 36px; }
-  .marquee span { font-family: var(--display); font-size: clamp(32px, 4.4vw, 60px); line-height: 1; text-transform: uppercase; white-space: nowrap; }
-  .marquee span.outline { color: transparent; -webkit-text-stroke: 1px var(--gold); }
-  .marquee.gold span.outline { -webkit-text-stroke-color: var(--ink); }
-  .marquee span.bl { font-family: var(--black); text-transform: none; }
-  .marquee .dia { width: 14px; height: 14px; border: 1px solid currentColor; transform: rotate(45deg); flex: none; }
-  .marquee:not(.gold) .dia { border-color: var(--gold); }
-  .marquee:hover .marquee-track { animation-play-state: paused; }
-  @keyframes marquee { to { transform: translateX(-50%); } }
-
-  /* Scroll reveals */
-  .js [data-reveal] { opacity: 0; transform: translateY(40px); transition: opacity .9s ease, transform 1.1s var(--ease-out); transition-delay: var(--d, 0s); }
-  .js [data-reveal="left"] { transform: translateX(-10%); transition-duration: 1.4s; }
-  .js [data-reveal="fade"] { transform: none; }
-  .js [data-reveal="clip"] { opacity: 1; transform: none; clip-path: inset(0 0 100% 0); transition: clip-path 1.3s var(--ease-io); transition-delay: var(--d, 0s); }
+  /* Quiet motion */
+  .js [data-reveal] { opacity: 0; transform: translateY(14px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
   .js [data-reveal].in { opacity: 1; transform: none; }
-  .js [data-reveal="clip"].in { clip-path: inset(0 0 0 0); }
-  .offer h2 .b[data-reveal].in { transform: rotate(-3deg); }
-  .js .count .ghost.in { transition: opacity 1.2s ease, transform .2s linear; }
-  .shot img { transform: scale(1.12); transition: transform 1.8s var(--ease-out), filter .4s; }
-  .shot.in img { transform: scale(1); }
-  .shot.in:hover img { transform: scale(1.04); }
-
-  /* Line icons draw in */
-  .js .ginkgo path, .js .ginkgo circle { stroke-dasharray: 220; stroke-dashoffset: 220; transition: stroke-dashoffset 1.8s var(--ease-io) .25s; }
-  .js .pillar.in .ginkgo path, .js .pillar.in .ginkgo circle { stroke-dashoffset: 0; }
-
-  /* Countdown digit flip */
-  .timer b.flip { animation: flip .5s var(--ease-out); }
-  @keyframes flip { from { transform: translateY(-35%); opacity: 0; filter: blur(4px); } to { transform: none; opacity: 1; filter: none; } }
-
-  /* Button sheen */
-  .btn { position: relative; overflow: hidden; }
-  .btn::after { content: ""; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.5) 50%, transparent 70%); transform: translateX(-130%); transition: transform .8s var(--ease-out); }
-  .btn:hover::after { transform: translateX(130%); }
-
-  /* Tracklist hover */
-  .track-head { transition: color .35s, letter-spacing .5s var(--ease-out); }
-  .track-head:hover, .track-head[aria-expanded="true"] { color: var(--gold-deep); letter-spacing: .01em; }
-
-  /* Menu links stagger in */
-  .menu-links li { opacity: 0; transform: translateX(40px); transition: opacity .5s, transform .6s var(--ease-out); }
-  .menu.open .menu-links li { opacity: 1; transform: none; }
-  .menu.open .menu-links li:nth-child(1) { transition-delay: .08s; } .menu.open .menu-links li:nth-child(2) { transition-delay: .14s; }
-  .menu.open .menu-links li:nth-child(3) { transition-delay: .2s; } .menu.open .menu-links li:nth-child(4) { transition-delay: .26s; }
-  .menu.open .menu-links li:nth-child(5) { transition-delay: .32s; } .menu.open .menu-links li:nth-child(6) { transition-delay: .38s; }
-
-  /* Scroll progress line */
-  .progress { position: fixed; left: 0; top: 0; height: 2px; width: 100%; z-index: 50; background: var(--gold-metal); background-size: 200% auto; transform-origin: 0 50%; transform: scaleX(var(--p, 0)); pointer-events: none; }
-
-  /* ================= TABLET (≤ 1024px) ================= */
-  @media (max-width: 1024px) {
-    .wrap { padding: 0 32px; }
-    .hero { padding-bottom: 180px; }
-    .hero h1 { margin-top: 140px; }
-    .badge { position: relative; right: auto; top: auto; margin: 48px auto 0; width: 140px; height: 140px; }
-    .badge .core { font-size: 36px; }
-    .cube { width: 80px; left: 4%; top: 120px; }
-    .ribbons { height: 180px; }
-
-    .statement { padding: 104px 0; }
-    .petal { width: 380px; }
-    .petal.tl { left: -150px; top: -110px; }
-    .petal.br { right: -170px; bottom: -150px; }
-
-    .pillars .grid { grid-template-columns: 1fr; }
-    .pillar { padding: 40px 0; display: grid; grid-template-columns: 72px 1fr; column-gap: 24px; align-items: start; }
-    .pillar .ginkgo { grid-row: span 2; margin: 6px 0 0; }
-    .pillar + .pillar { border-left: 0; border-top: 1px solid var(--line-ivory); }
-    .pillar p { max-width: 560px; }
-
-    .story .wrap { gap: 32px; }
-    .story h2 { flex-basis: 100%; }
-
-    .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 240px; }
-
-    .visit .wrap { gap: 40px; }
-    .visit .info, .map { flex: 1 1 100%; }
-    .map, .map iframe { min-height: 380px; }
-
-    .menu-panel { padding: 20px 28px 28px; }
-  }
-
-  /* ================= PHONE (≤ 600px) ================= */
-  @media (max-width: 600px) {
-    body { font-size: 15px; }
-    .wrap { padding: 0 20px; }
-    .site-head .wrap { padding-top: 14px; padding-bottom: 14px; }
-    .brand { font-size: 11px; letter-spacing: .22em; }
-    .head-mid { display: none; }
-    .menu-btn { font-size: 12px; letter-spacing: .22em; }
-
-    .btn { width: 100%; padding: 0 20px; }
-    .tag { font-size: 11px; letter-spacing: .16em; }
-
-    /* Hero */
-    .hero { min-height: auto; padding: 88px 0 150px; background-size: 18px 18px; }
-    .hero-photo { top: 24px; width: 82vw; }
-    .hero h1 { margin-top: 46vw; }
-    .hero h1 .shine { font-size: clamp(88px, 27vw, 140px); }
-    .hero h1 .redefined { font-size: clamp(46px, 14vw, 72px); }
-    .hero-meta { flex-direction: column; gap: 6px; margin-top: 36px; }
-    .hero-lead { font-size: 16px; }
-    .hero-cta { flex-direction: column; width: 100%; max-width: 360px; }
-    .cube { display: none; }
-    .badge { width: 116px; height: 116px; margin-top: 40px; }
-    .badge .core { font-size: 28px; }
-    .ribbons { height: 130px; }
-
-    /* Countdown */
-    .count { padding: 72px 0 80px; }
-    .count .ghost { font-size: 22vw; }
-    .timer { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; margin-top: 12px; font-size: 16px; padding: 0 20px; }
-    .timer b { font-size: 64px; }
-    .venue { margin-top: 40px; font-size: 30px; padding: 0 20px; }
-    .venue-sub { padding: 0 20px; font-size: 14px; }
-    .count .btn { width: auto; }
-
-    /* Statement */
-    .statement { padding: 80px 0; }
-    .statement p { font-size: clamp(34px, 10vw, 48px); line-height: 1.02; }
-    .statement .soft { display: block; font-size: .5em; margin: 10px 0; }
-    .petal { width: 240px; opacity: .9; }
-    .chain-art, .chain-gl { opacity: .55; }
-    .petal.tl { left: -120px; top: -90px; }
-    .petal.br { right: -120px; bottom: -110px; }
-
-    /* Pillars */
-    .pillar { grid-template-columns: 48px 1fr; column-gap: 16px; padding: 32px 0; }
-    .pillar h3 { font-size: 38px; }
-    .ginkgo { width: 40px; }
-
-    /* Story */
-    .story { padding: 72px 0; }
-    .story h2 { font-size: 46px; }
-    .story .cols { column-width: auto; column-count: 1; }
-
-    /* The day — stacked tracklist */
-    .day { padding: 72px 0 80px; }
-    .day-title { font-size: 25vw; }
-    .day-sub { margin-bottom: 32px; padding: 0 20px; font-size: 14px; }
-    .tracks li { font-size: 30px; padding: 14px 0; }
-    .tracks sup { display: block; position: static; margin: 0 0 4px; font-size: 10px; }
-    .tracks em { display: block; margin: 4px 0 0; font-size: 15px; }
-    .track-head { padding: 0 36px; }
-    .track-head::after { font-size: 24px; }
-    .track-body p { font-size: 15px; padding: 10px 8px 4px; }
-
-    /* Offer */
-    .offer { padding: 88px 0; }
-    .offer h2 .a { font-size: clamp(56px, 16vw, 96px); }
-    .offer h2 .b { font-size: clamp(40px, 11vw, 64px); }
-    .offer p { font-size: 16px; }
-    .offer .ribbons { height: 300px; }
-
-    /* Gallery */
-    .bill { padding: 72px 0; }
-    .bill-head { margin-bottom: 24px; }
-    .bill-head h2 { font-size: 52px; }
-    .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 180px; gap: 8px; }
-    .shot { padding: 12px; }
-    .shot .cap b { font-size: 20px; }
-    .shot.big .cap b { font-size: 36px; }
-    .shot .cap span { font-size: 11px; }
-    .shot .ph { font-size: 10px; padding: 12px; }
-
-    /* Visit */
-    .visit { padding: 72px 0; }
-    .visit h2 { font-size: 64px; margin-bottom: 24px; }
-    .row .k { flex-basis: 100%; }
-    .row .v { font-size: 16px; }
-    .btn-row { flex-direction: column; }
-    .map, .map iframe { min-height: 300px; }
-
-    /* RSVP */
-    .rsvp { padding: 80px 0; }
-    .rsvp h2 .a { font-size: clamp(44px, 13vw, 64px); }
-    .rsvp h2 .b { font-size: clamp(32px, 9vw, 44px); }
-    .rsvp form { grid-template-columns: 1fr; gap: 22px; margin-top: 36px; }
-
-    /* Footer */
-    .foot-mark { font-size: 15vw; margin-bottom: 28px; }
-    .foot-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
-
-    /* Menu */
-    .menu-panel { padding: 16px 20px 24px; }
-    .menu-links { margin-top: 32px; }
-    .menu-links a { font-size: 40px; }
-  }
-
-  /* ================= SMALL PHONE (≤ 380px) ================= */
-  @media (max-width: 380px) {
-    .brand { letter-spacing: .14em; }
-    .timer b { font-size: 54px; }
-    .tracks li { font-size: 26px; }
-    .gallery { grid-template-columns: 1fr; grid-auto-rows: 200px; }
-    .shot.big { grid-column: auto; grid-row: span 2; }
-    .shot.wide { grid-column: auto; }
-    .foot-grid { grid-template-columns: 1fr; }
-  }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    *, *::before, *::after { animation: none !important; transition: none !important; }
-    .js [data-reveal], .js .slogan, .js .hero-photo, .js .hero h1 .shine, .js .hero-meta, .js .hero-lead, .js .hero-cta, .js .badge, .js .cube { opacity: 1 !important; transform: none !important; clip-path: none !important; }
-    .js .hero h1 .redefined { opacity: 1 !important; transform: rotate(-4deg) !important; }
-    .ribbons path, .ginkgo path, .ginkgo circle { stroke-dashoffset: 0 !important; }
-    .glow, .progress { display: none; }
+    .js [data-reveal] { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .info-grid, .offer-grid { grid-template-columns: 1fr; }
+    .people { grid-template-columns: repeat(2, 1fr); }
+    .agenda li { grid-template-columns: 170px 1fr; }
+    .agenda p { grid-column: 2; }
+  }
+  /* Phone */
+  @media (max-width: 600px) {
+    body { font-size: 15px; }
+    .site-head .wrap { height: 60px; }
+    .brand { font-size: 10px; letter-spacing: .2em; }
+    .when { line-height: 2; }
+    .when i { margin: 0 6px; }
+    .cta .btn { flex: 1 1 100%; }
+    .facts div { grid-template-columns: 1fr; gap: 2px; }
+    .people { gap: 28px 14px; }
+    .person h3 { font-size: 21px; }
+    .person blockquote { font-size: 17px; }
+    .person .btn { align-self: stretch; padding: 0 10px; letter-spacing: .12em; }
+    .agenda li { grid-template-columns: 1fr; gap: 4px; padding: 18px 0; }
+    .agenda p { grid-column: auto; }
+    .two { grid-template-columns: 1fr; }
+    .social { gap: 20px; }
   }
 </style>
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-
-<!-- Reusable gold ribbon set -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <linearGradient id="g-metal" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#8C6A26"/>
-      <stop offset=".3" stop-color="#EAD49A"/>
-      <stop offset=".55" stop-color="#B8913F"/>
-      <stop offset=".75" stop-color="#F3E2B3"/>
-      <stop offset="1" stop-color="#9C7A32"/>
-    </linearGradient>
-    <!-- Diamond / steel facet fills -->
-    <linearGradient id="f-ice" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#C9D3DA"/><stop offset=".55" stop-color="#F4F7F9"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
-    <linearGradient id="f-steel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DDE4E9"/><stop offset="1" stop-color="#8A97A1"/></linearGradient>
-    <linearGradient id="f-gold" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#A9822F"/><stop offset=".5" stop-color="#F3E2B3"/><stop offset="1" stop-color="#C9A24E"/></linearGradient>
-    <linearGradient id="f-dark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5E6A73"/><stop offset="1" stop-color="#262B2F"/></linearGradient>
-    <!-- One crystal petal, pointing up, base at 0,0 -->
-    <g id="c-petal">
-      <path d="M0 0 L-46 -82 L0 -96 Z" fill="url(#f-dark)"/>
-      <path d="M-46 -82 L0 -192 L0 -96 Z" fill="url(#f-ice)"/>
-      <path d="M0 -96 L0 -192 L46 -82 Z" fill="url(#f-gold)"/>
-      <path d="M0 0 L0 -96 L46 -82 Z" fill="url(#f-steel)"/>
-      <path d="M0 0 L-46 -82 L0 -192 L46 -82 Z" fill="none" stroke="#7A5B1C" stroke-width="1"/>
-      <path d="M0 -6 L0 -186 M-46 -82 L46 -82" fill="none" stroke="#FFFFFF" stroke-width=".7" opacity=".75"/>
-    </g>
-    <!-- Thin spike between petals -->
-    <g id="c-spike">
-      <path d="M0 0 L-14 -64 L0 -132 Z" fill="url(#f-steel)"/>
-      <path d="M0 0 L0 -132 L14 -64 Z" fill="url(#f-dark)"/>
-      <path d="M0 0 L-14 -64 L0 -132 L14 -64 Z" fill="none" stroke="#7A5B1C" stroke-width=".8"/>
-    </g>
-    <!-- Full crystal flower -->
-    <symbol id="crystal-flower" viewBox="-200 -200 400 400" overflow="visible">
-      <use href="#c-spike" transform="rotate(36)"/>
-      <use href="#c-spike" transform="rotate(108)"/>
-      <use href="#c-spike" transform="rotate(180)"/>
-      <use href="#c-spike" transform="rotate(252)"/>
-      <use href="#c-spike" transform="rotate(324)"/>
-      <use href="#c-petal"/>
-      <use href="#c-petal" transform="rotate(72)"/>
-      <use href="#c-petal" transform="rotate(144)"/>
-      <use href="#c-petal" transform="rotate(216)"/>
-      <use href="#c-petal" transform="rotate(288)"/>
-      <!-- Brilliant-cut centre stone -->
-      <g stroke="#7A5B1C" stroke-width=".7">
-        <path d="M0 0 L0 -28 L20 -20 Z" fill="url(#f-ice)"/>
-        <path d="M0 0 L20 -20 L28 0 Z" fill="url(#f-gold)"/>
-        <path d="M0 0 L28 0 L20 20 Z" fill="url(#f-steel)"/>
-        <path d="M0 0 L20 20 L0 28 Z" fill="url(#f-dark)"/>
-        <path d="M0 0 L0 28 L-20 20 Z" fill="url(#f-steel)"/>
-        <path d="M0 0 L-20 20 L-28 0 Z" fill="url(#f-dark)"/>
-        <path d="M0 0 L-28 0 L-20 -20 Z" fill="url(#f-ice)"/>
-        <path d="M0 0 L-20 -20 L0 -28 Z" fill="url(#f-gold)"/>
-      </g>
-      <path d="M0 -12 L9 0 L0 12 L-9 0 Z" fill="#FFFFFF" opacity=".85"/>
-    </symbol>
-  </defs>
-</svg>
-
-<div class="progress" aria-hidden="true"></div>
 
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="#top">Brilliant Jewelers</a>
-    <a class="head-mid" href="#top" aria-label="Shine Redefined home">Sr</a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" id="menu-open">Menu (+)</button>
+    <ul class="nav">
+      <li><a href="#story">The story</a></li>
+      <li><a href="#info">Event info</a></li>
+      <li><a href="#coming">Who's coming</a></li>
+      <li><a href="#agenda">Agenda</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <button class="btn btn-solid btn-sm" type="button" data-open-rsvp>RSVP</button>
   </div>
 </header>
 
-<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
-  <div class="menu-panel">
-    <div class="menu-top">
-      <span class="tag" style="color:var(--muted-on-ink)">Shine Redefined — 12.12.26</span>
-      <button class="menu-btn" type="button" id="menu-close">Close (×)</button>
+<main id="top">
+
+<!-- 1 · Hero -->
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker" data-reveal>Something's coming to Sharpstown.</p>
+    <p class="eyebrow" data-reveal>Brilliant Jewelers Grand Opening</p>
+    <h1 data-reveal>Shine <span>Redefined</span></h1>
+    <p class="when" data-reveal>12.12<i>·</i>300 Sharpstown Center, Houston, TX 77036</p>
+    <p class="sub" data-reveal>Sharpstown never dimmed. Join us December 12 for live music, a car show, and a one-day-only offer.</p>
+    <div class="cta" data-reveal>
+      <button class="btn btn-solid" type="button" data-open-rsvp>RSVP and claim your offer</button>
+      <a class="btn" href="https://maps.app.goo.gl/rG756HiFMuE4MmCT8" target="_blank" rel="noopener">Get directions</a>
     </div>
-    <ul class="menu-links">
-      <li><a href="#top">Index<sup>(01)</sup></a></li>
-      <li><a href="#story">The comeback<sup>(02)</sup></a></li>
-      <li><a href="#day">The day<sup>(03)</sup></a></li>
-      <li><a href="#offer">The offer<sup>(04)</sup></a></li>
-      <li><a href="#bill">On the bill<sup>(05)</sup></a></li>
-      <li><a href="#visit">Find us<sup>(06)</sup></a></li>
-    </ul>
-    <div class="menu-foot">
-      <div>
-        <div class="tag" style="margin-bottom:10px">Language</div>
-        <div class="lang" role="group" aria-label="Language">
-          <button type="button" aria-pressed="true" lang="en">EN</button>
-          <button type="button" aria-pressed="false" lang="zh">中文</button>
-          <button type="button" aria-pressed="false" lang="vi">VI</button>
-          <button type="button" aria-pressed="false" lang="es">ES</button>
+    <p class="tags" data-reveal>#ShineRedefined #BrilliantJewelers #Sharpstown</p>
+  </div>
+</section>
+
+<!-- 2 · Comeback story -->
+<section class="story alt" id="story">
+  <div class="wrap">
+    <h2 class="eyebrow" data-reveal>Sharpstown was once a Houston icon.</h2>
+    <p class="quote" data-reveal>Sharpstown was once a <em>Houston icon.</em> <span class="soft">We're not here by accident.</span> We're here to write what comes <em>next.</em></p>
+    <p class="support" data-reveal>On December 12, Brilliant Jewelers opens its doors in the neighborhood with music, cars, and a thank-you offer for Sharpstown. Come be part of the next chapter.</p>
+  </div>
+</section>
+
+<!-- 3 · Event info -->
+<section id="info">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="eyebrow">Event info</p>
+      <h2>One day. One street. <em class="accent">One shine.</em></h2>
+    </div>
+    <div class="info-grid">
+      <div data-reveal>
+        <dl class="facts">
+          <div><dt>Date</dt><dd>Saturday, December 12, 2026</dd></div>
+          <div><dt>Time</dt><dd>10:00 AM – 6:00 PM</dd></div>
+          <div><dt>Place</dt><dd>300 Sharpstown Center, Houston, TX 77036</dd></div>
+          <div><dt>Parking</dt><dd class="tbd">Parking details to be added</dd></div>
+        </dl>
+        <div class="cta">
+          <a class="btn btn-solid" href="https://maps.app.goo.gl/rG756HiFMuE4MmCT8" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn" href="#" id="add-cal">Add to calendar</a>
+        </div>
+        <div class="map">
+          <iframe title="Map: Brilliant Jewelers, 300 Sharpstown Center, Houston, TX 77036" src="https://maps.google.com/maps?q=300+Sharpstown+Center+Ste+1010A,+Houston,+TX+77036&amp;ll=29.7072411,-95.517191&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
       </div>
-      <div>300 Sharpstown Center<br>Houston, TX 77036<br>Sat · Dec 12 · 2026</div>
-    </div>
-  </div>
-</div>
-
-<main>
-
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="glow" aria-hidden="true"></div>
-  <svg class="cube" viewBox="0 0 100 100" fill="none" stroke="url(#g-metal)" stroke-width="1.2" aria-hidden="true">
-    <path d="M50 8 L88 28 L88 72 L50 92 L12 72 L12 28 Z"/>
-    <path d="M12 28 L50 48 L88 28 M50 48 L50 92"/>
-    <path d="M12 28 L50 8 M31 18 L69 38 M69 18 L31 38" opacity=".45"/>
-  </svg>
-
-  <div class="wrap hero-inner">
-    <div class="hero-photo">
-      <span>[B&amp;W photo — featured creator or performer]</span>
-    </div>
-    <h1>
-      <span class="shine metal">Shine</span>
-      <span class="redefined">Redefined</span>
-    </h1>
-    <p class="slogan">Redefine Your Style. <span class="metal">Smile &amp; Shine!</span></p>
-    <div class="hero-meta tag">
-      <span>Grand Opening</span><span>Sat · 12.12.2026</span><span>300 Sharpstown Center · Houston</span>
-    </div>
-    <p class="hero-lead">Sharpstown was once a Houston icon. We're not here by accident — we're here to write what comes next.</p>
-    <div class="hero-cta">
-      <a class="btn btn-gold" href="#rsvp">Save the date</a>
-      <a class="btn btn-ghost" href="https://www.instagram.com/brilliant_jewelers2024/" target="_blank" rel="noopener">Follow @brilliant_jewelers2024</a>
-    </div>
-  </div>
-
-  <div class="badge" aria-hidden="true">
-    <svg viewBox="0 0 200 200">
-      <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-      <circle cx="100" cy="100" r="96" fill="none" stroke="#C9A24E" stroke-width=".8"/>
-      <text font-family="Archivo, sans-serif" font-size="15" font-weight="600" letter-spacing="5" fill="#F4F0E8">
-        <textPath href="#circ">SHINE REDEFINED · 12.12.2026 · SHARPSTOWN · </textPath>
-      </text>
-    </svg>
-    <div class="core">Bj</div>
-  </div>
-
-  <svg class="ribbons" viewBox="0 0 1440 240" preserveAspectRatio="none" fill="none" stroke="url(#g-metal)" stroke-width="1.3" aria-hidden="true">
-    <path d="M-80 150 C 200 40, 420 230, 720 140 S 1240 40, 1540 130"/>
-    <path d="M-80 160 C 200 50, 420 240, 720 150 S 1240 50, 1540 140"/>
-    <path d="M-80 170 C 200 60, 420 250, 720 160 S 1240 60, 1540 150"/>
-    <path d="M-80 180 C 200 70, 420 260, 720 170 S 1240 70, 1540 160"/>
-    <path d="M-80 190 C 200 80, 420 270, 720 180 S 1240 80, 1540 170"/>
-    <path d="M-80 200 C 200 90, 420 280, 720 190 S 1240 90, 1540 180"/>
-    <path d="M-80 210 C 200 100, 420 290, 720 200 S 1240 100, 1540 190"/>
-    <path d="M-80 220 C 200 110, 420 300, 720 210 S 1240 110, 1540 200"/>
-  </svg>
-</section>
-
-<!-- MARQUEE 1 -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <div><span class="metal">New Value</span><i class="dia"></i><span class="outline">New Vision</span><i class="dia"></i><span class="bl">New Era</span><i class="dia"></i><span class="metal">Shine Redefined</span><i class="dia"></i><span class="outline">12.12.2026</span><i class="dia"></i></div>
-    <div><span class="metal">New Value</span><i class="dia"></i><span class="outline">New Vision</span><i class="dia"></i><span class="bl">New Era</span><i class="dia"></i><span class="metal">Shine Redefined</span><i class="dia"></i><span class="outline">12.12.2026</span><i class="dia"></i></div>
-  </div>
-</div>
-
-<!-- COUNTDOWN -->
-<section class="count" aria-labelledby="count-h">
-  <h2 class="sr-only" id="count-h">Countdown to the grand opening</h2>
-  <p class="ghost" aria-hidden="true">Sharpstown</p>
-  <div class="timer" role="timer" aria-live="off">
-    <div><b id="t-d">00</b><span class="tag">Days</span></div>
-    <div><b id="t-h">00</b><span class="tag">Hours</span></div>
-    <div><b id="t-m">00</b><span class="tag">Minutes</span></div>
-    <div><b id="t-s">00</b><span class="tag">Seconds</span></div>
-  </div>
-  <p class="venue">300 Sharpstown Center</p>
-  <p class="venue-sub">Saturday, December 12, 2026 · Doors [TIME] · Houston, TX</p>
-  <a class="btn btn-ghost" href="#visit">Get directions</a>
-</section>
-
-<!-- STATEMENT -->
-<section class="ivory statement" aria-label="Our story in one line">
-  <svg class="chain-art" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <defs>
-      <linearGradient id="gold-a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF3CC"/><stop offset=".28" stop-color="#E9C878"/><stop offset=".55" stop-color="#B98B2E"/><stop offset=".8" stop-color="#E7C66F"/><stop offset="1" stop-color="#8A6420"/></linearGradient>
-      <linearGradient id="gold-b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A6420"/><stop offset=".45" stop-color="#F6E3A8"/><stop offset="1" stop-color="#A97D28"/></linearGradient>
-      <radialGradient id="pave-stone"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#E9EEF2"/><stop offset="1" stop-color="#9AA6AF"/></radialGradient>
-      <pattern id="pave" width="7.2" height="7.2" patternUnits="userSpaceOnUse" patternTransform="translate(1.6 1.6)"><circle cx="3.6" cy="3.6" r="2.9" fill="#8A6420"/><circle cx="3.6" cy="3.6" r="2.3" fill="url(#pave-stone)"/></pattern>
-      <linearGradient id="ice-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#C7D1D8"/></linearGradient>
-      <linearGradient id="ice-b" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF2F5"/><stop offset="1" stop-color="#8E9BA5"/></linearGradient>
-      <linearGradient id="ice-c" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#6F7C86"/><stop offset="1" stop-color="#DCE3E8"/></linearGradient>
-      <!-- flat paperclip link, centred, long axis = x -->
-      <g id="lk-flat">
-        <rect x="-37" y="-17" width="74" height="34" rx="17" fill="none" stroke="#6E4F16" stroke-width="12"/>
-        <rect x="-37" y="-17" width="74" height="34" rx="17" fill="none" stroke="url(#gold-a)" stroke-width="9"/>
-        <path d="M-22 -19.5 H22" stroke="#FFF8E0" stroke-width="2" stroke-linecap="round" opacity=".9"/>
-        <path d="M-18 14 H18" stroke="#5E4212" stroke-width="1.4" stroke-linecap="round" opacity=".55"/>
-      </g>
-      <!-- link seen edge-on -->
-      <g id="lk-edge">
-        <rect x="-33" y="-7" width="66" height="14" rx="7" fill="url(#gold-b)" stroke="#6E4F16" stroke-width="1.6"/>
-        <path d="M-24 -3 H24" stroke="#FFF8E0" stroke-width="2.2" stroke-linecap="round" opacity=".85"/>
-      </g>
-      <!-- pave diamond link -->
-      <g id="lk-pave">
-        <rect x="-42" y="-24" width="84" height="48" rx="24" fill="url(#gold-a)" stroke="#6E4F16" stroke-width="2"/>
-        <rect x="-36" y="-18" width="72" height="36" rx="18" fill="url(#pave)"/>
-        <rect x="-36" y="-18" width="72" height="36" rx="18" fill="none" stroke="#FFF3CC" stroke-width="1.2" opacity=".8"/>
-      </g>
-      <!-- brilliant-cut diamond, top view -->
-      <symbol id="dia-top" viewBox="-50 -50 100 100">
-        <polygon points="0,-48 34,-34 48,0 34,34 0,48 -34,34 -48,0 -34,-34" fill="#AEB9C1"/>
-        <g stroke="#7D8A93" stroke-width=".6">
-          <polygon points="0,-48 34,-34 17,-17" fill="url(#ice-a)"/><polygon points="34,-34 48,0 17,-17" fill="url(#ice-b)"/>
-          <polygon points="48,0 34,34 17,17" fill="url(#ice-c)"/><polygon points="34,34 0,48 17,17" fill="url(#ice-a)"/>
-          <polygon points="0,48 -34,34 -17,17" fill="url(#ice-b)"/><polygon points="-34,34 -48,0 -17,17" fill="url(#ice-c)"/>
-          <polygon points="-48,0 -34,-34 -17,-17" fill="url(#ice-a)"/><polygon points="-34,-34 0,-48 -17,-17" fill="url(#ice-b)"/>
-          <polygon points="0,-48 17,-17 0,-24 -17,-17" fill="url(#ice-c)"/><polygon points="48,0 17,17 24,0 17,-17" fill="url(#ice-a)"/>
-          <polygon points="0,48 -17,17 0,24 17,17" fill="url(#ice-c)"/><polygon points="-48,0 -17,-17 -24,0 -17,17" fill="url(#ice-b)"/>
-          <polygon points="0,-24 17,-17 24,0 17,17 0,24 -17,17 -24,0 -17,-17" fill="url(#ice-a)"/>
-        </g>
-        <polygon points="0,-48 34,-34 48,0 34,34 0,48 -34,34 -48,0 -34,-34" fill="none" stroke="#5F6B74" stroke-width="1.2"/>
-        <path d="M-12 -10 L4 -20" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".9"/>
-      </symbol>
-      <!-- diamond, side view -->
-      <symbol id="dia-side" viewBox="-50 -50 100 100">
-        <g stroke="#6F7C86" stroke-width=".7" stroke-linejoin="round">
-          <polygon points="-48,-8 -30,-30 30,-30 48,-8" fill="url(#ice-a)"/>
-          <polygon points="-30,-30 -12,-8 12,-8 30,-30" fill="url(#ice-b)"/>
-          <polygon points="-48,-8 0,46 -12,-8" fill="url(#ice-c)"/><polygon points="-12,-8 0,46 12,-8" fill="url(#ice-a)"/>
-          <polygon points="12,-8 0,46 48,-8" fill="url(#ice-b)"/>
-        </g>
-        <polygon points="-48,-8 -30,-30 30,-30 48,-8 0,46" fill="none" stroke="#5F6B74" stroke-width="1.2" stroke-linejoin="round"/>
-        <path d="M-22 -24 L-4 -24" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".9"/>
-      </symbol>
-    </defs>
-    <g class="chain chain-a">
-      <use href="#lk-flat" transform="translate(-129.7 329.8) rotate(-30.5)"/>
-      <use href="#lk-edge" transform="translate(-89.4 304.0) rotate(-34.6)"/>
-      <use href="#lk-flat" transform="translate(-50.7 275.7) rotate(-37.7)"/>
-      <use href="#lk-edge" transform="translate(-13.3 245.5) rotate(-39.9)"/>
-      <use href="#lk-pave" transform="translate(23.2 214.2) rotate(-41.2)"/>
-      <use href="#lk-edge" transform="translate(58.9 182.5) rotate(-41.8)"/>
-      <use href="#lk-flat" transform="translate(94.6 150.5) rotate(-41.8)"/>
-      <use href="#lk-edge" transform="translate(130.7 118.5) rotate(-41.2)"/>
-      <use href="#lk-flat" transform="translate(166.9 87.4) rotate(-40.1)"/>
-      <use href="#lk-edge" transform="translate(204.3 56.7) rotate(-38.7)"/>
-      <use href="#lk-flat" transform="translate(242.0 27.4) rotate(-37.0)"/>
-      <use href="#lk-edge" transform="translate(280.8 -0.8) rotate(-35.0)"/>
-      <use href="#lk-pave" transform="translate(320.8 -27.7) rotate(-32.8)"/>
-      <use href="#lk-edge" transform="translate(361.7 -52.9) rotate(-30.5)"/>
-      <use href="#lk-flat" transform="translate(403.5 -76.3) rotate(-28.1)"/>
-    </g>
-    <g class="chain chain-b">
-      <use href="#lk-edge" transform="translate(900.3 879.7) rotate(-45.0)"/>
-      <use href="#lk-flat" transform="translate(934.1 846.0) rotate(-44.9)"/>
-      <use href="#lk-edge" transform="translate(968.2 812.1) rotate(-44.6)"/>
-      <use href="#lk-pave" transform="translate(1002.7 778.5) rotate(-44.0)"/>
-      <use href="#lk-edge" transform="translate(1037.2 745.6) rotate(-43.3)"/>
-      <use href="#lk-flat" transform="translate(1072.4 712.9) rotate(-42.3)"/>
-      <use href="#lk-edge" transform="translate(1108.3 680.9) rotate(-41.1)"/>
-      <use href="#lk-flat" transform="translate(1144.8 649.7) rotate(-39.7)"/>
-      <use href="#lk-edge" transform="translate(1182.3 619.5) rotate(-38.1)"/>
-      <use href="#lk-flat" transform="translate(1220.3 590.6) rotate(-36.3)"/>
-      <use href="#lk-edge" transform="translate(1259.5 562.8) rotate(-34.3)"/>
-      <use href="#lk-pave" transform="translate(1299.8 536.4) rotate(-32.1)"/>
-      <use href="#lk-edge" transform="translate(1340.7 511.9) rotate(-29.8)"/>
-      <use href="#lk-flat" transform="translate(1383.0 488.8) rotate(-27.3)"/>
-      <use href="#lk-edge" transform="translate(1426.0 467.8) rotate(-24.7)"/>
-      <use href="#lk-flat" transform="translate(1470.3 448.7) rotate(-22.1)"/>
-      <use href="#lk-edge" transform="translate(1514.9 431.8) rotate(-19.4)"/>
-    </g>
-    <g class="gems">
-      <use href="#dia-top" x="74" y="514" width="92" height="92" transform="rotate(0 120 560)"/><path class="spark" style="--t:0s" transform="translate(141 537) scale(1.15)" d="M0 -10 L2 -2 L10 0 L2 2 L0 10 L-2 2 L-10 0 L-2 -2 Z"/><use href="#dia-side" x="284" y="614" width="52" height="52" transform="rotate(20 310 640)"/><path class="spark" style="--t:1.2s" transform="translate(322 627) scale(0.70)" d="M0 -10 L2 -2 L10 0 L2 2 L0 10 L-2 2 L-10 0 L-2 -2 Z"/><use href="#dia-top" x="38" y="678" width="44" height="44" transform="rotate(0 60 700)"/><path class="spark" style="--t:2.1s" transform="translate(70 689) scale(0.70)" d="M0 -10 L2 -2 L10 0 L2 2 L0 10 L-2 2 L-10 0 L-2 -2 Z"/><use href="#dia-side" x="636" y="46" width="48" height="48" transform="rotate(-15 660 70)"/><path class="spark" style="--t:.7s" transform="translate(671 58) scale(0.70)" d="M0 -10 L2 -2 L10 0 L2 2 L0 10 L-2 2 L-10 0 L-2 -2 Z"/><use href="#dia-top" x="1290" y="110" width="80" height="80" transform="rotate(10 1330 150)"/><path class="spark" style="--t:1.6s" transform="translate(1348 130) scale(1.00)" d="M0 -10 L2 -2 L10 0 L2 2 L0 10 L-2 2 L-10 0 L-2 -2 Z"/><use href="#dia-top" x="1168" y="68" width="44" height="44" transform="rotate(0 1190 90)"/><path class="spark" style="--t:2.6s" transform="translate(1200 79) scale(0.70)" d="M0 -10 L2 -2 L10 0 L2 2 L0 10 L-2 2 L-10 0 L-2 -2 Z"/><use href="#dia-side" x="1350" y="660" width="60" height="60" transform="rotate(-25 1380 690)"/><path class="spark" style="--t:.3s" transform="translate(1394 675) scale(0.75)" d="M0 -10 L2 -2 L10 0 L2 2 L0 10 L-2 2 L-10 0 L-2 -2 Z"/><use href="#dia-top" x="800" y="740" width="40" height="40" transform="rotate(0 820 760)"/><path class="spark" style="--t:1.9s" transform="translate(829 750) scale(0.70)" d="M0 -10 L2 -2 L10 0 L2 2 L0 10 L-2 2 L-10 0 L-2 -2 Z"/>
-    </g>
-  </svg>
-  <div class="wrap">
-    <p>Sharpstown was once a <span class="tilt">Houston</span> icon. <span class="soft">We're not here by accident —</span> we're here to write what comes <span class="huge metal">next.</span></p>
-  </div>
-</section>
-
-<!-- PILLARS -->
-<section class="ivory pillars" aria-label="New Value, New Vision, New Era">
-  <div class="wrap grid">
-    <div class="pillar">
-      <svg class="ginkgo" viewBox="0 0 60 60" fill="none" stroke="#7A5B1C" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true">
-        <path d="M16 10 L44 10 L56 24 L30 54 L4 24 Z"/>
-        <path d="M4 24 L56 24"/>
-        <path d="M16 10 L23 24 L30 10 L37 24 L44 10" opacity=".7"/>
-        <path d="M23 24 L30 54 L37 24" opacity=".7"/>
-      </svg>
-      <h3>New Value<span class="num">(01)</span></h3>
-      <p>What "valuable" means on your own terms — self-made status, worn by anyone who's earned it.</p>
-    </div>
-    <div class="pillar">
-      <svg class="ginkgo" viewBox="0 0 60 60" fill="none" stroke="#7A5B1C" stroke-width="1.1" stroke-linejoin="round" aria-hidden="true">
-        <path d="M3 30 C 14 14, 46 14, 57 30 C 46 46, 14 46, 3 30 Z"/>
-        <circle cx="30" cy="30" r="10"/>
-        <path d="M30 24 L35 30 L30 36 L25 30 Z" fill="#7A5B1C" stroke="none"/>
-        <path d="M30 4 L30 10 M14 9 L17 14 M46 9 L43 14" opacity=".7"/>
-      </svg>
-      <h3>New Vision<span class="num">(02)</span></h3>
-      <p>A new way of seeing Sharpstown — and a new way of seeing yourself.</p>
-    </div>
-    <div class="pillar">
-      <svg class="ginkgo" viewBox="0 0 60 60" fill="none" stroke="#7A5B1C" stroke-width="1.1" stroke-linecap="round" aria-hidden="true">
-        <path d="M4 44 L56 44"/>
-        <path d="M14 44 A16 16 0 0 1 46 44"/>
-        <path d="M30 20 L30 10 M16 26 L9 19 M44 26 L51 19 M10 36 L3 34 M50 36 L57 34" opacity=".75"/>
-        <path d="M12 51 L48 51 M20 57 L40 57" opacity=".45"/>
-      </svg>
-      <h3>New Era<span class="num">(03)</span></h3>
-      <p>The line between what Sharpstown used to be and what comes next — starting now.</p>
-    </div>
-  </div>
-</section>
-
-<!-- STORY -->
-<section class="ivory story" id="story">
-  <div class="wrap">
-    <h2>The <em>comeback</em> starts on purpose.</h2>
-    <div class="cols">
-      <p>In 1961, Sharpstown Center opened as Houston's first air-conditioned, enclosed shopping mall. For a generation it was the city's premier destination — the new Houston, modern and ambitious.</p>
-      <p>The neighborhood never stopped moving. Today it's one of Houston's most diverse: Vietnamese, Chinese, Hispanic and Black families side by side, about 77,000 neighbors with a median age of 33, and fifteen years of fresh investment.</p>
-      <p>The reputation just hasn't caught up. Brilliant Jewelers isn't discovering Sharpstown — we're choosing it, as where the comeback starts.</p>
-    </div>
-  </div>
-</section>
-
-<!-- THE DAY -->
-<section class="day" id="day">
-  <h2 class="day-title">The day<sup>(03)</sup></h2>
-  <p class="day-sub">Saturday, December 12 · Full schedule drops [DATE]</p>
-  <div class="wrap">
-    <ol class="tracks">
-      <li>
-        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-1"><sup>Arrival</sup>Welcome drinks<em>(flair bar &amp; bites)</em></button>
-        <div class="track-body" id="track-1" role="region"><div><p>A flair bartender opens the day with welcome drinks and light bites. Grab a glass and take a first look around the store.</p></div></div>
-      </li>
-      <li>
-        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-2"><sup>All day</sup>Live DJ<em>(open to close)</em></button>
-        <div class="track-body" id="track-2" role="region"><div><p>[DJ name] keeps the music going from the moment doors open until close &mdash; the soundtrack for the whole day.</p></div></div>
-      </li>
-      <li>
-        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-3"><sup>[Time]</sup>Street dance<em>(the opener)</em></button>
-        <div class="track-body" id="track-3" role="region"><div><p>[Crew name] kicks things off at [Time] with a street dance set &mdash; the opener that gets the crowd moving.</p></div></div>
-      </li>
-      <li>
-        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-4"><sup>[Time]</sup>Ribbon cutting<em>(doors officially open)</em></button>
-        <div class="track-body" id="track-4" role="region"><div><p>The official moment: we cut the ribbon and Brilliant Jewelers opens its doors to Sharpstown. Be there for the first look inside.</p></div></div>
-      </li>
-      <li>
-        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-5"><sup>[Time]</sup>Lion dance<em>(blessing + offer reveal)</em></button>
-        <div class="track-body" id="track-5" role="region"><div><p>A traditional lion dance brings luck and blessings to the new store &mdash; and reveals our one-day 12.12 offer.</p></div></div>
-      </li>
-      <li>
-        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-6"><sup>[Time]</sup>Houston hip-hop<em>(feat. [Artist names])</em></button>
-        <div class="track-body" id="track-6" role="region"><div><p>Live sets from Houston artists [Artist names]. Full lineup coming soon &mdash; follow @brilliant_jewelers2024 so you don&rsquo;t miss it.</p></div></div>
-      </li>
-      <li>
-        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-7"><sup>[Time]</sup>Car show<em>(slabs &amp; lowriders)</em></button>
-        <div class="track-body" id="track-7" role="region"><div><p>Slabs and lowriders lined up all day &mdash; candy paint, chrome and Houston car culture. Want to show your ride? [Car show sign-up details].</p></div></div>
-      </li>
-      <li>
-        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-8"><sup>All day</sup>Photo booth<em>(step into the cover)</em></button>
-        <div class="track-body" id="track-8" role="region"><div><p>Step into the cover: a photo booth made for your grillz and your best angle. Strike a pose and tag @brilliant_jewelers2024.</p></div></div>
-      </li>
-      <li>
-        <button class="track-head" type="button" aria-expanded="false" aria-controls="track-9"><sup>All day</sup>Jewelry cleaning<em>(on the house)</em></button>
-        <div class="track-body" id="track-9" role="region"><div><p>Bring a piece you love and our team will clean it for free while you look around. On the house, all day.</p></div></div>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- OFFER -->
-<section class="offer" id="offer">
-  <svg class="ribbons" viewBox="0 0 1440 420" preserveAspectRatio="none" fill="none" stroke="url(#g-metal)" stroke-width="1.2" aria-hidden="true">
-    <path d="M-80 240 C 260 80, 520 380, 760 210 S 1220 60, 1540 220"/>
-    <path d="M-80 252 C 260 92, 520 392, 760 222 S 1220 72, 1540 232"/>
-    <path d="M-80 264 C 260 104, 520 404, 760 234 S 1220 84, 1540 244"/>
-    <path d="M-80 276 C 260 116, 520 416, 760 246 S 1220 96, 1540 256"/>
-    <path d="M-80 288 C 260 128, 520 428, 760 258 S 1220 108, 1540 268"/>
-    <path d="M-80 300 C 260 140, 520 440, 760 270 S 1220 120, 1540 280"/>
-  </svg>
-  <div class="wrap offer-inner">
-    <span class="tag" style="color:var(--gold)">(04) The offer — 12.12 only</span>
-    <h2><span class="a metal">Buy upper.</span><span class="b">Get lower free.</span></h2>
-    <p>One day. One offer. Our thank-you to Sharpstown for welcoming us.</p>
-    <p class="terms">[OFFER TERMS]</p>
-    <a class="btn btn-gold" href="#visit">Plan your visit</a>
-  </div>
-</section>
-
-<!-- ON THE BILL -->
-<section class="bill" id="bill">
-  <div class="wrap">
-    <div class="bill-head">
-      <h2>On the bill<span class="num" style="color:var(--gold)">(05)</span></h2>
-      <p>The faces of December 12. Photos drop as the lineup is announced.</p>
-    </div>
-    <div class="gallery">
-      <figure class="shot tall" style="margin:0">
-        <div class="ph">[Approved photo — @khalilvegas]</div>
-        <figcaption class="cap"><b><a href="https://www.instagram.com/khalilvegas/" target="_blank" rel="noopener">@khalilvegas</a></b><span>Featured creator</span></figcaption>
-      </figure>
-      <figure class="shot tall" style="margin:0">
-        <div class="ph">[Approved photo — @toxicissue]</div>
-        <figcaption class="cap"><b><a href="https://www.instagram.com/toxicissue/" target="_blank" rel="noopener">@toxicissue</a></b><span>Featured creator</span></figcaption>
-      </figure>
-      <figure class="shot tall" style="margin:0">
-        <div class="ph">[Approved photo — @nickgeedyrhta]</div>
-        <figcaption class="cap"><b><a href="https://www.instagram.com/nickgeedyrhta/" target="_blank" rel="noopener">@nickgeedyrhta</a></b><span>Featured creator</span></figcaption>
-      </figure>
-      <figure class="shot tall" style="margin:0">
-        <div class="ph">[Approved photo — Xavier Toliver]</div>
-        <figcaption class="cap"><b><a href="#" rel="noopener">Xavier Toliver</a></b><span>Featured creator</span></figcaption>
-      </figure>
-      <figure class="shot" style="margin:0">
-        <div class="ph">[Photo — Houston artist 1]</div>
-        <figcaption class="cap"><b>[Artist 1]</b><span>Live set</span></figcaption>
-      </figure>
-      <figure class="shot" style="margin:0">
-        <div class="ph">[Photo — Houston artist 2]</div>
-        <figcaption class="cap"><b>[Artist 2]</b><span>Headline set</span></figcaption>
-      </figure>
-      <figure class="shot" style="margin:0">
-        <div class="ph">[Photo — DJ]</div>
-        <figcaption class="cap"><b>[DJ name]</b><span>All day</span></figcaption>
-      </figure>
-      <figure class="shot" style="margin:0">
-        <div class="ph">[Photo — street dance crew]</div>
-        <figcaption class="cap"><b>[Crew name]</b><span>Street dance</span></figcaption>
-      </figure>
-      <figure class="shot wide" style="margin:0">
-        <div class="ph">[Close-up — Brilliant Jewelers grillz]</div>
-        <figcaption class="cap"><b>The shine</b><span>Custom grillz</span></figcaption>
-      </figure>
-      <figure class="shot wide" style="margin:0">
-        <div class="ph">[Photo — slab / car show]</div>
-        <figcaption class="cap"><b>Car show</b><span>Slabs &amp; lowriders</span></figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- VISIT -->
-<section class="ivory visit" id="visit">
-  <div class="wrap">
-    <div class="info">
-      <span class="tag" style="color:var(--gold-deep)">(06) Find us</span>
-      <h2>Pull up.</h2>
-      <div class="row"><span class="k tag">Where</span><span class="v">300 Sharpstown Center, Houston, TX 77036</span></div>
-      <div class="row"><span class="k tag">When</span><span class="v">Saturday, December 12, 2026</span></div>
-      <div class="row"><span class="k tag">Hours</span><span class="v">[DOORS TIME] – 6:00 PM</span></div>
-      <div class="row"><span class="k tag">Parking</span><span class="v">[PARKING DETAILS]</span></div>
-      <div class="btn-row">
-        <a class="btn btn-gold" href="https://maps.app.goo.gl/rG756HiFMuE4MmCT8" target="_blank" rel="noopener">Open in Google Maps</a>
-        <a class="btn btn-ghost" href="#" id="add-cal">Add to calendar</a>
+      <div class="happen" data-reveal>
+        <h3>What's happening on the day</h3>
+        <ul>
+          <li><span><b>Live hip-hop:</b> a Houston artist set and a second Houston artist session in the afternoon.</span></li>
+          <li><span><b>Street dance:</b> high-energy performances to open the day and restart the afternoon.</span></li>
+          <li><span><b>Lion dance blessing:</b> a traditional performance to bless the new store.</span></li>
+          <li><span><b>Car show:</b> Houston car culture on display in two sessions.</span></li>
+          <li><span><b>DJ and bartender flair show:</b> the party starts at the door, with welcome drinks and finger food.</span></li>
+          <li><span><b>Free jewelry cleaning:</b> bring your pieces to the counter.</span></li>
+          <li><span><b>Photo booth:</b> show us your shine and tag #ShineRedefined.</span></li>
+          <li class="offer-li"><span><b>The offer:</b> Buy Upper, Get Lower FREE. <a href="#rsvp">RSVP to claim it.</a></span></li>
+        </ul>
       </div>
     </div>
-    <div class="map">
-      <iframe title="Map: 300 Sharpstown Center, Houston, TX 77036" src="https://maps.google.com/maps?q=300+Sharpstown+Center+Ste+1010A,+Houston,+TX+77036&amp;ll=29.7072411,-95.517191&amp;z=17&amp;output=embed" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+</section>
+
+<!-- 4 · Who's coming -->
+<section class="alt" id="coming">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="eyebrow">Who's coming</p>
+      <h2>Houston's own are <em class="accent">pulling up.</em></h2>
+      <p>Meet the faces of the day, and follow them to see what's coming.</p>
+    </div>
+    <div class="people">
+      <article class="person" data-reveal>
+        <div class="photo"><span class="ph">[Approved photo — Khalilvegas]</span></div>
+        <h3>Khalilvegas</h3>
+        <p class="eyebrow role">Houston rapper</p>
+        <blockquote>“Mid-bar, mid-store.”</blockquote>
+        <a class="btn btn-sm" href="https://www.instagram.com/khalilvegas/" target="_blank" rel="noopener">Follow on Instagram</a>
+      </article>
+      <article class="person" data-reveal>
+        <div class="photo"><span class="ph">[Approved photo — toxicissue]</span></div>
+        <h3>toxicissue</h3>
+        <p class="eyebrow role">Houston rapper</p>
+        <blockquote>“Not yet, Houston.”</blockquote>
+        <a class="btn btn-sm" href="https://www.instagram.com/toxicissue/" target="_blank" rel="noopener">Follow on Instagram</a>
+      </article>
+      <article class="person" data-reveal>
+        <div class="photo"><span class="ph">[Approved photo — nickgeedyrhta]</span></div>
+        <h3>nickgeedyrhta</h3>
+        <p class="eyebrow role">Houston rapper</p>
+        <blockquote>“Sharpstown went quiet. Not for long.”</blockquote>
+        <a class="btn btn-sm" href="https://www.instagram.com/nickgeedyrhta/" target="_blank" rel="noopener">Follow on Instagram</a>
+      </article>
+      <article class="person" data-reveal>
+        <div class="photo"><span class="ph">[Approved photo — Xavier Toliver]</span></div>
+        <h3>Xavier Toliver</h3>
+        <p class="eyebrow role">Football player</p>
+        <blockquote>“Game day's coming, Sharpstown.”</blockquote>
+        <a class="btn btn-sm" href="#" rel="noopener" title="Facebook link to be added">Follow on Facebook</a>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- MARQUEE 2 -->
-<div class="marquee gold rev" aria-hidden="true">
-  <div class="marquee-track">
-    <div><span>300 Sharpstown Center</span><i class="dia"></i><span class="bl">Houston</span><i class="dia"></i><span class="outline">Sat · Dec 12</span><i class="dia"></i><span>Buy upper, get lower free</span><i class="dia"></i></div>
-    <div><span>300 Sharpstown Center</span><i class="dia"></i><span class="bl">Houston</span><i class="dia"></i><span class="outline">Sat · Dec 12</span><i class="dia"></i><span>Buy upper, get lower free</span><i class="dia"></i></div>
-  </div>
-</div>
-
-<!-- RSVP -->
-<section class="rsvp" id="rsvp">
+<!-- 5 · Agenda -->
+<section id="agenda">
   <div class="wrap">
-    <h2><span class="a">Save your spot</span><span class="b">see you on the twelfth</span></h2>
-    <p>A reminder three days out and the morning of. Nothing else.</p>
-    <form id="rsvp-form" novalidate>
-      <label class="field tag">Name<input type="text" name="name" autocomplete="name" required></label>
-      <label class="field tag">Phone<input type="tel" name="phone" autocomplete="tel"></label>
-      <label class="field tag">Email<input type="email" name="email" autocomplete="email"></label>
-      <label class="check"><input type="checkbox" name="sms">Text me event reminders. Msg &amp; data rates may apply.</label>
-      <button class="btn btn-gold" type="submit">Count me in</button>
-      <p class="note" id="form-note" role="status" aria-live="polite"></p>
-    </form>
+    <div class="sec-head" data-reveal>
+      <p class="eyebrow">Agenda · Saturday, December 12</p>
+      <h2>The full day, <em class="accent">at a glance.</em></h2>
+    </div>
+    <ol class="agenda" data-reveal>
+      <li><time>10:00 – 10:30 AM</time><h3>Welcome and Arrival</h3><p>DJ set, bartender flair show, welcome drinks and finger food, product display, free jewelry cleaning, photo booth</p></li>
+      <li><time>10:30 – 10:35 AM</time><h3>Street Dance Performance</h3><p>High-energy hip-hop dance opener</p></li>
+      <li><time>10:35 – 10:40 AM</time><h3>Ribbon Cutting</h3><p>Brilliant Jewelers officially opens</p></li>
+      <li><time>11:40 AM – 12:00 PM</time><h3>Lion Dance and Offer Moment</h3><p>A blessing performance, then the Buy Upper, Get Lower FREE moment, today only</p></li>
+      <li><time>12:00 – 12:30 PM</time><h3>Houston Artist Performance</h3><p>Opening hip-hop set</p></li>
+      <li><time>12:30 – 1:00 PM</time><h3>Car Show, Session 1</h3><p>Houston car culture on display</p></li>
+      <li class="quiet"><time>1:00 – 3:00 PM</time><h3>Midday Break</h3><p>Shopping and browsing continues while performances pause</p></li>
+      <li><time>3:00 – 4:00 PM</time><h3>Street Dance Performance</h3><p>Afternoon energy restart</p></li>
+      <li><time>4:00 – 5:00 PM</time><h3>Car Show and Houston Hip-Hop Artist</h3><p>Session 2, with live music as the backdrop</p></li>
+      <li><time>5:00 – 6:00 PM</time><h3>Closing Window</h3><p>Final push, thank-you moment, wind-down</p></li>
+    </ol>
+    <p class="footnote">Times may change. Check this page and our social accounts for updates.</p>
+  </div>
+</section>
+
+<!-- 6 · Promotion + RSVP -->
+<section class="offer-sec" id="rsvp">
+  <div class="wrap offer-grid">
+    <div data-reveal>
+      <p class="eyebrow">The offer · December 12 only</p>
+      <h2>Buy Upper. <span>Get Lower FREE.</span></h2>
+      <p class="lead">One day only: December 12. RSVP to claim your offer.</p>
+      <p class="body">Buy an upper grill and your lower is on us, matched to the price of the upper. RSVP below to lock it in.</p>
+      <p class="fine">Offer valid December 12, 2026 only. RSVP required. See terms below.</p>
+      <ol class="steps">
+        <li><span>RSVP here<span class="arrow" aria-hidden="true">→</span></span></li>
+        <li><span>Show your confirmation at the store on December 12.</span></li>
+        <li><span>Buy your upper and get your lower free.</span></li>
+      </ol>
+      <details class="terms">
+        <summary>Terms</summary>
+        <ul>
+          <li>Offer valid December 12, 2026 only, at the Brilliant Jewelers grand opening.</li>
+          <li>RSVP is required to claim the offer.</li>
+          <li>The free lower piece matches the price of the upper piece purchased.</li>
+          <li>One offer per RSVP. Cannot be combined with other promotions.</li>
+        </ul>
+      </details>
+    </div>
+    <div class="form-card" data-reveal>
+      <form class="rsvp-form" novalidate>
+        <h3>Claim your offer</h3>
+        <p class="intro">RSVP is required to get this offer. We'll send your confirmation by text and email.</p>
+        <label class="field">Full name<input type="text" name="name" autocomplete="name" required></label>
+        <div class="two">
+          <label class="field">Mobile number<input type="tel" name="phone" autocomplete="tel" inputmode="tel" required></label>
+          <label class="field">Email<input type="email" name="email" autocomplete="email" required></label>
+        </div>
+        <div class="two">
+          <label class="field">Preferred language <span class="opt">(optional)</span>
+            <select name="language"><option value="">Select</option><option>English</option><option>中文</option><option>Tiếng Việt</option><option>Español</option></select>
+          </label>
+          <label class="field">How did you hear about us? <span class="opt">(optional)</span>
+            <select name="source"><option value="">Select</option><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>A friend</option><option>Flyer</option><option>Other</option></select>
+          </label>
+        </div>
+        <label class="consent"><input type="checkbox" name="consent" required><span>I agree to receive event reminders from Brilliant Jewelers by text and email. Message and data rates may apply. Reply STOP to opt out.</span></label>
+        <button class="btn btn-solid" type="submit">Claim my offer</button>
+        <p class="msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="eyebrow">FAQ</p>
+      <h2>Before you <em class="accent">pull up.</em></h2>
+    </div>
+    <div class="faq" data-reveal>
+      <details><summary>When and where is it?</summary><p>Saturday, December 12, 2026, from 10:00 AM to 6:00 PM at 300 Sharpstown Center, Houston, TX 77036.</p></details>
+      <details><summary>Do I need to RSVP?</summary><p>Everyone is welcome. RSVP is required to claim Buy Upper, Get Lower FREE.</p></details>
+      <details><summary>What is the offer?</summary><p>Buy an upper and get the lower free, matched to the price of the upper. December 12 only.</p></details>
+      <details><summary>What else is happening?</summary><p>Live hip-hop, street dance, a lion dance blessing, a car show, a DJ, a bartender flair show, free jewelry cleaning, and a photo booth.</p></details>
+      <details><summary>Will there be food and drinks?</summary><p>Yes. Welcome drinks and finger food are served at arrival.</p></details>
+      <details><summary>Who is coming?</summary><p>Khalilvegas, toxicissue, nickgeedyrhta, and Xavier Toliver, plus Houston performers.</p></details>
+      <details><summary>Can I bring friends?</summary><p>Yes. Bring your crew.</p></details>
+    </div>
   </div>
 </section>
 
@@ -1055,703 +469,105 @@
 
 <footer class="site-foot">
   <div class="wrap">
-    <p class="foot-mark metal">Shine Redefined</p>
-    <p class="slogan" style="text-align:center; margin:-12px 0 48px">Redefine Your Style. <span class="metal">Smile &amp; Shine!</span></p>
-    <div class="foot-grid">
-      <div><b>Brilliant Jewelers</b>300 Sharpstown Center<br>Houston, TX 77036</div>
-      <div><b>Grand Opening</b>Saturday, December 12, 2026<br>Doors [TIME]</div>
-      <div><b>Follow</b><a href="https://www.instagram.com/brilliant_jewelers2024/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@brilliant.jeweler" target="_blank" rel="noopener">TikTok</a><a href="https://www.facebook.com/p/Brilliant-Jewelers-61556574743555/" target="_blank" rel="noopener">Facebook</a></div>
-    </div>
-    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 24px; margin-top:40px; padding-top:20px; border-top:1px solid var(--line-ink); font-size:12px; color:var(--muted-on-ink)">
-      <span>© 2026 Brilliant Jewelers. All rights reserved.</span>
-      <span class="tag">Design by RAVO</span>
-    </div>
+    <p class="foot-mark">Shine Redefined</p>
+    <p class="tags">#ShineRedefined #BrilliantJewelers #Sharpstown</p>
+    <p class="foot-addr">Brilliant Jewelers · 300 Sharpstown Center, Houston, TX 77036</p>
+    <ul class="social">
+      <li><a href="https://www.facebook.com/p/Brilliant-Jewelers-61556574743555/" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="https://www.instagram.com/brilliant_jewelers2024/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.tiktok.com/@brilliant.jeweler" target="_blank" rel="noopener">TikTok</a></li>
+    </ul>
+    <div class="legal"><span>© 2026 Brilliant Jewelers. All rights reserved.</span><span>Design by RAVO</span></div>
   </div>
 </footer>
 
+<!-- RSVP popup: opens on first visit and from every RSVP button -->
+<dialog class="pop" id="rsvp-pop" aria-labelledby="pop-title">
+  <div class="pop-top">
+    <button class="pop-close" type="button" aria-label="Close" data-close-rsvp>×</button>
+    <p class="eyebrow">Shine Redefined · 12.12</p>
+    <h2 id="pop-title">Buy Upper. <span>Get Lower FREE.</span></h2>
+    <p>One day only: December 12. RSVP to claim your offer.</p>
+  </div>
+  <div class="pop-body">
+    <form class="rsvp-form" novalidate>
+      <p class="intro">RSVP is required to get this offer. We'll send your confirmation by text and email.</p>
+      <label class="field">Full name<input type="text" name="name" autocomplete="name" required></label>
+        <div class="two">
+          <label class="field">Mobile number<input type="tel" name="phone" autocomplete="tel" inputmode="tel" required></label>
+          <label class="field">Email<input type="email" name="email" autocomplete="email" required></label>
+        </div>
+        <div class="two">
+          <label class="field">Preferred language <span class="opt">(optional)</span>
+            <select name="language"><option value="">Select</option><option>English</option><option>中文</option><option>Tiếng Việt</option><option>Español</option></select>
+          </label>
+          <label class="field">How did you hear about us? <span class="opt">(optional)</span>
+            <select name="source"><option value="">Select</option><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>A friend</option><option>Flyer</option><option>Other</option></select>
+          </label>
+        </div>
+        <label class="consent"><input type="checkbox" name="consent" required><span>I agree to receive event reminders from Brilliant Jewelers by text and email. Message and data rates may apply. Reply STOP to opt out.</span></label>
+        <button class="btn btn-solid" type="submit">Claim my offer</button>
+        <p class="msg" role="status" aria-live="polite"></p>
+    </form>
+    <button class="pop-later" type="button" data-close-rsvp>Maybe later</button>
+  </div>
+</dialog>
+
 <script>
-  // ===== Countdown — update DOORS once the team confirms the time =====
-  var DOORS = new Date('2026-12-12T09:00:00-06:00').getTime();
-  function pad(n) { return String(n).padStart(2, '0'); }
-  function tick() {
-    var diff = Math.max(0, DOORS - Date.now());
-    var d = Math.floor(diff / 86400000);
-    var h = Math.floor(diff / 3600000) % 24;
-    var m = Math.floor(diff / 60000) % 60;
-    var s = Math.floor(diff / 1000) % 60;
-    setDigit('t-d', pad(d)); setDigit('t-h', pad(h)); setDigit('t-m', pad(m)); setDigit('t-s', pad(s));
+  // ===== RSVP popup =====
+  var pop = document.getElementById('rsvp-pop');
+  function openRsvp() {
+    if (typeof pop.showModal === 'function') { if (!pop.open) pop.showModal(); }
+    else document.getElementById('rsvp').scrollIntoView();
   }
-  function setDigit(id, val) {
-    var el = document.getElementById(id);
-    if (el.textContent === val) return;
-    el.textContent = val;
-    el.classList.remove('flip'); void el.offsetWidth; el.classList.add('flip');
-  }
-  tick(); setInterval(tick, 1000);
-
-  // ===== Motion =====
+  document.querySelectorAll('[data-open-rsvp]').forEach(function (b) { b.addEventListener('click', openRsvp); });
+  document.querySelectorAll('[data-close-rsvp]').forEach(function (b) { b.addEventListener('click', function () { pop.close(); }); });
+  pop.addEventListener('click', function (e) { if (e.target === pop) pop.close(); });
+  document.querySelectorAll('a[href="#rsvp"]').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); openRsvp(); });
+  });
+  // Show once per visit, shortly after the page opens
   (function () {
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var hero = document.querySelector('.hero');
-
-    // Hero intro
-    requestAnimationFrame(function () {
-      document.body.classList.add('is-loaded');
-      setTimeout(function () { hero.classList.add('go'); }, 300);
-    });
-    hero.querySelectorAll('.ribbons path').forEach(function (p, i) { p.style.animationDelay = (0.4 + i * 0.09) + 's, 0s'; });
-    document.querySelectorAll('.offer .ribbons path').forEach(function (p, i) { p.style.animationDelay = (i * 0.1) + 's, 0s'; });
-
-    // Tag elements for scroll reveal: [selector, type, stagger]
-    var groups = [
-      ['.count .ghost', 'left', 0], ['.timer > div', 'up', .1], ['.venue, .venue-sub, .count .btn', 'up', .1],
-      ['.statement p', 'clip', 0], ['.pillar', 'up', .15],
-      ['.story h2', 'up', 0], ['.story .cols p', 'up', .12],
-      ['.day-title', 'clip', 0], ['.day-sub', 'up', 0], ['.tracks .track-head', 'up', .06],
-      ['.offer .tag, .offer h2 .a', 'up', .12], ['.offer h2 .b', 'fade', 0], ['.offer p, .offer .btn', 'up', .1],
-      ['.bill-head > *', 'up', .1], ['.shot', 'clip', .08],
-      ['.visit .info > *', 'up', .06], ['.map', 'clip', 0],
-      ['.rsvp h2 .a, .rsvp h2 .b, .rsvp .wrap > p', 'up', .12], ['.rsvp form > *', 'up', .06],
-      ['.foot-mark', 'clip', 0], ['.foot-grid > div', 'up', .08]
-    ];
-    groups.forEach(function (g) {
-      document.querySelectorAll(g[0]).forEach(function (el, i) {
-        el.setAttribute('data-reveal', g[1]);
-        el.style.setProperty('--d', ((i % 8) * g[2]) + 's');
-      });
-    });
-    if (document.querySelector('.offer h2 .b')) document.querySelector('.offer h2 .b').style.setProperty('--d', '.35s');
-
-    // Chain links drop in one by one, then the loose diamonds
-    document.querySelectorAll('.chain').forEach(function (c) {
-      c.querySelectorAll('use').forEach(function (u, i) { u.style.setProperty('--d', (0.15 + i * 0.05) + 's'); });
-    });
-    document.querySelectorAll('.gems use').forEach(function (u, i) { u.style.setProperty('--d', (0.9 + i * 0.12) + 's'); });
-
-    var targets = document.querySelectorAll('[data-reveal], .offer, .statement');
-    if (reduce || !('IntersectionObserver' in window)) {
-      targets.forEach(function (el) { el.classList.add('in'); });
-    } else {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
-      var clipIo = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (!e.isIntersecting) return;
-          var kids = e.target.__clipKids || [];
-          kids.forEach(function (k) {
-            var r = k.getBoundingClientRect();
-            if (r.top < innerHeight * 0.92) k.classList.add('in');
-          });
-          e.target.__clipKids = kids.filter(function (k) { return !k.classList.contains('in'); });
-          if (!e.target.__clipKids.length) clipIo.unobserve(e.target);
-        });
-      }, { threshold: [0, 0.1, 0.25, 0.5, 0.75, 1] });
-      window.addEventListener('scroll', function () {
-        document.querySelectorAll('[data-reveal="clip"]:not(.in)').forEach(function (k) {
-          if (k.getBoundingClientRect().top < innerHeight * 0.92) k.classList.add('in');
-        });
-      }, { passive: true });
-      targets.forEach(function (el) {
-        // A fully clipped element reports no intersection, so watch its parent instead
-        if (el.getAttribute('data-reveal') === 'clip') {
-          var host = el.parentElement;
-          (host.__clipKids = host.__clipKids || []).push(el);
-          if (!host.__clipWatched) { host.__clipWatched = true; clipIo.observe(host); }
-        } else { io.observe(el); }
-      });
-    }
-
-    // Scroll progress + parallax
-    var bar = document.querySelector('.progress');
-    var photo = document.querySelector('.hero-photo');
-    var ghost = document.querySelector('.count .ghost');
-    var petals = document.querySelectorAll('.petal');
-    var fine = window.matchMedia('(pointer: fine) and (min-width: 1025px)').matches;
-    var ticking = false;
-    function onScroll() {
-      var y = window.scrollY;
-      var max = document.documentElement.scrollHeight - innerHeight;
-      bar.style.setProperty('--p', max > 0 ? (y / max).toFixed(4) : 0);
-      if (!reduce && fine) {
-        if (y < innerHeight * 1.2) photo.style.transform = 'translate(-50%,' + (y * 0.18).toFixed(1) + 'px)';
-        if (ghost.classList.contains('in')) {
-          var r = ghost.getBoundingClientRect();
-          ghost.style.transform = 'translateX(' + ((r.top - innerHeight / 2) * 0.25).toFixed(1) + 'px)';
-        }
-        petals.forEach(function (p, i) {
-          p.style.transform = 'rotate(' + ((i ? 140 : 0) + y * (i ? -0.03 : 0.03)).toFixed(2) + 'deg)';
-        });
-      }
-      ticking = false;
-    }
-    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
-    onScroll();
-
-    // Cursor spotlight on hero
-    if (!reduce && fine) {
-      var glow = hero.querySelector('.glow');
-      hero.addEventListener('pointermove', function (e) {
-        var r = hero.getBoundingClientRect();
-        glow.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-        glow.style.setProperty('--my', (e.clientY - r.top) + 'px');
-      });
-    }
+    var seen = false;
+    try { seen = sessionStorage.getItem('sr-pop') === '1'; } catch (err) {}
+    if (seen) return;
+    setTimeout(function () {
+      openRsvp();
+      try { sessionStorage.setItem('sr-pop', '1'); } catch (err) {}
+    }, 1200);
   })();
 
-  // ===== Menu overlay =====
-  var menu = document.getElementById('menu');
-  var openBtn = document.getElementById('menu-open');
-  var closeBtn = document.getElementById('menu-close');
-  function setMenu(open) {
-    menu.classList.toggle('open', open);
-    openBtn.setAttribute('aria-expanded', String(open));
-    document.body.style.overflow = open ? 'hidden' : '';
-    (open ? closeBtn : openBtn).focus();
-  }
-  openBtn.addEventListener('click', function () { setMenu(true); });
-  closeBtn.addEventListener('click', function () { setMenu(false); });
-  menu.addEventListener('click', function (e) { if (e.target === menu) setMenu(false); });
-  menu.querySelectorAll('.menu-links a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.classList.contains('open')) setMenu(false); });
-
-  // ===== 3D gold chains + diamonds (raw WebGL, no libraries) =====
-  (function () {
-    var section = document.querySelector('.statement');
-    if (!section) return;
-    var canvas = document.createElement('canvas');
-    canvas.className = 'chain-gl';
-    canvas.setAttribute('aria-hidden', 'true');
-    var gl = canvas.getContext('webgl', { alpha: true, antialias: true, premultipliedAlpha: true });
-    if (!gl) return; // keep the SVG fallback
-    section.insertBefore(canvas, section.firstChild);
-
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // ---------- shaders ----------
-    var VS = [
-      'attribute vec3 aP; attribute vec3 aN;',
-      'uniform mat4 uProj, uView, uModel;',
-      'varying vec3 vN; varying vec3 vW; varying vec3 vL;',
-      'void main(){ vec4 w = uModel * vec4(aP,1.0); vW = w.xyz; vL = aP;',
-      ' vN = normalize(mat3(uModel) * aN); gl_Position = uProj * uView * w; }'
-    ].join('\n');
-    var FS = [
-      'precision highp float;',
-      'varying vec3 vN; varying vec3 vW; varying vec3 vL;',
-      'uniform vec3 uCam; uniform int uMat; uniform float uTime; uniform float uSeed;',
-      'vec3 env(vec3 d){',
-      ' vec3 c = mix(vec3(0.10,0.085,0.07), vec3(0.97,0.94,0.88), smoothstep(-0.55,0.75,d.y));',
-      ' c += 5.0*smoothstep(0.93,0.985, dot(d, normalize(vec3(-0.55,0.65,0.55))));',
-      ' c += 3.0*smoothstep(0.90,0.97, dot(d, normalize(vec3(0.75,0.35,0.45))));',
-      ' c += 1.6*smoothstep(0.86,0.95, dot(d, normalize(vec3(0.05,-0.15,1.0))));',
-      ' c += 1.2*exp(-pow((d.y-0.05)*10.0,2.0));',
-      ' c *= 1.0 - 0.55*smoothstep(0.2,-0.6,d.y);',
-      ' return c; }',
-      'float hash(vec2 p){ return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453); }',
-      'vec3 tone(vec3 c){ c = c/(1.0+c*0.55); return pow(c, vec3(1.0/2.2)); }',
-      'vec3 gold(vec3 N, vec3 V){',
-      ' vec3 R = reflect(-V,N); float f = pow(1.0-max(dot(N,V),0.0),5.0);',
-      ' vec3 F0 = vec3(1.0,0.70,0.24); vec3 F = F0+(1.0-F0)*f;',
-      ' vec3 e = env(R); e = mix(vec3(dot(e,vec3(0.333))), e, 1.0) * vec3(1.06,0.98,0.82);',
-      ' return pow(e, vec3(1.25))*F*1.15; }',
-      'vec3 diamond(vec3 N, vec3 V, float seed){',
-      ' vec3 R = reflect(-V,N); float f = pow(1.0-max(dot(N,V),0.0),3.0);',
-      ' vec3 c;',
-      ' c.r = env(reflect(-V, normalize(N+vec3(0.07,0.0,0.0)))).r;',
-      ' c.g = env(R).g;',
-      ' c.b = env(reflect(-V, normalize(N-vec3(0.07,0.0,0.0)))).b;',
-      ' vec3 T = refract(-V, N, 1.0/2.42); vec3 t = env(normalize(T*vec3(1.0,-1.0,1.0)));',
-      ' c = c*(0.45+0.55*f) + t*0.75 + vec3(0.22,0.24,0.27);',
-      ' float tw = 0.5+0.5*sin(uTime*2.3 + seed*17.0 + dot(N,vec3(9.0,7.0,5.0)));',
-      ' c += vec3(6.0)*pow(max(dot(R, normalize(vec3(-0.55,0.65,0.55))),0.0),220.0)*tw;',
-      ' c = mix(vec3(dot(c,vec3(0.333))), c, 0.75);',
-      ' return c*vec3(0.95,0.98,1.03); }',
-      'void main(){',
-      ' vec3 N = normalize(vN); vec3 V = normalize(uCam - vW); if(dot(N,V) < 0.0) N = -N;',
-      ' vec3 col;',
-      ' if (uMat == 0) { col = gold(N,V); }',
-      ' else if (uMat == 2) { col = diamond(N,V,uSeed); }',
-      ' else {',
-      '  vec2 p = vL.xy / 0.16; vec2 q = vec2(p.x + 0.5*mod(floor(p.y),2.0), p.y);',
-      '  vec2 cell = floor(q); vec2 fr = fract(q) - 0.5; float d = length(fr);',
-      '  if (d < 0.36) {',
-      '   float a = floor(atan(fr.y,fr.x)/0.785398)*0.785398 + 0.3927;',
-      '   float k = d/0.36; vec3 n2 = normalize(vec3(cos(a)*k*0.9, sin(a)*k*0.9, 1.0-0.6*k));',
-      '   vec3 Nn = normalize(N + (n2 - vec3(0.0,0.0,1.0))*1.2);',
-      '   col = diamond(Nn, V, hash(cell)+uSeed);',
-      '  } else { col = gold(N,V)*0.85; }',
-      ' }',
-      ' gl_FragColor = vec4(tone(col),1.0); }'
-    ].join('\n');
-
-    function sh(type, src) {
-      var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
-      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
-      return s;
-    }
-    var prog;
-    try {
-      prog = gl.createProgram();
-      gl.attachShader(prog, sh(gl.VERTEX_SHADER, VS));
-      gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, FS));
-      gl.linkProgram(prog);
-      if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog));
-    } catch (e) { canvas.remove(); return; }
-    gl.useProgram(prog);
-    var A = { p: gl.getAttribLocation(prog, 'aP'), n: gl.getAttribLocation(prog, 'aN') };
-    var U = {};
-    ['uProj', 'uView', 'uModel', 'uCam', 'uMat', 'uTime', 'uSeed'].forEach(function (k) { U[k] = gl.getUniformLocation(prog, k); });
-
-    // ---------- geometry ----------
-    function mesh(arr) {
-      var b = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, b);
-      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(arr), gl.STATIC_DRAW);
-      return { b: b, n: arr.length / 6 };
-    }
-    function quad(out, a, b, c, d) { out.push.apply(out, a.concat(b, c, a, c, d)); }
-    function ovalTorus(a, b, r, US, VS2) {
-      var out = [];
-      function P(u, v) {
-        var cu = Math.cos(u), su = Math.sin(u);
-        var nx = b * cu, ny = a * su, l = Math.hypot(nx, ny); nx /= l; ny /= l;
-        var cv = Math.cos(v), sv = Math.sin(v);
-        var n = [cv * nx, cv * ny, sv];
-        return [a * cu + r * n[0], b * su + r * n[1], r * n[2], n[0], n[1], n[2]];
-      }
-      for (var i = 0; i < US; i++) for (var j = 0; j < VS2; j++) {
-        var u0 = i / US * 6.2832, u1 = (i + 1) / US * 6.2832, v0 = j / VS2 * 6.2832, v1 = (j + 1) / VS2 * 6.2832;
-        quad(out, P(u0, v0), P(u1, v0), P(u1, v1), P(u0, v1));
-      }
-      return out;
-    }
-    function plate(a, b, h, R, S) {
-      var out = [];
-      function P(rho, t) {
-        var x = a * rho * Math.cos(t), y = b * rho * Math.sin(t), z = h * (1 - rho * rho);
-        var n = [2 * h * x / (a * a), 2 * h * y / (b * b), 1], l = Math.hypot(n[0], n[1], n[2]);
-        return [x, y, z, n[0] / l, n[1] / l, n[2] / l];
-      }
-      for (var i = 0; i < R; i++) for (var j = 0; j < S; j++) {
-        var r0 = i / R, r1 = (i + 1) / R, t0 = j / S * 6.2832, t1 = (j + 1) / S * 6.2832;
-        quad(out, P(r0, t0), P(r1, t0), P(r1, t1), P(r0, t1));
-      }
-      return out;
-    }
-    function brilliant() {
-      var out = [], i, k, m;
-      var tY = 0.32, tR = 0.55, cY = -0.86, T = [], G = [], PV = [];
-      for (k = 0; k < 8; k++) { var at = k * Math.PI / 4; T.push([tR * Math.cos(at), tY, tR * Math.sin(at)]); }
-      for (m = 0; m < 16; m++) { var ag = m * Math.PI / 8; G.push([Math.cos(ag), 0, Math.sin(ag)]); }
-      for (m = 0; m < 16; m++) { var ap = (m + 0.5) * Math.PI / 8; PV.push([0.5 * Math.cos(ap), -0.45, 0.5 * Math.sin(ap)]); }
-      var C = [0, cY, 0], TC = [0, tY, 0], tris = [];
-      for (k = 0; k < 8; k++) {
-        var k1 = (k + 1) % 8;
-        tris.push([TC, T[k], T[k1]]);
-        tris.push([T[k], T[k1], G[(2 * k + 1) % 16]]);
-        tris.push([T[k], G[(2 * k + 1) % 16], G[2 * k]]);
-        tris.push([T[k1], G[(2 * k + 2) % 16], G[(2 * k + 1) % 16]]);
-      }
-      for (m = 0; m < 16; m++) {
-        var m1 = (m + 1) % 16;
-        tris.push([G[m], G[m1], PV[m]]);
-        tris.push([G[m1], PV[m1], PV[m]]);
-        tris.push([PV[m], PV[m1], C]);
-      }
-      tris.forEach(function (t) {
-        var a = t[0], b = t[1], c = t[2];
-        var u = [b[0] - a[0], b[1] - a[1], b[2] - a[2]], v = [c[0] - a[0], c[1] - a[1], c[2] - a[2]];
-        var n = [u[1] * v[2] - u[2] * v[1], u[2] * v[0] - u[0] * v[2], u[0] * v[1] - u[1] * v[0]];
-        var l = Math.hypot(n[0], n[1], n[2]); n = [n[0] / l, n[1] / l, n[2] / l];
-        var cx = (a[0] + b[0] + c[0]) / 3, cy = (a[1] + b[1] + c[1]) / 3 + 0.2, cz = (a[2] + b[2] + c[2]) / 3;
-        if (n[0] * cx + n[1] * cy + n[2] * cz < 0) n = [-n[0], -n[1], -n[2]];
-        [a, b, c].forEach(function (p) { out.push(p[0], p[1], p[2], n[0], n[1], n[2]); });
+  // ===== RSVP form (placeholder: connect to the team's form / SMS tool) =====
+  var OK = "You're in. See you December 12 at 300 Sharpstown Center. Show this confirmation at the store to claim Buy Upper, Get Lower FREE. #ShineRedefined";
+  var ERR = 'Something went wrong. Check your details and try again.';
+  document.querySelectorAll('.rsvp-form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var msg = form.querySelector('.msg');
+      var bad = null;
+      form.querySelectorAll('[required]').forEach(function (f) {
+        var invalid = f.type === 'checkbox' ? !f.checked : !f.value.trim() || !f.checkValidity();
+        f.setAttribute('aria-invalid', String(invalid));
+        if (invalid && !bad) bad = f;
       });
-      return out;
-    }
-    var G = {
-      link: mesh(ovalTorus(1.55, 0.95, 0.27, 56, 16)),
-      paveRing: mesh(ovalTorus(1.75, 1.1, 0.24, 56, 14)),
-      paveTop: mesh(plate(1.62, 0.98, 0.18, 10, 56)),
-      gem: mesh(brilliant())
-    };
-
-    // ---------- math ----------
-    function persp(fy, asp, n, f) {
-      var t = 1 / Math.tan(fy / 2);
-      return [t / asp, 0, 0, 0, 0, t, 0, 0, 0, 0, (f + n) / (n - f), -1, 0, 0, 2 * f * n / (n - f), 0];
-    }
-    function mul(a, b) {
-      var o = new Array(16);
-      for (var c = 0; c < 4; c++) for (var r = 0; r < 4; r++) {
-        o[c * 4 + r] = a[r] * b[c * 4] + a[4 + r] * b[c * 4 + 1] + a[8 + r] * b[c * 4 + 2] + a[12 + r] * b[c * 4 + 3];
-      }
-      return o;
-    }
-    function basis(x, y, z, p, s) { return [x[0] * s, x[1] * s, x[2] * s, 0, y[0] * s, y[1] * s, y[2] * s, 0, z[0] * s, z[1] * s, z[2] * s, 0, p[0], p[1], p[2], 1]; }
-    function rotX(a) { var c = Math.cos(a), s = Math.sin(a); return [1, 0, 0, 0, 0, c, s, 0, 0, -s, c, 0, 0, 0, 0, 1]; }
-    function rotY(a) { var c = Math.cos(a), s = Math.sin(a); return [c, 0, -s, 0, 0, 1, 0, 0, s, 0, c, 0, 0, 0, 0, 1]; }
-    function rotZ(a) { var c = Math.cos(a), s = Math.sin(a); return [c, s, 0, 0, -s, c, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]; }
-    function trans(x, y, z) { return [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, x, y, z, 1]; }
-    function scl(s) { return [s, 0, 0, 0, 0, s, 0, 0, 0, 0, s, 0, 0, 0, 0, 1]; }
-    function norm(v) { var l = Math.hypot(v[0], v[1], v[2]) || 1; return [v[0] / l, v[1] / l, v[2] / l]; }
-    function cross(a, b) { return [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]]; }
-    function cr(p0, p1, p2, p3, t) {
-      var t2 = t * t, t3 = t2 * t;
-      return [0, 1, 2].map(function (i) {
-        return 0.5 * (2 * p1[i] + (-p0[i] + p2[i]) * t + (2 * p0[i] - 5 * p1[i] + 4 * p2[i] - p3[i]) * t2 + (-p0[i] + 3 * p1[i] - 3 * p2[i] + p3[i]) * t3);
-      });
-    }
-
-    // ---------- scene layout (fractions of the visible half-width W / half-height H) ----------
-    var CHAINS = [
-      { pts: [[-1.25, 0.05, -1], [-1.02, 0.28, 0.5], [-0.78, 0.66, 1.2], [-0.55, 1.02, 0.2], [-0.38, 1.3, -1]], anchor: [-1.0, 1.0] },
-      { pts: [[0.12, -1.3, -1], [0.38, -0.98, 0.4], [0.68, -0.6, 1.2], [0.98, -0.3, 0.4], [1.25, -0.08, -1]], anchor: [1.0, -1.0] }
-    ];
-    var GEMS = [
-      [-0.83, -0.4, 0.95, 'top'], [-0.57, -0.6, 0.55, 'side'], [-0.92, -0.75, 0.45, 'top'],
-      [-0.08, 0.83, 0.5, 'side'], [0.85, 0.63, 0.85, 'top'], [0.65, 0.78, 0.45, 'top'],
-      [0.92, -0.72, 0.62, 'side'], [0.14, -0.9, 0.42, 'top']
-    ];
-    var FOV = 30 * Math.PI / 180, D = 40, HH = D * Math.tan(FOV / 2);
-    var links = [], gems = [];
-    var LINK_S = 0.82, STEP = 1.72 * LINK_S;
-
-    function layout(asp) {
-      var W = HH * asp, H = HH;
-      var s = Math.min(1, Math.max(0.62, asp / 1.6));
-      links = [];
-      CHAINS.forEach(function (ch, ci) {
-        var P = ch.pts.map(function (q) { return [q[0] * W, q[1] * H, q[2]]; });
-        var ext = [P[0]].concat(P, [P[P.length - 1]]);
-        var samples = [];
-        for (var sgm = 0; sgm < ext.length - 3; sgm++) for (var t = 0; t < 1; t += 0.002) samples.push(cr(ext[sgm], ext[sgm + 1], ext[sgm + 2], ext[sgm + 3], t));
-        var acc = 0, next = 0, idx = 0, step = STEP * s;
-        for (var i = 1; i < samples.length; i++) {
-          var a = samples[i - 1], b = samples[i];
-          acc += Math.hypot(b[0] - a[0], b[1] - a[1], b[2] - a[2]);
-          if (acc >= next) {
-            var tg = norm([b[0] - a[0], b[1] - a[1], b[2] - a[2]]);
-            links.push({ p: b, t: tg, k: idx, chain: ci, anchor: [ch.anchor[0] * W, ch.anchor[1] * H], s: LINK_S * s });
-            idx++; next += step;
-          }
-        }
-      });
-      gems = GEMS.map(function (g, i) { return { p: [g[0] * W, g[1] * H, 1.5], r: g[2] * 1.15 * s, kind: g[3], seed: i * 0.37 + 0.1 }; });
-    }
-
-    // ---------- render ----------
-    var mx = 0, my = 0, tmx = 0, tmy = 0, start = null, visible = false, raf = 0, asp = 1;
-    function resize() {
-      var r = section.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = Math.max(1, Math.round(r.width * dpr)); canvas.height = Math.max(1, Math.round(r.height * dpr));
-      gl.viewport(0, 0, canvas.width, canvas.height);
-      asp = r.width / Math.max(1, r.height); layout(asp);
-    }
-    function ease(x) { x = Math.min(1, Math.max(0, x)); return 1 - Math.pow(1 - x, 3); }
-    function draw(m, model, mat, seed) {
-      gl.bindBuffer(gl.ARRAY_BUFFER, m.b);
-      gl.vertexAttribPointer(A.p, 3, gl.FLOAT, false, 24, 0);
-      gl.vertexAttribPointer(A.n, 3, gl.FLOAT, false, 24, 12);
-      gl.uniformMatrix4fv(U.uModel, false, new Float32Array(model));
-      gl.uniform1i(U.uMat, mat); gl.uniform1f(U.uSeed, seed || 0);
-      gl.drawArrays(gl.TRIANGLES, 0, m.n);
-    }
-    function frame(now) {
-      raf = 0;
-      if (start === null) start = now;
-      var t = reduce ? 30 : (now - start) / 1000;
-      mx += (tmx - mx) * 0.06; my += (tmy - my) * 0.06;
-      gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-      gl.enable(gl.DEPTH_TEST); gl.enableVertexAttribArray(A.p); gl.enableVertexAttribArray(A.n);
-      gl.uniformMatrix4fv(U.uProj, false, new Float32Array(persp(FOV, asp, 1, 100)));
-      gl.uniformMatrix4fv(U.uView, false, new Float32Array(trans(0, 0, -D)));
-      gl.uniform3f(U.uCam, 0, 0, D); gl.uniform1f(U.uTime, t);
-      var scene = mul(rotX(-my * 0.12), rotY(mx * 0.16));
-
-      links.forEach(function (L, i) {
-        var appear = ease((t - 0.1 - L.k * 0.045) / 0.7);
-        if (appear <= 0) return;
-        var sway = Math.sin(t * 0.5 + L.chain * 2.0) * 0.025;
-        var ax = L.anchor[0], ay = L.anchor[1];
-        var dx = L.p[0] - ax, dy = L.p[1] - ay, cs = Math.cos(sway), sn = Math.sin(sway);
-        var p = [ax + dx * cs - dy * sn, ay + dx * sn + dy * cs + (1 - appear) * 4, L.p[2]];
-        var tg = [L.t[0] * cs - L.t[1] * sn, L.t[0] * sn + L.t[1] * cs, L.t[2]];
-        var y = norm(cross([0, 0, 1], tg)), z = cross(tg, y);
-        var roll = (L.k % 2 ? Math.PI / 2 : 0) + Math.sin(t * 1.1 + L.k * 0.6) * 0.18;
-        var cr2 = Math.cos(roll), sr = Math.sin(roll);
-        var y2 = [y[0] * cr2 + z[0] * sr, y[1] * cr2 + z[1] * sr, y[2] * cr2 + z[2] * sr];
-        var z2 = cross(tg, y2);
-        var model = mul(scene, basis(tg, y2, z2, p, L.s * appear));
-        var pave = (L.k % 2 === 0) && (L.k % 8 === 4);
-        if (pave) { draw(G.paveRing, model, 0); draw(G.paveTop, model, 1, i * 0.13); }
-        else draw(G.link, model, 0);
-      });
-      gems.forEach(function (g, i) {
-        var appear = ease((t - 0.9 - i * 0.12) / 0.8);
-        if (appear <= 0) return;
-        var bob = Math.sin(t * 0.9 + i) * 0.15;
-        var m = trans(g.p[0], g.p[1] + bob + (1 - appear) * 2, g.p[2]);
-        if (g.kind === 'top') m = mul(m, mul(rotX(Math.PI / 2 + Math.sin(t * 0.7 + i) * 0.25), rotY(t * 0.45 + i)));
-        else m = mul(m, mul(rotZ(0.35 * (i % 2 ? 1 : -1)), mul(rotX(0.25), rotY(t * 0.6 + i))));
-        draw(G.gem, mul(scene, mul(m, scl(g.r * appear))), 2, g.seed);
-      });
-      if (!reduce && visible) raf = requestAnimationFrame(frame);
-    }
-    function kick() { if (!raf) raf = requestAnimationFrame(frame); }
-
-    resize();
-    section.classList.add('gl-on');
-    window.addEventListener('resize', function () { resize(); kick(); });
-    window.addEventListener('pointermove', function (e) {
-      tmx = e.clientX / innerWidth * 2 - 1; tmy = e.clientY / innerHeight * 2 - 1;
-    }, { passive: true });
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (es) {
-        es.forEach(function (e) { visible = e.isIntersecting; if (visible) { if (start === null) start = null; kick(); } });
-      }, { rootMargin: '100px' }).observe(section);
-    } else { visible = true; kick(); }
-  })();
-
-  // ===== Translations (EN is read from the page itself) =====
-  // mode: h = innerHTML, t = text, n = first text node (label text), l = last text node
-  var I18N = [
-    ['#menu-open', 0, 't', { vi: 'Menu (+)', zh: '菜单 (+)', es: 'Menú (+)' }],
-    ['#menu-close', 0, 't', { vi: 'Đóng (×)', zh: '关闭 (×)', es: 'Cerrar (×)' }],
-    ['.menu-links a', 0, 'h', { vi: 'Trang chủ<sup>(01)</sup>', zh: '首页<sup>(01)</sup>', es: 'Inicio<sup>(01)</sup>' }],
-    ['.menu-links a', 1, 'h', { vi: 'Câu chuyện<sup>(02)</sup>', zh: '回归之路<sup>(02)</sup>', es: 'El regreso<sup>(02)</sup>' }],
-    ['.menu-links a', 2, 'h', { vi: 'Lịch trình<sup>(03)</sup>', zh: '活动日程<sup>(03)</sup>', es: 'El día<sup>(03)</sup>' }],
-    ['.menu-links a', 3, 'h', { vi: 'Ưu đãi<sup>(04)</sup>', zh: '限时优惠<sup>(04)</sup>', es: 'La oferta<sup>(04)</sup>' }],
-    ['.menu-links a', 4, 'h', { vi: 'Khách mời<sup>(05)</sup>', zh: '演出阵容<sup>(05)</sup>', es: 'En cartel<sup>(05)</sup>' }],
-    ['.menu-links a', 5, 'h', { vi: 'Địa điểm<sup>(06)</sup>', zh: '活动地点<sup>(06)</sup>', es: 'Cómo llegar<sup>(06)</sup>' }],
-    ['.menu-foot .tag', 0, 't', { vi: 'Ngôn ngữ', zh: '语言', es: 'Idioma' }],
-    ['.menu-foot > div', 1, 'h', {
-      vi: '300 Sharpstown Center<br>Houston, TX 77036<br>Thứ Bảy · 12/12/2026',
-      zh: '300 Sharpstown Center<br>Houston, TX 77036<br>2026年12月12日（周六）',
-      es: '300 Sharpstown Center<br>Houston, TX 77036<br>Sáb · 12 dic · 2026' }],
-
-    ['.hero-meta', 0, 'h', {
-      vi: '<span>Khai trương</span><span>Thứ Bảy · 12.12.2026</span><span>300 Sharpstown Center · Houston</span>',
-      zh: '<span>盛大开业</span><span>周六 · 2026.12.12</span><span>300 Sharpstown Center · 休斯顿</span>',
-      es: '<span>Gran apertura</span><span>Sáb · 12.12.2026</span><span>300 Sharpstown Center · Houston</span>' }],
-    ['.hero-lead', 0, 't', {
-      vi: 'Sharpstown từng là biểu tượng của Houston. Chúng tôi đến đây không phải tình cờ — mà để viết nên chương tiếp theo.',
-      zh: 'Sharpstown 曾是休斯顿的地标。我们来到这里并非偶然——而是为了书写下一个篇章。',
-      es: 'Sharpstown fue un ícono de Houston. No estamos aquí por casualidad: venimos a escribir lo que sigue.' }],
-    ['.hero-cta .btn-gold', 0, 't', { vi: 'Lưu ngày', zh: '记下日期', es: 'Aparta la fecha' }],
-    ['.hero-cta .btn-ghost', 0, 't', { vi: 'Theo dõi @brilliant_jewelers2024', zh: '关注 @brilliant_jewelers2024', es: 'Síguenos @brilliant_jewelers2024' }],
-
-    ['.timer .tag', 0, 't', { vi: 'Ngày', zh: '天', es: 'Días' }],
-    ['.timer .tag', 1, 't', { vi: 'Giờ', zh: '时', es: 'Horas' }],
-    ['.timer .tag', 2, 't', { vi: 'Phút', zh: '分', es: 'Minutos' }],
-    ['.timer .tag', 3, 't', { vi: 'Giây', zh: '秒', es: 'Segundos' }],
-    ['.venue-sub', 0, 't', {
-      vi: 'Thứ Bảy, 12 tháng 12, 2026 · Mở cửa [TIME] · Houston, TX',
-      zh: '2026年12月12日（周六）· [TIME] 开门 · 德州休斯顿',
-      es: 'Sábado 12 de diciembre de 2026 · Abre a las [TIME] · Houston, TX' }],
-    ['.count .btn', 0, 't', { vi: 'Chỉ đường', zh: '查看路线', es: 'Cómo llegar' }],
-
-    ['.statement p', 0, 'h', {
-      vi: 'Sharpstown từng là biểu tượng của <span class="tilt">Houston</span>. <span class="soft">Chúng tôi đến đây không phải tình cờ —</span> mà để viết nên chương <span class="huge metal">tiếp theo.</span>',
-      zh: 'Sharpstown 曾是<span class="tilt">Houston</span>的地标。<span class="soft">我们来到这里并非偶然——</span>而是为了书写<span class="huge metal">下一章。</span>',
-      es: 'Sharpstown fue un ícono de <span class="tilt">Houston</span>. <span class="soft">No estamos aquí por casualidad:</span> venimos a escribir lo que <span class="huge metal">sigue.</span>' }],
-
-    ['.pillar h3', 0, 'h', { vi: 'Giá trị mới<span class="num">(01)</span>', zh: '新价值<span class="num">(01)</span>', es: 'Nuevo valor<span class="num">(01)</span>' }],
-    ['.pillar h3', 1, 'h', { vi: 'Tầm nhìn mới<span class="num">(02)</span>', zh: '新视野<span class="num">(02)</span>', es: 'Nueva visión<span class="num">(02)</span>' }],
-    ['.pillar h3', 2, 'h', { vi: 'Kỷ nguyên mới<span class="num">(03)</span>', zh: '新时代<span class="num">(03)</span>', es: 'Nueva era<span class="num">(03)</span>' }],
-    ['.pillar p', 0, 't', {
-      vi: 'Giá trị theo cách của riêng bạn — vị thế tự thân làm nên, dành cho bất kỳ ai xứng đáng.',
-      zh: '以你自己的方式定义「价值」——白手起家的身份象征，属于每一个配得上它的人。',
-      es: 'Lo valioso, en tus propios términos: estatus hecho a pulso, para quien se lo ha ganado.' }],
-    ['.pillar p', 1, 't', {
-      vi: 'Một cách nhìn mới về Sharpstown — và về chính bạn.',
-      zh: '以全新的眼光看待 Sharpstown——也重新看待你自己。',
-      es: 'Una nueva forma de ver Sharpstown, y de verte a ti mismo.' }],
-    ['.pillar p', 2, 't', {
-      vi: 'Ranh giới giữa Sharpstown của ngày xưa và những gì sắp đến — bắt đầu từ bây giờ.',
-      zh: 'Sharpstown 的过去与未来之间的分界线——从现在开始。',
-      es: 'La línea entre lo que Sharpstown fue y lo que viene, a partir de ahora.' }],
-
-    ['.story h2', 0, 'h', { vi: 'Cuộc <em>Comeback</em> bắt đầu từ đây.', zh: '<em>Comeback</em>，从这里开始。', es: 'El <em>regreso</em> empieza a propósito.' }],
-    ['.story .cols p', 0, 't', {
-      vi: 'Năm 1961, Sharpstown Center khai trương, trở thành trung tâm mua sắm khép kín có máy lạnh đầu tiên của Houston. Suốt một thế hệ, nơi đây là điểm đến hàng đầu của thành phố — một Houston mới, hiện đại và đầy tham vọng.',
-      zh: '1961年，Sharpstown Center 开业，成为休斯顿第一座有空调的室内购物中心。在整整一代人的时间里，它都是城市首屈一指的购物胜地——一个现代而雄心勃勃的新休斯顿。',
-      es: 'En 1961, Sharpstown Center abrió como el primer centro comercial cerrado y con aire acondicionado de Houston. Durante una generación fue el destino principal de la ciudad: el nuevo Houston, moderno y ambicioso.' }],
-    ['.story .cols p', 1, 't', {
-      vi: 'Khu phố chưa bao giờ ngừng chuyển động. Ngày nay đây là một trong những khu đa dạng nhất Houston: các gia đình gốc Việt, Hoa, Latin và Mỹ gốc Phi sống cạnh nhau, khoảng 77.000 cư dân với độ tuổi trung bình 33, cùng mười lăm năm đầu tư mới.',
-      zh: '这个社区从未停下脚步。如今它是休斯顿最多元的社区之一：越南裔、华裔、拉丁裔和非裔家庭比邻而居，约77,000位居民，平均年龄33岁，并迎来了十五年的新投资。',
-      es: 'El barrio nunca dejó de moverse. Hoy es uno de los más diversos de Houston: familias vietnamitas, chinas, hispanas y afroamericanas conviven lado a lado, unos 77,000 vecinos con una edad promedio de 33 años y quince años de nueva inversión.' }],
-    ['.story .cols p', 2, 't', {
-      vi: 'Chỉ có danh tiếng là chưa theo kịp. Brilliant Jewelers không đi khám phá Sharpstown — chúng tôi chọn nơi đây làm điểm khởi đầu cho cuộc trở lại.',
-      zh: '只是外界的印象还没跟上。Brilliant Jewelers 并非偶然发现 Sharpstown——我们是有意选择这里，作为回归的起点。',
-      es: 'Solo falta que la reputación se ponga al día. Brilliant Jewelers no está descubriendo Sharpstown: lo estamos eligiendo como el lugar donde empieza el regreso.' }],
-
-    ['.day-title', 0, 'h', { vi: 'Lịch trình<sup>(03)</sup>', zh: '活动日程<sup>(03)</sup>', es: 'El día<sup>(03)</sup>' }],
-    ['.day-sub', 0, 't', {
-      vi: 'Thứ Bảy, 12 tháng 12 · Lịch chi tiết công bố [DATE]',
-      zh: '12月12日（周六）· 完整日程将于 [DATE] 公布',
-      es: 'Sábado 12 de diciembre · Programa completo el [DATE]' }],
-    ['.tracks .track-head', 0, 'h', { vi: '<sup>Đón khách</sup>Đồ uống chào mừng<em>(quầy bar biểu diễn &amp; món nhẹ)</em>', zh: '<sup>入场</sup>迎宾饮品<em>（花式调酒与小食）</em>', es: '<sup>Llegada</sup>Bebidas de bienvenida<em>(barra flair y bocadillos)</em>' }],
-    ['.tracks .track-head', 1, 'h', { vi: '<sup>Cả ngày</sup>DJ trực tiếp<em>(từ lúc mở đến lúc đóng cửa)</em>', zh: '<sup>全天</sup>现场 DJ<em>（从开门到打烊）</em>', es: '<sup>Todo el día</sup>DJ en vivo<em>(de apertura a cierre)</em>' }],
-    ['.tracks .track-head', 2, 'h', { vi: '<sup>[Giờ]</sup>Nhảy đường phố<em>(màn mở đầu)</em>', zh: '<sup>[时间]</sup>街舞表演<em>（开场）</em>', es: '<sup>[Hora]</sup>Baile urbano<em>(la apertura)</em>' }],
-    ['.tracks .track-head', 3, 'h', { vi: '<sup>[Giờ]</sup>Cắt băng khai trương<em>(chính thức mở cửa)</em>', zh: '<sup>[时间]</sup>剪彩仪式<em>（正式开业）</em>', es: '<sup>[Hora]</sup>Corte de listón<em>(apertura oficial)</em>' }],
-    ['.tracks .track-head', 4, 'h', { vi: '<sup>[Giờ]</sup>Múa lân<em>(cầu may + công bố ưu đãi)</em>', zh: '<sup>[时间]</sup>舞狮<em>（祈福 + 公布优惠）</em>', es: '<sup>[Hora]</sup>Danza del león<em>(bendición + revelación de la oferta)</em>' }],
-    ['.tracks .track-head', 5, 'h', { vi: '<sup>[Giờ]</sup>Hip-hop Houston<em>(cùng [Tên nghệ sĩ])</em>', zh: '<sup>[时间]</sup>休斯顿嘻哈<em>（特邀 [艺人名单]）</em>', es: '<sup>[Hora]</sup>Hip-hop de Houston<em>(con [Artistas])</em>' }],
-    ['.tracks .track-head', 6, 'h', { vi: '<sup>[Giờ]</sup>Triển lãm xe<em>(slab &amp; lowrider)</em>', zh: '<sup>[时间]</sup>改装车展<em>（Slab 与 Lowrider）</em>', es: '<sup>[Hora]</sup>Exhibición de autos<em>(slabs y lowriders)</em>' }],
-    ['.tracks .track-head', 7, 'h', { vi: '<sup>Cả ngày</sup>Photo booth<em>(bước vào trang bìa)</em>', zh: '<sup>全天</sup>拍照亭<em>（登上封面）</em>', es: '<sup>Todo el día</sup>Photo booth<em>(entra a la portada)</em>' }],
-    ['.tracks .track-head', 8, 'h', { vi: '<sup>Cả ngày</sup>Vệ sinh trang sức<em>(miễn phí)</em>', zh: '<sup>全天</sup>珠宝清洗<em>（免费）</em>', es: '<sup>Todo el día</sup>Limpieza de joyas<em>(cortesía de la casa)</em>' }],
-    ['.tracks .track-body p', 0, 'h', { vi: 'Bartender biểu diễn mở màn ngày hội với đồ uống chào mừng và món nhẹ. Cầm ly trên tay và dạo một vòng cửa hàng mới.', zh: '花式调酒师以迎宾饮品和小食开启这一天。端起一杯，先逛逛新店。', es: 'Un bartender flair abre el día con bebidas de bienvenida y bocadillos. Toma una copa y date una primera vuelta por la tienda.' }],
-    ['.tracks .track-body p', 1, 'h', { vi: '[Tên DJ] giữ nhạc suốt từ lúc mở cửa đến khi đóng cửa &mdash; nhạc nền cho cả ngày hội.', zh: '[DJ 名字] 从开门到打烊全程打碟 &mdash; 整天的背景音乐。', es: '[Nombre del DJ] pone la música desde que abrimos hasta el cierre &mdash; la banda sonora de todo el día.' }],
-    ['.tracks .track-body p', 2, 'h', { vi: '[Tên nhóm nhảy] mở màn lúc [Giờ] với tiết mục nhảy đường phố &mdash; khởi động cho cả đám đông.', zh: '[舞团名字] 于 [时间] 带来街舞开场，点燃全场气氛。', es: '[Nombre del grupo] arranca a las [Hora] con un show de baile urbano &mdash; la apertura que pone a todos a moverse.' }],
-    ['.tracks .track-body p', 3, 'h', { vi: 'Khoảnh khắc chính thức: cắt băng khai trương, Brilliant Jewelers mở cửa chào Sharpstown. Hãy có mặt để là người đầu tiên bước vào.', zh: '正式时刻：剪彩仪式后，Brilliant Jewelers 正式向 Sharpstown 敞开大门。快来第一个走进店里。', es: 'El momento oficial: cortamos el listón y Brilliant Jewelers abre sus puertas a Sharpstown. Sé de los primeros en entrar.' }],
-    ['.tracks .track-body p', 4, 'h', { vi: 'Múa lân truyền thống mang may mắn và lời chúc phúc cho cửa hàng mới &mdash; đồng thời công bố ưu đãi duy nhất ngày 12.12.', zh: '传统舞狮为新店带来好运与祝福 &mdash; 并揭晓 12.12 一日限定优惠。', es: 'Una danza del león tradicional trae suerte y bendiciones a la nueva tienda &mdash; y revela nuestra oferta de un solo día, el 12.12.' }],
-    ['.tracks .track-body p', 5, 'h', { vi: 'Các nghệ sĩ Houston [Tên nghệ sĩ] biểu diễn trực tiếp. Danh sách đầy đủ sắp công bố &mdash; theo dõi @brilliant_jewelers2024 để không bỏ lỡ.', zh: '休斯顿艺人 [艺人名单] 现场演出。完整阵容即将公布 &mdash; 关注 @brilliant_jewelers2024，不要错过。', es: 'Shows en vivo de artistas de Houston: [Artistas]. El cartel completo muy pronto &mdash; síguenos en @brilliant_jewelers2024 para no perdértelo.' }],
-    ['.tracks .track-body p', 6, 'h', { vi: 'Dàn xe slab và lowrider trưng bày cả ngày &mdash; sơn bóng, chrome và văn hoá xe Houston. Muốn mang xe đến trưng bày? [Thông tin đăng ký xe].', zh: 'Slab 与 Lowrider 全天展出 &mdash; 亮漆、镀铬与休斯顿汽车文化。想展示你的爱车？[车展报名信息]。', es: 'Slabs y lowriders en exhibición todo el día &mdash; pintura candy, cromo y cultura automotriz de Houston. ¿Quieres mostrar tu carro? [Detalles de inscripción].' }],
-    ['.tracks .track-body p', 7, 'h', { vi: 'Bước vào trang bìa: photo booth dành cho grillz và góc đẹp nhất của bạn. Tạo dáng và tag @brilliant_jewelers2024.', zh: '登上封面：专为你的 grillz 和最佳角度打造的拍照亭。摆个姿势，并标记 @brilliant_jewelers2024。', es: 'Entra a la portada: un photo booth hecho para tus grillz y tu mejor ángulo. Posa y etiqueta a @brilliant_jewelers2024.' }],
-    ['.tracks .track-body p', 8, 'h', { vi: 'Mang theo món trang sức bạn yêu thích, đội ngũ của chúng tôi sẽ vệ sinh miễn phí trong lúc bạn tham quan. Miễn phí cả ngày.', zh: '带上你心爱的首饰，在你逛店时我们的团队免费为你清洗。全天免费。', es: 'Trae una pieza que ames y nuestro equipo la limpiará gratis mientras recorres la tienda. Cortesía de la casa, todo el día.' }],
-
-    ['.offer .tag', 0, 't', { vi: '(04) Ưu đãi — chỉ ngày 12.12', zh: '(04) 限时优惠 — 仅限 12.12', es: '(04) La oferta — solo el 12.12' }],
-    ['.offer h2 .a', 0, 't', { vi: 'Mua hàm trên.', zh: '购买上排，', es: 'Compra la superior.' }],
-    ['.offer h2 .b', 0, 't', { vi: 'Tặng hàm dưới.', zh: '下排免费送。', es: 'La inferior, gratis.' }],
-    ['.offer p', 0, 't', {
-      vi: 'Một ngày. Một ưu đãi. Lời cảm ơn của chúng tôi gửi đến Sharpstown.',
-      zh: '一天，一个优惠。这是我们对 Sharpstown 的感谢。',
-      es: 'Un día. Una oferta. Nuestro agradecimiento a Sharpstown.' }],
-    ['.offer .terms', 0, 't', { vi: '[ĐIỀU KHOẢN ƯU ĐÃI]', zh: '[优惠条款]', es: '[TÉRMINOS DE LA OFERTA]' }],
-    ['.offer .btn', 0, 't', { vi: 'Lên kế hoạch ghé thăm', zh: '规划您的行程', es: 'Planea tu visita' }],
-
-    ['.bill-head h2', 0, 'h', {
-      vi: 'Khách mời<span class="num" style="color:var(--gold)">(05)</span>',
-      zh: '演出阵容<span class="num" style="color:var(--gold)">(05)</span>',
-      es: 'En cartel<span class="num" style="color:var(--gold)">(05)</span>' }],
-    ['.bill-head p', 0, 't', {
-      vi: 'Những gương mặt của ngày 12/12. Ảnh sẽ được cập nhật khi công bố lineup.',
-      zh: '12月12日的主角们。阵容公布后将陆续更新照片。',
-      es: 'Las caras del 12 de diciembre. Las fotos llegan conforme se anuncie el cartel.' }],
-    ['.shot .cap span', 0, 't', { vi: 'Nhà sáng tạo khách mời', zh: '特邀创作者', es: 'Creador invitado' }],
-    ['.shot .cap span', 1, 't', { vi: 'Nhà sáng tạo khách mời', zh: '特邀创作者', es: 'Creador invitado' }],
-    ['.shot .cap span', 2, 't', { vi: 'Nhà sáng tạo khách mời', zh: '特邀创作者', es: 'Creador invitado' }],
-    ['.shot .cap span', 3, 't', { vi: 'Nhà sáng tạo khách mời', zh: '特邀创作者', es: 'Creador invitado' }],
-    ['.shot .cap span', 4, 't', { vi: 'Biểu diễn trực tiếp', zh: '现场演出', es: 'Show en vivo' }],
-    ['.shot .cap span', 5, 't', { vi: 'Tiết mục chính', zh: '压轴演出', es: 'Show estelar' }],
-    ['.shot .cap span', 6, 't', { vi: 'Cả ngày', zh: '全天', es: 'Todo el día' }],
-    ['.shot .cap span', 7, 't', { vi: 'Nhảy đường phố', zh: '街舞', es: 'Baile urbano' }],
-    ['.shot .cap span', 8, 't', { vi: 'Grillz đặt riêng', zh: '定制 Grillz', es: 'Grillz a la medida' }],
-    ['.shot .cap span', 9, 't', { vi: 'Slab & lowrider', zh: 'Slab 与 Lowrider', es: 'Slabs y lowriders' }],
-    ['.shot .cap b', 8, 't', { vi: 'Ánh kim', zh: '闪耀', es: 'El brillo' }],
-    ['.shot .cap b', 9, 't', { vi: 'Triển lãm xe', zh: '车展', es: 'Autos' }],
-
-    ['.visit .tag', 0, 't', { vi: '(06) Địa điểm', zh: '(06) 活动地点', es: '(06) Cómo llegar' }],
-    ['.visit h2', 0, 't', { vi: 'Ghé nhé.', zh: '快来吧。', es: 'Te esperamos.' }],
-    ['.row .k', 0, 't', { vi: 'Địa chỉ', zh: '地点', es: 'Dónde' }],
-    ['.row .k', 1, 't', { vi: 'Ngày', zh: '日期', es: 'Cuándo' }],
-    ['.row .k', 2, 't', { vi: 'Giờ mở', zh: '时间', es: 'Horario' }],
-    ['.row .k', 3, 't', { vi: 'Đậu xe', zh: '停车', es: 'Parqueo' }],
-    ['.row .v', 1, 't', { vi: 'Thứ Bảy, 12 tháng 12, 2026', zh: '2026年12月12日（周六）', es: 'Sábado 12 de diciembre de 2026' }],
-    ['.row .v', 3, 't', { vi: '[THÔNG TIN ĐẬU XE]', zh: '[停车信息]', es: '[INFO DE ESTACIONAMIENTO]' }],
-    ['.btn-row .btn', 0, 't', { vi: 'Mở Google Maps', zh: '在 Google 地图中打开', es: 'Abrir en Google Maps' }],
-    ['.btn-row .btn', 1, 't', { vi: 'Thêm vào lịch', zh: '加入日历', es: 'Agregar al calendario' }],
-
-    ['.marquee.gold .marquee-track > div', 0, 'h', {
-      vi: '<span>300 Sharpstown Center</span><i class="dia"></i><span class="bl">Houston</span><i class="dia"></i><span class="outline">Thứ Bảy · 12/12</span><i class="dia"></i><span>Mua hàm trên, tặng hàm dưới</span><i class="dia"></i>',
-      zh: '<span>300 Sharpstown Center</span><i class="dia"></i><span class="bl">Houston</span><i class="dia"></i><span class="outline">周六 · 12月12日</span><i class="dia"></i><span>买上排，送下排</span><i class="dia"></i>',
-      es: '<span>300 Sharpstown Center</span><i class="dia"></i><span class="bl">Houston</span><i class="dia"></i><span class="outline">Sáb · 12 dic</span><i class="dia"></i><span>Compra la superior, la inferior gratis</span><i class="dia"></i>' }],
-
-    ['.rsvp h2 .a', 0, 't', { vi: 'Giữ chỗ cho bạn', zh: '预留你的位置', es: 'Aparta tu lugar' }],
-    ['.rsvp h2 .b', 0, 't', { vi: 'hẹn gặp ngày 12', zh: '十二号见', es: 'nos vemos el doce' }],
-    ['.rsvp .wrap > p', 0, 't', {
-      vi: 'Nhắc lịch trước 3 ngày và sáng ngày sự kiện. Không gì khác.',
-      zh: '活动前三天及当天早上各提醒一次，仅此而已。',
-      es: 'Un recordatorio tres días antes y la mañana del evento. Nada más.' }],
-    ['.rsvp .field', 0, 'n', { vi: 'Họ tên', zh: '姓名', es: 'Nombre' }],
-    ['.rsvp .field', 1, 'n', { vi: 'Điện thoại', zh: '电话', es: 'Teléfono' }],
-    ['.rsvp .field', 2, 'n', { vi: 'Email', zh: '邮箱', es: 'Correo' }],
-    ['.rsvp .check', 0, 'l', {
-      vi: 'Nhắn tin nhắc lịch cho tôi. Có thể phát sinh phí tin nhắn & dữ liệu.',
-      zh: '请通过短信提醒我。可能产生短信和流量费用。',
-      es: 'Envíame recordatorios por SMS. Pueden aplicar cargos por mensajes y datos.' }],
-    ['.rsvp button[type="submit"]', 0, 't', { vi: 'Đăng ký', zh: '我要参加', es: 'Cuenta conmigo' }],
-
-    ['.foot-grid > div', 1, 'h', {
-      vi: '<b>Khai trương</b>Thứ Bảy, 12 tháng 12, 2026<br>Mở cửa [TIME]',
-      zh: '<b>盛大开业</b>2026年12月12日（周六）<br>[TIME] 开门',
-      es: '<b>Gran apertura</b>Sábado 12 de diciembre de 2026<br>Abre a las [TIME]' }],
-    ['.foot-grid > div:nth-child(3) b', 0, 't', { vi: 'Theo dõi', zh: '关注我们', es: 'Síguenos' }],
-    ['.site-foot .wrap > div:last-child span', 0, 't', {
-      vi: '© 2026 Brilliant Jewelers. Bảo lưu mọi quyền.',
-      zh: '© 2026 Brilliant Jewelers。保留所有权利。',
-      es: '© 2026 Brilliant Jewelers. Todos los derechos reservados.' }]
-  ];
-  var MSG = {
-    en: { name: 'Please add your name.', contact: 'Add a phone number or email so we can remind you.', ok: "You're on the list. See you December 12." },
-    vi: { name: 'Vui lòng nhập họ tên.', contact: 'Thêm số điện thoại hoặc email để chúng tôi nhắc bạn.', ok: 'Bạn đã có tên trong danh sách. Hẹn gặp ngày 12/12!' },
-    zh: { name: '请填写您的姓名。', contact: '请留下电话或邮箱，方便我们提醒您。', ok: '报名成功！12月12日见。' },
-    es: { name: 'Por favor escribe tu nombre.', contact: 'Agrega un teléfono o correo para recordarte.', ok: '¡Estás en la lista! Nos vemos el 12 de diciembre.' }
-  };
-  var currentLang = 'en';
-
-  function textNode(el, last) {
-    var nodes = Array.prototype.filter.call(el.childNodes, function (n) { return n.nodeType === 3 && n.nodeValue.trim(); });
-    return last ? nodes[nodes.length - 1] : nodes[0];
-  }
-  function read(el, mode) {
-    if (mode === 'h') return el.innerHTML;
-    if (mode === 'n' || mode === 'l') { var t = textNode(el, mode === 'l'); return t ? t.nodeValue : ''; }
-    return el.textContent;
-  }
-  function write(el, mode, val) {
-    if (mode === 'h') el.innerHTML = val;
-    else if (mode === 'n' || mode === 'l') { var t = textNode(el, mode === 'l'); if (t) t.nodeValue = val; }
-    else el.textContent = val;
-  }
-  // Schedule: tap a row to open its details
-  document.querySelectorAll('.track-head').forEach(function (b) {
-    b.addEventListener('click', function () {
-      b.setAttribute('aria-expanded', String(b.getAttribute('aria-expanded') !== 'true'));
+      if (bad) { msg.className = 'msg err'; msg.textContent = ERR; bad.focus(); return; }
+      msg.className = 'msg ok';
+      msg.textContent = OK;
+      form.querySelectorAll('input, select').forEach(function (f) { f.disabled = true; });
+      form.querySelector('button[type="submit"]').style.display = 'none';
     });
   });
-  // Capture English from the page once
-  I18N.forEach(function (e) {
-    var el = document.querySelectorAll(e[0])[e[1]];
-    e.el = el;
-    if (el) e[3].en = read(el, e[2]);
-  });
-  function setLang(code) {
-    if (!MSG[code]) code = 'en';
-    currentLang = code;
-    I18N.forEach(function (e) { if (e.el && e[3][code] != null) write(e.el, e[2], e[3][code]); });
-    // the second (duplicate) marquee copy mirrors the first
-    var copies = document.querySelectorAll('.marquee.gold .marquee-track > div');
-    if (copies[1]) copies[1].innerHTML = copies[0].innerHTML;
-    document.documentElement.lang = code === 'zh' ? 'zh-Hans' : code;
-    document.querySelectorAll('.lang button').forEach(function (b) {
-      b.setAttribute('aria-pressed', String(b.getAttribute('lang') === code));
-    });
-    try { localStorage.setItem('sr-lang', code); } catch (err) {}
-  }
-  document.querySelectorAll('.lang button').forEach(function (b) {
-    b.addEventListener('click', function () { setLang(b.getAttribute('lang')); });
-  });
-  (function () {
-    var fromUrl = new URLSearchParams(location.search).get('lang');
-    var saved = null;
-    try { saved = localStorage.getItem('sr-lang'); } catch (err) {}
-    var start = fromUrl || saved;
-    if (start && start !== 'en') setLang(start);
-  })();
 
   // ===== Add to calendar (.ics) =====
   document.getElementById('add-cal').addEventListener('click', function (e) {
     e.preventDefault();
     var ics = [
       'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Brilliant Jewelers//Grand Opening//EN',
-      'BEGIN:VEVENT', 'UID:shine-redefined-20261212@brilliantjewelers', 'DTSTAMP:20261018T000000Z',
-      'DTSTART:20261212T150000Z', 'DTEND:20261213T000000Z',
+      'BEGIN:VEVENT', 'UID:shine-redefined-20261212@brilliantjewelers', 'DTSTAMP:20261022T000000Z',
+      'DTSTART:20261212T160000Z', 'DTEND:20261213T000000Z',
       'SUMMARY:Brilliant Jewelers Grand Opening — Shine Redefined',
       'LOCATION:300 Sharpstown Center\\, Houston\\, TX 77036',
-      'DESCRIPTION:Live DJ\\, lion dance\\, Houston hip-hop\\, car show and a one-day offer.',
+      'DESCRIPTION:Live music\\, a car show\\, and Buy Upper\\, Get Lower FREE. RSVP to claim the offer.',
       'END:VEVENT', 'END:VCALENDAR'
     ].join('\r\n');
     var a = document.createElement('a');
@@ -1760,16 +576,18 @@
     document.body.appendChild(a); a.click(); a.remove();
   });
 
-  // ===== RSVP (placeholder — connect to the team's form / SMS tool) =====
-  document.getElementById('rsvp-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var note = document.getElementById('form-note');
-    var m = MSG[currentLang] || MSG.en;
-    if (!this.name.value.trim()) { note.textContent = m.name; this.name.focus(); return; }
-    if (!this.phone.value.trim() && !this.email.value.trim()) { note.textContent = m.contact; return; }
-    note.textContent = m.ok;
-    this.reset();
-  });
+  // ===== Soft reveal on scroll =====
+  (function () {
+    var els = document.querySelectorAll('[data-reveal]');
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
 </script>
 </body>
 </html>
