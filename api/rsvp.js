@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 
 // Same viewing code as the brief results page; only its SHA-256 lives in this public repo
 const KEY_HASH = process.env.BRIEF_ADMIN_KEY_HASH || '8ae08cd71d7fe2a2cea351b2ba6f92f504e08d2c5b3ae75b918249a391339fef';
-// Web app URL of the Apps Script bound to the "Shine Redefined – RSVP" sheet
+// Web app URL of the Apps Script bound to the "Shine Redefined – RSVP" sheet, kept in the Vercel env so this public repo does not expose it
 const SHEET_URL = process.env.RSVP_SHEET_URL || '';
 
 const clip = (v, n) => String(v == null ? '' : v).trim().slice(0, n);
