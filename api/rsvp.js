@@ -47,8 +47,10 @@ export default async function handler(req, res) {
     if (SHEET_URL) {
       try {
         const r = await fetch(SHEET_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(record) });
-        sheet = r.ok;
-        if (!r.ok) console.error('sheet', r.status);
+        // Apps Script answers 200 with an HTML error page when the script throws, so check the body too
+        const text = await r.text();
+        sheet = r.ok && text.trim() === 'ok';
+        if (!sheet) console.error('sheet', r.status, text.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').slice(0, 300));
       } catch (e) { console.error('sheet', e); }
     }
     if (!saved && !sheet) return res.status(503).json({ error: 'not-saved' });
