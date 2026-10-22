@@ -582,13 +582,16 @@
     }, 1200);
   })();
 
-  // ===== RSVP form (placeholder: connect to the team's form / SMS tool) =====
+  // ===== RSVP form: saved by /api/rsvp to the team's Google Sheet =====
   var OK = "You're in. See you December 12 at 300 Sharpstown Center. Show this confirmation at the store to claim Buy Upper, Get Lower FREE. #ShineRedefined";
   var ERR = 'Something went wrong. Check your details and try again.';
+  var SEND_ERR = "We couldn't send your RSVP. Please try again in a moment.";
   document.querySelectorAll('.rsvp-form').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var msg = form.querySelector('.msg');
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn.disabled) return;
       var bad = null;
       form.querySelectorAll('[required]').forEach(function (f) {
         var invalid = f.type === 'checkbox' ? !f.checked : !f.value.trim() || !f.checkValidity();
@@ -596,10 +599,28 @@
         if (invalid && !bad) bad = f;
       });
       if (bad) { msg.className = 'msg err'; msg.textContent = ERR; bad.focus(); return; }
-      msg.className = 'msg ok';
-      msg.textContent = OK;
-      form.querySelectorAll('input, select').forEach(function (f) { f.disabled = true; });
-      form.querySelector('button[type="submit"]').style.display = 'none';
+      var data = {};
+      ['name', 'phone', 'email', 'language', 'source'].forEach(function (k) { data[k] = form.elements[k].value; });
+      data.consent = form.elements.consent.checked;
+      var label = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      msg.className = 'msg';
+      msg.textContent = '';
+      fetch('/api/rsvp', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); })
+        .then(function () {
+          msg.className = 'msg ok';
+          msg.textContent = OK;
+          form.querySelectorAll('input, select').forEach(function (f) { f.disabled = true; });
+          btn.style.display = 'none';
+        })
+        .catch(function () {
+          msg.className = 'msg err';
+          msg.textContent = SEND_ERR;
+          btn.disabled = false;
+          btn.textContent = label;
+        });
     });
   });
 
