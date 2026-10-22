@@ -1,0 +1,3 @@
+{
+  "rewrites": [{ "source": "/shine-redefined", "destination": "/index.html" }]
+}
