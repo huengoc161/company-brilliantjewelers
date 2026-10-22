@@ -95,6 +95,19 @@
   .cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 32px; }
   .hero .tags { margin-top: 32px; }
 
+  /* Hero diamond: brilliant cut seen from above, hairline gold */
+  .gem-wrap { display: flex; justify-content: center; margin-bottom: clamp(24px, 3vw, 36px); }
+  .gem { width: clamp(84px, 9vw, 124px); height: auto; overflow: visible; }
+  .gem-lines { fill: none; stroke: var(--gold); stroke-width: .9; stroke-linejoin: round; vector-effect: non-scaling-stroke; animation: gemTurn 60s linear infinite; transform-origin: 0 0; }
+  .gem-lines .f { stroke-opacity: .55; }
+  .gem-lines polygon { stroke: var(--gold-deep); }
+  .gem-sheen { animation: gemSheen 5.5s 1.4s var(--ease) infinite; opacity: .9; }
+  .spark { fill: var(--gold); transform-box: fill-box; transform-origin: center; animation: twinkle 3.2s ease-in-out infinite; }
+  .spark.s2 { animation-delay: 1.6s; }
+  @keyframes gemTurn { to { transform: rotate(360deg); } }
+  @keyframes gemSheen { 0% { transform: rotate(25deg) translateX(0); } 45%, 100% { transform: rotate(25deg) translateX(320px); } }
+  @keyframes twinkle { 0%, 100% { opacity: .25; transform: scale(.6); } 50% { opacity: 1; transform: scale(1); } }
+
   /* 2 · Comeback story */
   .story { border-top: 1px solid var(--line); }
   .quote { max-width: 860px; margin: 0 auto; text-align: center; font: 300 clamp(26px, 3.4vw, 44px)/1.25 var(--serif); color: var(--ink); text-wrap: balance; }
@@ -295,6 +308,14 @@
 <!-- 1 · Hero -->
 <section class="hero">
   <div class="wrap">
+    <div class="gem-wrap" data-reveal><svg class="gem" viewBox="-110 -110 220 220" aria-hidden="true">
+      <defs><linearGradient id="gem-sheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+      <clipPath id="gem-clip"><circle r="96"/></clipPath></defs>
+      <g class="gem-lines"><circle r="96"/><polygon points="17.6,-42.5 42.5,-17.6 42.5,17.6 17.6,42.5 -17.6,42.5 -42.5,17.6 -42.5,-17.6 -17.6,-42.5"/><path d="M17.6 -42.5L49.5 -49.5L42.5 -17.6"/><path d="M42.5 -17.6L70.0 0.0L42.5 17.6"/><path d="M42.5 17.6L49.5 49.5L17.6 42.5"/><path d="M17.6 42.5L0.0 70.0L-17.6 42.5"/><path d="M-17.6 42.5L-49.5 49.5L-42.5 17.6"/><path d="M-42.5 17.6L-70.0 0.0L-42.5 -17.6"/><path d="M-42.5 -17.6L-49.5 -49.5L-17.6 -42.5"/><path d="M-17.6 -42.5L-0.0 -70.0L17.6 -42.5"/><path class="f" d="M-36.74 -88.69L0.0 -70.0L36.74 -88.69M0.0 -70.0L0.0 -96.0"/><path class="f" d="M36.74 -88.69L49.5 -49.5L88.69 -36.74M49.5 -49.5L67.88 -67.88"/><path class="f" d="M88.69 -36.74L70.0 0.0L88.69 36.74M70.0 0.0L96.0 0.0"/><path class="f" d="M88.69 36.74L49.5 49.5L36.74 88.69M49.5 49.5L67.88 67.88"/><path class="f" d="M36.74 88.69L0.0 70.0L-36.74 88.69M0.0 70.0L0.0 96.0"/><path class="f" d="M-36.74 88.69L-49.5 49.5L-88.69 36.74M-49.5 49.5L-67.88 67.88"/><path class="f" d="M-88.69 36.74L-70.0 0.0L-88.69 -36.74M-70.0 0.0L-96.0 0.0"/><path class="f" d="M-88.69 -36.74L-49.5 -49.5L-36.74 -88.69M-49.5 -49.5L-67.88 -67.88"/><path d="M17.6 -42.5L36.74 -88.69"/><path d="M42.5 -17.6L88.69 -36.74"/><path d="M42.5 17.6L88.69 36.74"/><path d="M17.6 42.5L36.74 88.69"/><path d="M-17.6 42.5L-36.74 88.69"/><path d="M-42.5 17.6L-88.69 36.74"/><path d="M-42.5 -17.6L-88.69 -36.74"/><path d="M-17.6 -42.5L-36.74 -88.69"/></g>
+      <g clip-path="url(#gem-clip)"><rect class="gem-sheen" x="-160" y="-110" width="80" height="220" fill="url(#gem-sheen)" transform="rotate(25)"/></g>
+      <path class="spark s1" d="M84 -96l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/>
+      <path class="spark s2" d="M-92 70l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/>
+    </svg></div>
     <p class="kicker" data-reveal>Something's coming to Sharpstown.</p>
     <p class="eyebrow" data-reveal>Brilliant Jewelers Grand Opening</p>
     <h1 data-reveal>Shine <span>Redefined</span></h1>
