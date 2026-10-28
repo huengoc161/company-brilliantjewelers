@@ -9,6 +9,8 @@
 <meta property="og:title" content="Brilliant Jewelers Grand Opening | Shine Redefined, Dec 12">
 <meta property="og:description" content="Join Brilliant Jewelers' grand opening in Sharpstown, Houston on Dec 12. Live music, a car show, and Buy Upper, Get Lower FREE. RSVP now.">
 <meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -77,7 +79,8 @@
   /* Header with sticky RSVP */
   .site-head { position: sticky; top: 0; z-index: 30; background: rgba(250, 248, 244, .92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
   .site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
-  .brand { font: 500 11px var(--sans); letter-spacing: .3em; text-transform: uppercase; text-decoration: none; color: var(--ink); white-space: nowrap; }
+  .brand { display: inline-flex; align-items: center; gap: 12px; font: 500 11px var(--sans); letter-spacing: .3em; text-transform: uppercase; text-decoration: none; color: var(--ink); white-space: nowrap; }
+  .brand img { height: 40px; width: auto; display: block; }
   .nav { display: flex; gap: 28px; list-style: none; padding: 0; }
   .nav a { font-size: 13px; text-decoration: none; color: var(--muted); transition: color .3s; }
   .nav a:hover { color: var(--ink); }
@@ -220,6 +223,7 @@
   .faq details p { padding: 0 44px 24px 0; color: var(--muted); max-width: 640px; }
 
   .site-foot { padding: clamp(72px, 10vw, 120px) 0 40px; border-top: 1px solid var(--line); text-align: center; }
+  .foot-logo { display: block; width: clamp(150px, 22vw, 220px); height: auto; margin: 0 auto 36px; }
   .foot-mark { font: italic 300 clamp(44px, 7vw, 88px)/1 var(--serif); color: var(--ink); }
   .site-foot .tags { margin-top: 20px; }
   .foot-addr { margin-top: 36px; color: var(--muted); font-size: 14px; }
@@ -270,7 +274,8 @@
   @media (max-width: 600px) {
     body { font-size: 15px; }
     .site-head .wrap { height: 60px; }
-    .brand { font-size: 10px; letter-spacing: .2em; }
+    .brand { font-size: 10px; letter-spacing: .2em; gap: 10px; }
+    .brand img { height: 34px; }
     .when { line-height: 2; }
     .when i { margin: 0 6px; }
     .cta .btn { flex: 1 1 100%; }
@@ -291,7 +296,7 @@
 
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="#top">Brilliant Jewelers</a>
+    <a class="brand" href="#top"><img src="/assets/logo-bj-mark.png" alt="" width="142" height="240">Brilliant Jewelers</a>
     <ul class="nav">
       <li><a href="#story">The story</a></li>
       <li><a href="#info">Event info</a></li>
@@ -514,6 +519,7 @@
 
 <footer class="site-foot">
   <div class="wrap">
+    <img class="foot-logo" src="/assets/logo-brilliant-jewelers.png" alt="Brilliant Jewelers" width="900" height="742" loading="lazy">
     <p class="foot-mark">Shine Redefined</p>
     <p class="tags">#ShineRedefined #BrilliantJewelers #Sharpstown</p>
     <p class="foot-addr">Brilliant Jewelers · 300 Sharpstown Center, Houston, TX 77036</p>
