@@ -43,6 +43,7 @@
     --muted: #66665F;
     --line: rgba(0, 0, 0, .14);
     --gold: #C5A15A;
+    --gold-logo: linear-gradient(110deg, #B8924A 0%, #E9CB66 38%, #DDBD60 55%, #C6A656 75%, #A9843F 100%);
     --gold-light: #F4E2A6;
     --gold-deep: #9C7A2B;
     --chrome-gold: linear-gradient(170deg, #E9C866 0%, #B8892B 28%, #6E5114 48%, #D8AE45 62%, #A27C25 80%, #5E440F 100%);
@@ -97,10 +98,10 @@
   .alt { background: var(--bg-2); }
 
   /* Buttons */
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 28px; border: 2px solid var(--fg); background: transparent; color: var(--fg); font: 700 13px/1 var(--display); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background .25s, color .25s, border-color .25s, transform .25s var(--ease); }
+  .btn { background-origin: border-box; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 28px; border: 2px solid var(--fg); background: transparent; color: var(--fg); font: 700 13px/1 var(--display); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background .25s, background-position .4s, color .25s, border-color .25s, transform .25s var(--ease); }
   .btn:hover { background: var(--fg); color: var(--bg); transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--gold); }
-  .btn-solid { background: var(--gold); border-color: var(--gold); color: var(--fg); }
-  .btn-solid:hover { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+  .btn-solid { background: var(--gold-logo); background-size: 160% 100%; background-position: 0 0; border-color: transparent; color: var(--fg); }
+  .btn-solid:hover { background: var(--gold-logo); background-size: 160% 100%; background-position: 100% 0; border-color: transparent; color: var(--fg); box-shadow: 4px 4px 0 var(--fg); }
   .btn-sm { min-height: 40px; padding: 0 16px; font-size: 15px; }
   :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
@@ -272,8 +273,8 @@
   .consent { display: grid; grid-template-columns: 18px 1fr; gap: 12px; font-size: 13px; line-height: 1.55; color: #555; }
   .consent input { margin: 3px 0 0; accent-color: var(--fg); width: 16px; height: 16px; }
   .rsvp-form .btn { width: 100%; }
-  .rsvp-form .btn-solid { background: var(--gold); border-color: var(--gold); color: var(--fg); }
-  .rsvp-form .btn-solid:hover { background: var(--fg); border-color: var(--fg); color: var(--bg); box-shadow: 4px 4px 0 var(--gold); }
+  .rsvp-form .btn-solid { background: var(--gold-logo); background-size: 160% 100%; border-color: transparent; color: var(--fg); }
+  .rsvp-form .btn-solid:hover { background: var(--gold-logo); background-size: 160% 100%; background-position: 100% 0; border-color: transparent; color: var(--fg); box-shadow: 4px 4px 0 var(--fg); }
   .msg { font-size: 14px; line-height: 1.55; }
   .msg:empty { display: none; }
   .msg.ok { padding: 16px; border: 2px solid var(--fg); color: var(--fg); background: var(--bg-2); }
