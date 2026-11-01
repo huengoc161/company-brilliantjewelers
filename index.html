@@ -115,7 +115,9 @@
   .script { font: 400 clamp(30px, 4vw, 52px)/1.1 var(--script); background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 2px 14px rgba(226, 178, 76, .3)); }
   .when { margin-top: 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 16px; font: 600 clamp(13px, 1.3vw, 16px)/1.4 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--fg); }
   .when .date { font-family: var(--serif); font-weight: 700; letter-spacing: .1em; color: var(--gold-light); }
-  .when .sep { color: var(--gold); font-size: .8em; }
+  .when .sep { color: var(--gold); }
+  .hero .kicker { font: 400 clamp(26px, 3vw, 40px)/1.1 var(--script); background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero .eyebrow { margin: 8px 0 14px; }
   .hero .sub { max-width: 600px; margin: 18px auto 0; color: var(--text); font-size: 17px; }
   .hero .sub b { color: var(--gold-light); font-weight: 700; }
   .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
@@ -167,7 +169,7 @@
   .happen ul { list-style: none; padding: 0; border-top: 1px solid var(--line); }
   .happen li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 14px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 15px; }
   .happen li::before { content: "✦"; color: var(--gold); line-height: 1.6; }
-  .happen b { display: block; font: 700 16px/1.3 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--fg); }
+  .happen b { font: 700 15px/1.3 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--fg); }
   .happen li.offer-li { margin-top: 12px; padding: 16px; border: 0; border-radius: 14px; background: var(--gold-logo); color: #2A1D08; }
   .happen li.offer-li::before { color: #2A1D08; }
   .happen li.offer-li b { color: #1A1206; }
@@ -308,8 +310,6 @@
     .brand { font-size: 12px; gap: 10px; }
     .brand img { height: 32px; }
     .hero-bar { margin-top: 0; }
-    .when .sep { display: none; }
-    .when { flex-direction: column; gap: 4px; }
     .cta .btn { flex: 1 1 100%; }
     .facts { grid-template-columns: 1fr; }
     .people { grid-template-columns: 1fr; max-width: 360px; gap: 40px; }
@@ -339,13 +339,15 @@
 
 <!-- 1 · Hero: the campaign key visual -->
 <section class="hero">
-  <h1 class="sr-only">Shine Redefined: Brilliant Jewelers Grand Opening Celebration</h1>
+  <h1 class="sr-only">Shine Redefined</h1>
   <figure class="kv">
     <img src="/assets/kv-shine-redefined-1200.webp" srcset="/assets/kv-shine-redefined-1200.webp 1200w, /assets/kv-shine-redefined.webp 2400w" sizes="100vw" width="2400" height="1800" alt="Shine Redefined, Brilliant Jewelers Grand Opening Celebration: a football player, a rapper and a model sit on a giant gold and diamond grill in front of the store at sunset, with a sports car beside them.">
   </figure>
   <div class="wrap hero-bar">
-    <p class="when" data-reveal><span class="date">Sat · 12.12.2026</span><span class="sep" aria-hidden="true">✦</span><span>10 AM – 6 PM</span><span class="sep" aria-hidden="true">✦</span><span>300 Sharpstown Center, Houston, TX 77036</span></p>
-    <p class="sub" data-reveal>Sharpstown never dimmed. Join us December 12 for live music, a car show, and a one-day-only offer: <b>Buy Upper, Get Lower FREE.</b></p>
+    <p class="kicker" data-reveal>Something's coming to Sharpstown.</p>
+    <p class="eyebrow" data-reveal>Brilliant Jewelers Grand Opening</p>
+    <p class="when" data-reveal><span class="date">12.12</span><span class="sep">·</span><span>300 Sharpstown Center, Houston, TX 77036</span></p>
+    <p class="sub" data-reveal>Sharpstown never dimmed. Join us December 12 for live music, a car show, and a one-day-only offer.</p>
     <div class="cta" data-reveal>
       <button class="btn btn-solid" type="button" data-open-rsvp>RSVP and claim your offer</button>
       <a class="btn" href="https://maps.app.goo.gl/rG756HiFMuE4MmCT8" target="_blank" rel="noopener">Get directions</a>
@@ -354,10 +356,6 @@
   </div>
 </section>
 
-<div class="ticker" aria-hidden="true"><div class="track">
-  <span>Buy upper get lower free</span><span>12.12 Sharpstown</span><span>Live hip-hop</span><span>Car show</span><span>Street dance</span><span>Shine redefined</span>
-  <span>Buy upper get lower free</span><span>12.12 Sharpstown</span><span>Live hip-hop</span><span>Car show</span><span>Street dance</span><span>Shine redefined</span>
-</div></div>
 
 <!-- 2 · Comeback story -->
 <section class="story" id="story">
@@ -365,7 +363,6 @@
     <h2 class="eyebrow" data-reveal>Sharpstown was once a Houston icon.</h2>
     <p class="quote" data-reveal>Sharpstown was once a <em>Houston icon.</em> <span class="soft">We're not here by accident.</span> We're here to write what comes <em>next.</em></p>
     <div class="story-foot" data-reveal>
-      <p class="diamond" aria-hidden="true">Sharpstown<span class="twinkle" style="top:.15em;right:-.1em">✦</span><span class="twinkle" style="bottom:.25em;left:.1em;animation-delay:1.3s">✦</span></p>
       <p class="support">On December 12, Brilliant Jewelers opens its doors in the neighborhood with music, cars, and a thank-you offer for Sharpstown. Come be part of the next chapter.</p>
     </div>
   </div>
@@ -375,7 +372,7 @@
 <section class="alt" id="info">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <p class="num">02 / Event info</p>
+      <p class="num">Event info</p>
       <h2>One day. One street. <em class="accent">One shine.</em></h2>
     </div>
     <div class="info-grid">
@@ -397,14 +394,14 @@
       <div class="happen" data-reveal>
         <h3>What's happening on the day</h3>
         <ul>
-          <li><span><b>Live hip-hop</b> A Houston artist set and a second Houston artist session in the afternoon.</span></li>
-          <li><span><b>Street dance</b> High-energy performances to open the day and restart the afternoon.</span></li>
-          <li><span><b>Lion dance blessing</b> A traditional performance to bless the new store.</span></li>
-          <li><span><b>Car show</b> Houston car culture on display in two sessions.</span></li>
-          <li><span><b>DJ and bartender flair show</b> The party starts at the door, with welcome drinks and finger food.</span></li>
-          <li><span><b>Free jewelry cleaning</b> Bring your pieces to the counter.</span></li>
-          <li><span><b>Photo booth</b> Show us your shine and tag #ShineRedefined.</span></li>
-          <li class="offer-li"><span><b>The offer: Buy Upper, Get Lower FREE</b> <a href="#rsvp">RSVP to claim it.</a></span></li>
+          <li><span><b>Live hip-hop:</b> a Houston artist set and a second Houston artist session in the afternoon.</span></li>
+          <li><span><b>Street dance:</b> high-energy performances to open the day and restart the afternoon.</span></li>
+          <li><span><b>Lion dance blessing:</b> a traditional performance to bless the new store.</span></li>
+          <li><span><b>Car show:</b> Houston car culture on display in two sessions.</span></li>
+          <li><span><b>DJ and bartender flair show:</b> the party starts at the door, with welcome drinks and finger food.</span></li>
+          <li><span><b>Free jewelry cleaning:</b> bring your pieces to the counter.</span></li>
+          <li><span><b>Photo booth:</b> show us your shine and tag #ShineRedefined.</span></li>
+          <li class="offer-li"><span><b>The offer:</b> Buy Upper, Get Lower FREE. <a href="#rsvp">RSVP to claim it.</a></span></li>
         </ul>
       </div>
     </div>
@@ -415,27 +412,27 @@
 <section id="coming">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <p class="num">03 / Who's coming</p>
+      <p class="num">Who's coming</p>
       <h2>Houston's own are <em class="accent">pulling up.</em></h2>
       <p>Meet the faces of the day, and follow them to see what's coming.</p>
     </div>
     <div class="people">
       <article class="person" data-reveal>
-        <div class="photo" data-n="01"><img src="/assets/kol-khalilvegas.webp" alt="Khalilvegas in a skeleton sweater and chain, sitting on the giant gold grill" width="720" height="960" loading="lazy"></div>
+        <div class="photo" data-n="01"><img src="/assets/kol-khalilvegas.webp" alt="Khalilvegas in a skeleton sweater, iced chain and pink grill, against a golden sunset sky" width="720" height="960" loading="lazy"></div>
         <h3>Khalilvegas</h3>
-        <p class="eyebrow role">Artist · TX / LA</p>
+        <p class="eyebrow role">Houston rapper</p>
         <blockquote>“Mid-bar, mid-store.”</blockquote>
         <a class="btn btn-sm" href="https://www.instagram.com/khalilvegas/" target="_blank" rel="noopener">Follow on Instagram</a>
       </article>
       <article class="person" data-reveal>
-        <div class="photo" data-n="02"><img src="/assets/kol-toxicissue.webp" alt="toxicissue in a blue outfit, sitting on the giant gold grill" width="720" height="960" loading="lazy"></div>
+        <div class="photo" data-n="02"><img src="/assets/kol-toxicissue.webp" alt="toxicissue flashing her pink grill and throwing up hand signs, against a golden sunset sky" width="720" height="960" loading="lazy"></div>
         <h3>toxicissue</h3>
-        <p class="eyebrow role">Reel creator</p>
+        <p class="eyebrow role">Houston rapper</p>
         <blockquote>“Not yet, Houston.”</blockquote>
         <a class="btn btn-sm" href="https://www.instagram.com/toxicissue/" target="_blank" rel="noopener">Follow on Instagram</a>
       </article>
       <article class="person" data-reveal>
-        <div class="photo" data-n="03"><img src="/assets/kol-xavier-toliver.webp" alt="Xavier Toliver in his Huskies number 13 jersey, holding a football on the giant gold grill" width="720" height="960" loading="lazy"></div>
+        <div class="photo" data-n="03"><img src="/assets/kol-xavier-toliver.webp" alt="Xavier Toliver in his Huskies number 13 jersey with a black grill, pointing and holding a football" width="720" height="960" loading="lazy"></div>
         <h3>Xavier Toliver</h3>
         <p class="eyebrow role">Football player</p>
         <blockquote>“Game day's coming, Sharpstown.”</blockquote>
@@ -450,8 +447,8 @@
   <div class="wrap">
     <div class="panel">
       <div class="panel-head" data-reveal>
-        <p class="hash">#shineredefined · Saturday, December 12</p>
-        <h2>The full day, at a glance.</h2>
+        <p class="hash">Agenda · Saturday, December 12</p>
+        <h2>The full day, <em class="accent">at a glance.</em></h2>
       </div>
       <ol class="agenda" data-reveal>
       <li><time>10:00 – 10:30 AM</time><h3>Welcome and Arrival</h3><p>DJ set, bartender flair show, welcome drinks and finger food, product display, free jewelry cleaning, photo booth</p></li>
@@ -466,17 +463,15 @@
       <li><time>5:00 – 6:00 PM</time><h3>Closing Window</h3><p>Final push, thank-you moment, wind-down</p></li>
       </ol>
       <p class="footnote">Times may change. Check this page and our social accounts for updates.</p>
-      <div class="advisory" aria-hidden="true"><b>R</b><span>RSVP required<br>Offer valid 12.12 only</span></div>
     </div>
   </div>
 </section>
 
 <!-- 6 · Promotion + RSVP -->
 <section class="offer-sec" id="rsvp">
-  <span class="bg-word" aria-hidden="true">FREE</span>
   <div class="wrap offer-grid">
     <div data-reveal>
-      <p class="eyebrow">05 / The offer · December 12 only</p>
+      <p class="eyebrow">The offer · December 12 only</p>
       <h2>Buy Upper. <span>Get Lower FREE.</span></h2>
       <p class="lead">One day only: December 12. RSVP to claim your offer.</p>
       <p class="body">Buy an upper grill and your lower is on us, matched to the price of the upper. RSVP below to lock it in.</p>
@@ -525,7 +520,7 @@
 <section id="faq">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <p class="num">06 / FAQ</p>
+      <p class="num">FAQ</p>
       <h2>Before you <em class="accent">pull up.</em></h2>
     </div>
     <div class="faq" data-reveal>
