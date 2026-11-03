@@ -120,12 +120,12 @@
 
   /* 2 · Guests: coverflow, tap to open */
   .guests { overflow: hidden; background: radial-gradient(ellipse 60% 50% at 50% 60%, rgba(226, 150, 40, .14), transparent 70%); }
-  .flow { position: relative; height: clamp(380px, 40vw, 540px); perspective: 1400px; touch-action: pan-y; user-select: none; }
+  .flow { position: relative; height: clamp(440px, 44vw, 600px); perspective: 1400px; touch-action: pan-y; user-select: none; }
   .g-card { position: absolute; left: 50%; bottom: 0; width: clamp(240px, 30vw, 380px); margin-left: calc(clamp(240px, 30vw, 380px) / -2); padding: 0; border: 0; background: none; cursor: pointer; transition: transform .7s var(--ease), opacity .7s var(--ease), filter .7s; text-align: center; }
   .g-card .ring { position: absolute; left: 6%; right: 6%; bottom: 12%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(255, 214, 120, .35), rgba(226, 150, 40, .08) 60%, transparent 70%); border: 1px solid rgba(255, 214, 120, .35); }
   .g-card img { -webkit-mask-image: linear-gradient(to top, transparent 0, #000 14%); mask-image: linear-gradient(to top, transparent 0, #000 14%); position: relative; width: 100%; height: clamp(320px, 35vw, 470px); object-fit: contain; object-position: bottom; filter: drop-shadow(0 0 1px rgba(255, 220, 150, .6)) drop-shadow(0 20px 30px rgba(0, 0, 0, .6)); }
-  .g-card .tag { position: relative; display: inline-block; margin-top: -26px; padding: 8px 16px; border-radius: 999px; background: rgba(10, 10, 11, .88); border: 1px solid rgba(255, 214, 120, .4); font: italic 800 clamp(15px, 1.5vw, 19px)/1 var(--title); text-transform: uppercase; color: var(--fg); white-space: nowrap; }
-  .g-card .tag small { display: block; margin-top: 4px; font: 600 10px var(--sans); letter-spacing: .16em; color: var(--gold); }
+  .g-card .tag { position: relative; z-index: 1; display: inline-block; margin-bottom: 12px; padding: 10px 20px; border-radius: 999px; background: rgba(10, 10, 11, .88); border: 1px solid rgba(255, 214, 120, .4); font: italic 800 clamp(17px, 1.7vw, 22px)/1 var(--title); text-transform: uppercase; color: var(--fg); white-space: nowrap; }
+  .g-card .tag small { display: block; margin-top: 5px; font: 600 11px var(--sans); letter-spacing: .16em; color: var(--gold); }
   .g-card[data-pos="0"] { transform: translateX(0) scale(1); z-index: 3; }
   .g-card[data-pos="1"] { transform: translateX(78%) scale(.72) rotateY(-28deg); z-index: 2; opacity: .55; filter: brightness(.6); }
   .g-card[data-pos="-1"] { transform: translateX(-78%) scale(.72) rotateY(28deg); z-index: 2; opacity: .55; filter: brightness(.6); }
@@ -242,7 +242,7 @@
   .guest-pop .in { align-items: center; grid-template-columns: minmax(0, 340px) 1fr; }
   .guest-pop video { align-self: start; width: 340px; height: min(604px, 78vh); }
   @media (max-width: 600px) { .guest-pop .in { grid-template-columns: 1fr; } }
-  .teaser-btn { display: flex; margin: 14px auto 0; }
+  .teaser-btn { margin-left: 10px; white-space: nowrap; }
   .guest-pop .txt { padding: 32px 28px; align-self: center; }
   .guest-pop .role { font: 700 11px var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
   .guest-pop h2 { margin: 6px 0 10px; font-size: clamp(32px, 5vw, 50px); }
@@ -298,7 +298,7 @@
     .head p { display: none; }
     .hero-bar { gap: 10px; }
     .hero-bar .when { flex: 1 1 100%; }
-    .flow { height: 340px; }
+    .flow { height: 390px; }
     .g-card { width: 220px; margin-left: -110px; }
     .g-card img { height: 290px; }
     .flow-nav { margin-top: 10px; }
@@ -361,16 +361,16 @@
       <p>Three Houston names, one day in Sharpstown. Tap a face to watch their video.</p>
     </div>
     <div class="flow" id="flow" data-reveal>
-      <button class="g-card" type="button"><span class="ring"></span><img src="/assets/kol-khalilvegas-cut.webp" alt="Khalilvegas in a skeleton sweater, gold-framed shades and an iced chain, smiling with a pink grill and throwing up hand signs" width="938" height="1400"><span class="tag">Khalilvegas<small>Houston rapper</small></span></button>
-      <button class="g-card" type="button"><span class="ring"></span><img src="/assets/kol-toxicissue-cut.webp" alt="toxicissue flashing her pink grill and throwing up hand signs" width="608" height="716"><span class="tag">toxicissue<small>Houston rapper</small></span></button>
-      <button class="g-card" type="button"><span class="ring"></span><img src="/assets/kol-xavier-toliver-cut.webp" alt="Xavier Toliver in his Huskies number 13 jersey and white gloves, tossing a football" width="1000" height="1323"><span class="tag">Xavier Toliver<small>Football player</small></span></button>
+      <button class="g-card" type="button"><span class="ring"></span><span class="tag">Khalilvegas<small>Houston rapper</small></span><img src="/assets/kol-khalilvegas-cut.webp" alt="Khalilvegas in a skeleton sweater, gold-framed shades and an iced chain, smiling with a pink grill and throwing up hand signs" width="938" height="1400"></button>
+      <button class="g-card" type="button"><span class="ring"></span><span class="tag">toxicissue<small>Houston rapper</small></span><img src="/assets/kol-toxicissue-cut.webp" alt="toxicissue flashing her pink grill and throwing up hand signs" width="608" height="716"></button>
+      <button class="g-card" type="button"><span class="ring"></span><span class="tag">Xavier Toliver<small>Football player</small></span><img src="/assets/kol-xavier-toliver-cut.webp" alt="Xavier Toliver in his Huskies number 13 jersey and white gloves, tossing a football" width="1000" height="1323"></button>
     </div>
     <div class="flow-nav">
       <button class="arr" type="button" data-flow="-1" aria-label="Previous guest">←</button>
       <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
       <button class="arr" type="button" data-flow="1" aria-label="Next guest">→</button>
+      <button class="btn btn-sm teaser-btn" type="button" id="teaser">▶ Watch the teaser</button>
     </div>
-    <button class="btn btn-sm teaser-btn" type="button" id="teaser">▶ Watch the teaser</button>
   </div>
 </section>
 
