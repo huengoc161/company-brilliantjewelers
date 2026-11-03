@@ -118,7 +118,7 @@
   .flow { position: relative; height: clamp(380px, 40vw, 540px); perspective: 1400px; touch-action: pan-y; user-select: none; }
   .g-card { position: absolute; left: 50%; bottom: 0; width: clamp(240px, 30vw, 380px); margin-left: calc(clamp(240px, 30vw, 380px) / -2); padding: 0; border: 0; background: none; cursor: pointer; transition: transform .7s var(--ease), opacity .7s var(--ease), filter .7s; text-align: center; }
   .g-card .ring { position: absolute; left: 6%; right: 6%; bottom: 12%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(255, 214, 120, .35), rgba(226, 150, 40, .08) 60%, transparent 70%); border: 1px solid rgba(255, 214, 120, .35); }
-  .g-card img { position: relative; width: 100%; height: clamp(320px, 35vw, 470px); object-fit: contain; object-position: bottom; filter: drop-shadow(0 0 1px rgba(255, 220, 150, .6)) drop-shadow(0 20px 30px rgba(0, 0, 0, .6)); }
+  .g-card img { -webkit-mask-image: linear-gradient(to top, transparent 0, #000 14%); mask-image: linear-gradient(to top, transparent 0, #000 14%); position: relative; width: 100%; height: clamp(320px, 35vw, 470px); object-fit: contain; object-position: bottom; filter: drop-shadow(0 0 1px rgba(255, 220, 150, .6)) drop-shadow(0 20px 30px rgba(0, 0, 0, .6)); }
   .g-card .tag { position: relative; display: inline-block; margin-top: -26px; padding: 8px 16px; border-radius: 999px; background: rgba(10, 10, 11, .88); border: 1px solid rgba(255, 214, 120, .4); font: italic 800 clamp(15px, 1.5vw, 19px)/1 var(--title); text-transform: uppercase; color: var(--fg); white-space: nowrap; }
   .g-card .tag small { display: block; margin-top: 4px; font: 600 10px var(--sans); letter-spacing: .16em; color: var(--gold); }
   .g-card[data-pos="0"] { transform: translateX(0) scale(1); z-index: 3; }
@@ -356,9 +356,9 @@
       <p>Three Houston names, one day in Sharpstown. Tap a face to watch their video.</p>
     </div>
     <div class="flow" id="flow" data-reveal>
-      <button class="g-card" type="button"><span class="ring"></span><img src="/assets/kol-khalilvegas-cut.webp" alt="Khalilvegas in a skeleton sweater and iced chain, flashing a pink grill" width="1000" height="1350"><span class="tag">Khalilvegas<small>Houston rapper</small></span></button>
-      <button class="g-card" type="button"><span class="ring"></span><img src="/assets/kol-toxicissue-cut.webp" alt="toxicissue flashing her pink grill and throwing up hand signs" width="1000" height="1172"><span class="tag">toxicissue<small>Houston rapper</small></span></button>
-      <button class="g-card" type="button"><span class="ring"></span><img src="/assets/kol-xavier-toliver-cut.webp" alt="Xavier Toliver in his Huskies number 13 jersey with a black grill, holding his helmet" width="1000" height="1388"><span class="tag">Xavier Toliver<small>Football player</small></span></button>
+      <button class="g-card" type="button"><span class="ring"></span><img src="/assets/kol-khalilvegas-cut.webp" alt="Khalilvegas in a skeleton sweater, gold-framed shades and an iced chain, smiling with a pink grill and throwing up hand signs" width="938" height="1400"><span class="tag">Khalilvegas<small>Houston rapper</small></span></button>
+      <button class="g-card" type="button"><span class="ring"></span><img src="/assets/kol-toxicissue-cut.webp" alt="toxicissue flashing her pink grill and throwing up hand signs" width="608" height="716"><span class="tag">toxicissue<small>Houston rapper</small></span></button>
+      <button class="g-card" type="button"><span class="ring"></span><img src="/assets/kol-xavier-toliver-cut.webp" alt="Xavier Toliver in his Huskies number 13 jersey and white gloves, tossing a football" width="1000" height="1323"><span class="tag">Xavier Toliver<small>Football player</small></span></button>
     </div>
     <div class="flow-nav">
       <button class="arr" type="button" data-flow="-1" aria-label="Previous guest">←</button>
