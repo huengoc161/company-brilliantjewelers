@@ -10,7 +10,7 @@
 <meta property="og:description" content="Live hip-hop, lion dance, car show, DJ. Buy Upper, Get Lower FREE and 50% off grillz. One day only. RSVP now.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://company-brilliantjewelers.vercel.app/assets/og-shine-redefined.jpg">
-<link rel="preload" as="image" href="/assets/kv-shine-redefined-1200.webp" imagesrcset="/assets/kv-shine-redefined-1200.webp 1200w, /assets/kv-shine-redefined.webp 2400w" imagesizes="100vw">
+<link rel="preload" as="image" href="/assets/kv-shine-redefined-1200.webp" imagesrcset="/assets/kv-shine-redefined-1200.webp 1200w, /assets/kv-shine-redefined.webp 2400w" imagesizes="(min-width: 900px) min(100vw, 104vh), 100vw">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -100,6 +100,11 @@
   .hero { padding: 0; }
   .kv { position: relative; }
   .kv img { width: 100%; height: auto; }
+  @media (min-width: 900px) {
+    /* Desktop: cap the key visual so it plus the date bar fit in about one screen */
+    .kv { width: min(100%, calc(78vh * 4 / 3)); margin: 0 auto; }
+    .kv img { -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  }
   .kv::after { content: ""; position: absolute; inset: auto 0 0; height: 8%; background: linear-gradient(transparent, var(--bg)); pointer-events: none; }
   .hero-bar { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px 28px; margin-top: clamp(12px, 1.6vw, 22px); padding-bottom: clamp(24px, 3vw, 36px); text-align: center; }
   .when { font: italic 800 clamp(18px, 2vw, 26px)/1.2 var(--title); text-transform: uppercase; color: var(--fg); letter-spacing: .02em; }
@@ -335,7 +340,7 @@
 <section class="hero">
   <h1 class="sr-only">Shine Redefined: Brilliant Jewelers Grand Opening, December 12</h1>
   <figure class="kv">
-    <img src="/assets/kv-shine-redefined-1200.webp" srcset="/assets/kv-shine-redefined-1200.webp 1200w, /assets/kv-shine-redefined.webp 2400w" sizes="100vw" width="2400" height="1800" alt="Shine Redefined, Brilliant Jewelers Grand Opening Celebration: a football player, a rapper and a model sit on a giant gold and diamond grill in front of the store at sunset, with a sports car beside them.">
+    <img src="/assets/kv-shine-redefined-1200.webp" srcset="/assets/kv-shine-redefined-1200.webp 1200w, /assets/kv-shine-redefined.webp 2400w" sizes="(min-width: 900px) min(100vw, 104vh), 100vw" width="2400" height="1800" alt="Shine Redefined, Brilliant Jewelers Grand Opening Celebration: a football player, a rapper and a model sit on a giant gold and diamond grill in front of the store at sunset, with a sports car beside them.">
   </figure>
   <div class="wrap hero-bar">
     <p class="when"><span class="g">Sat 12.12</span> · 10AM – 6PM<small>300 Sharpstown Center, Houston, TX 77036</small></p>
