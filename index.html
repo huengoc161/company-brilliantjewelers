@@ -200,6 +200,7 @@
   .terms summary::-webkit-details-marker { display: none; }
   .terms summary::after { content: " +"; color: var(--gold); }
   .terms[open] summary::after { content: " −"; }
+  .mobile-rsvp { display: none; width: 100%; margin-top: 18px; }
   .terms ul { margin-top: 10px; padding-left: 18px; font-size: 13px; color: var(--muted); }
   .form-card { padding: clamp(22px, 3.5vw, 40px); border: 1px solid rgba(226, 178, 76, .45); border-radius: 24px; background: linear-gradient(160deg, #1B1812, #0E0D0B); box-shadow: 0 30px 80px -30px rgba(226, 150, 40, .45); }
   .rsvp-form { display: grid; gap: 20px; }
@@ -280,6 +281,30 @@
     .guest-pop .txt { padding: 4px 22px 26px; text-align: center; }
     .agenda li { grid-template-columns: 1fr; gap: 0; }
     .dock { justify-content: space-between; }
+    /* Phone: keep the page short, everything slides sideways */
+    section { padding: 36px 0; }
+    .title { font-size: 40px; }
+    .head { margin-bottom: 18px; }
+    .head p { display: none; }
+    .hero-bar { gap: 10px; }
+    .hero-bar .when { flex: 1 1 100%; }
+    .flow { height: 340px; }
+    .g-card { width: 220px; margin-left: -110px; }
+    .g-card img { height: 290px; }
+    .flow-nav { margin-top: 10px; }
+    .rail { grid-auto-columns: 62%; }
+    .extras { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 4px calc(var(--gutter) * -1) 0; padding: 0 var(--gutter); }
+    .extras::-webkit-scrollbar { display: none; }
+    .extras li { white-space: nowrap; }
+    .offers .grid { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 86%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter) 4px; gap: 12px; }
+    .offers .grid::-webkit-scrollbar { display: none; }
+    .deal { scroll-snap-align: start; min-height: 0; gap: 16px; padding: 22px; }
+    .deal h3 { font-size: 38px; }
+    .facts { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .facts div { padding: 12px 14px; }
+    .plan .grid { gap: 14px; }
+    .rsvp .form-card { display: none; }
+    .rsvp .mobile-rsvp { display: flex; }
   }
 </style>
 <script>document.documentElement.classList.add('js');</script>
@@ -345,7 +370,7 @@
       <div><span class="kick">On the day</span><h2 class="title">The <span class="g">lineup</span></h2></div>
       <div class="rail-nav"><button type="button" data-rail="-1" aria-label="Scroll left">←</button><button type="button" data-rail="1" aria-label="Scroll right">→</button></div>
     </div>
-    <div class="rail" id="rail" data-reveal>
+    <div class="rail" id="rail" data-reveal data-auto>
       <figure class="act"><img src="/assets/act-hiphop.webp" alt="Rapper performing with a microphone" width="800" height="1000" loading="lazy"><figcaption><time>12PM · 4PM</time><h3>Live hip-hop</h3></figcaption></figure>
       <figure class="act"><img src="/assets/act-lion-dance.webp" alt="Red lion dance performance in the street" width="800" height="1000" loading="lazy"><figcaption><time>11:40AM</time><h3>Lion dance</h3></figcaption></figure>
       <figure class="act"><img src="/assets/act-car-show.webp" alt="Lowrider cars on show in the street" width="800" height="1000" loading="lazy"><figcaption><time>12:30PM · 4PM</time><h3>Car show</h3></figcaption></figure>
@@ -363,7 +388,7 @@
     <div class="head" data-reveal>
       <div><span class="kick">December 12 only</span><h2 class="title">Grand opening <span class="g">deals</span></h2></div>
     </div>
-    <div class="grid">
+    <div class="grid" data-auto>
       <article class="deal deal-a sweep" data-reveal>
         <span class="big" aria-hidden="true">FREE</span>
         <div><h3>Buy Upper.<br>Get Lower FREE.</h3><p class="desc">Buy an upper grill and your lower is on us, matched to the price of the upper.</p></div>
@@ -420,6 +445,7 @@
       <span class="kick">Lock it in</span>
       <h2 class="title">RSVP <span class="g">now</span></h2>
       <p class="lead">Everyone is welcome. RSVP to claim Buy Upper, Get Lower FREE, then show your confirmation at the store on December 12.</p>
+      <button class="btn btn-solid mobile-rsvp" type="button" data-open-rsvp>RSVP and claim my offer</button>
       <details class="terms">
         <summary>Terms</summary>
         <ul>
@@ -599,6 +625,22 @@
     var rail = document.getElementById('rail');
     document.querySelectorAll('[data-rail]').forEach(function (b) {
       b.addEventListener('click', function () { rail.scrollBy({ left: +b.dataset.rail * (rail.firstElementChild.offsetWidth + 16), behavior: 'smooth' }); });
+    });
+  })();
+
+  // ===== Slow auto-slide for sideways rows (pauses while the visitor touches it) =====
+  (function () {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.querySelectorAll('[data-auto]').forEach(function (row) {
+      var hold = 0;
+      ['pointerdown', 'touchstart', 'wheel', 'mouseenter'].forEach(function (ev) { row.addEventListener(ev, function () { hold = Date.now() + 6000; }, { passive: true }); });
+      setInterval(function () {
+        if (Date.now() < hold || row.scrollWidth <= row.clientWidth + 4) return;
+        var r = row.getBoundingClientRect(); if (r.bottom < 0 || r.top > innerHeight) return;
+        var step = row.firstElementChild.offsetWidth + 12;
+        if (row.scrollLeft + row.clientWidth >= row.scrollWidth - 8) row.scrollTo({ left: 0, behavior: 'smooth' });
+        else row.scrollBy({ left: step, behavior: 'smooth' });
+      }, 3800);
     });
   })();
 
