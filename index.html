@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Brilliant Jewelers Grand Opening | Shine Redefined, Dec 12</title>
-<meta name="description" content="Join Brilliant Jewelers' grand opening in Sharpstown, Houston on Dec 12. Live music, a car show, and Buy Upper, Get Lower FREE. RSVP now.">
+<meta name="description" content="Brilliant Jewelers grand opening in Sharpstown, Houston on Dec 12. Live hip-hop, lion dance, car show, DJ. Buy Upper, Get Lower FREE and 50% off grillz. RSVP now.">
 <link rel="canonical" href="https://company-brilliantjewelers.vercel.app/shine-redefined">
 <meta property="og:title" content="Brilliant Jewelers Grand Opening | Shine Redefined, Dec 12">
-<meta property="og:description" content="Join Brilliant Jewelers' grand opening in Sharpstown, Houston on Dec 12. Live music, a car show, and Buy Upper, Get Lower FREE. RSVP now.">
+<meta property="og:description" content="Live hip-hop, lion dance, car show, DJ. Buy Upper, Get Lower FREE and 50% off grillz. One day only. RSVP now.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://company-brilliantjewelers.vercel.app/assets/og-shine-redefined.jpg">
 <link rel="preload" as="image" href="/assets/kv-shine-redefined-1200.webp" imagesrcset="/assets/kv-shine-redefined-1200.webp 1200w, /assets/kv-shine-redefined.webp 2400w" imagesizes="100vw">
@@ -29,220 +29,189 @@
     "name": "Brilliant Jewelers",
     "address": { "@type": "PostalAddress", "streetAddress": "300 Sharpstown Center", "addressLocality": "Houston", "addressRegion": "TX", "postalCode": "77036", "addressCountry": "US" }
   },
-  "description": "Live music, a car show, and Buy Upper, Get Lower FREE — one day only."
+  "description": "Live hip-hop, lion dance, car show and DJ. Buy Upper, Get Lower FREE and 50% off grillz, one day only."
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,800;1,900&family=Yellowtail&family=Playball&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,500;0,700;1,700;1,800;1,900&family=Montserrat:wght@400;500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
 <style>
-  /* Key visual mood: black night, molten gold light, sparkle. Cinzel for the "Grand Opening" serif, Yellowtail for the script, Montserrat for everything else. */
+  /* Mood: Houston street at night, chrome and gold like a car show, diamonds as the sparkle.
+     Kanit heavy italic for titles (racing, Fast & Furious feel), Montserrat for text, Yellowtail only as a small accent from the key visual. */
   :root {
     color-scheme: dark;
-    --bg: #070605;
-    --bg-2: #0E0B07;
-    --block: #15110B;
-    --fg: #FFF7E6;
-    --text: #E9DFC9;
-    --muted: #A8997C;
-    --line: rgba(232, 196, 110, .18);
+    --bg: #0A0A0B;
+    --bg-2: #111113;
+    --card: #17171A;
+    --fg: #F7F4EE;
+    --text: #D9D5CD;
+    --muted: #9A958C;
+    --line: rgba(255, 255, 255, .1);
     --gold: #E2B24C;
     --gold-light: #FFE6A3;
-    --gold-deep: #9A6A1C;
     --gold-logo: linear-gradient(110deg, #B8924A 0%, #E9CB66 38%, #DDBD60 55%, #C6A656 75%, #A9843F 100%);
-    --gold-text: linear-gradient(180deg, #FFF3C4 0%, #F4CF73 34%, #C8902E 60%, #FFE29A 78%, #A8701F 100%);
-    --serif: "Cinzel", "Trajan Pro", Georgia, serif;
-    --display: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    --gold-text: linear-gradient(180deg, #FFF3C4 0%, #F4CF73 38%, #C8902E 62%, #FFE29A 82%, #A8701F 100%);
+    --chrome: linear-gradient(180deg, #FFFFFF 0%, #E6E8EB 40%, #8E949B 52%, #D7DADF 70%, #FFFFFF 100%);
+    --title: "Kanit", "Arial Black", sans-serif;
     --script: "Yellowtail", cursive;
-    --sig: "Yellowtail", cursive;
-    --diamond: "Playball", cursive;
     --sans: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
     --wrap: 1200px;
     --gutter: clamp(16px, 4vw, 40px);
-    --space: clamp(80px, 10vw, 140px);
+    --space: clamp(44px, 5vw, 72px);
     --ease: cubic-bezier(.22, .61, .36, 1);
   }
   *, *::before, *::after { box-sizing: border-box; }
-  html { overflow-x: clip; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 68px; }
-  body { margin: 0; background: var(--bg); color: var(--text); font: 400 16px/1.65 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: clip; }
-  /* Fine warm grain, like the key visual's print */
-  body::after { content: ""; position: fixed; inset: 0; z-index: 100; pointer-events: none; opacity: .07; mix-blend-mode: screen;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .85 0 0 0 0 .5 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
-  iframe { display: block; max-width: 100%; }
+  html { overflow-x: clip; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 64px; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: clip; padding-bottom: 72px; }
   a { color: inherit; }
   h1, h2, h3, p, ol, ul, dl, dd, figure, blockquote { margin: 0; }
-  h1, h2, h3 { font-family: var(--serif); font-weight: 700; color: var(--fg); text-transform: uppercase; letter-spacing: .02em; line-height: 1.02; }
   button, input, select { font: inherit; color: inherit; }
+  img { display: block; max-width: 100%; }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
   .wrap { width: 100%; max-width: calc(var(--wrap) + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter); }
-  .eyebrow { font: 700 11px/1.5 var(--sans); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
-  .gold { background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .accent { font-style: normal; background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .tags { font: italic 500 13px var(--sans); color: var(--muted); }
   section { padding: var(--space) 0; position: relative; }
-  .sec-head { margin-bottom: clamp(40px, 5vw, 64px); display: grid; gap: 14px; justify-items: center; text-align: center; }
-  .sec-head .num { font: 700 11px var(--sans); letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
-  .sec-head .num::before, .sec-head .num::after { content: "✦"; margin: 0 12px; color: var(--gold-light); }
-  .sec-head h2 { font-size: clamp(32px, 5vw, 70px); background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 2px 18px rgba(226, 178, 76, .25)); text-wrap: balance; }
-  .sec-head h2 .accent { background: none; -webkit-background-clip: initial; background-clip: initial; color: inherit; font-family: var(--script); text-transform: none; letter-spacing: 0; font-weight: 400; }
-  .sec-head h2 .accent { color: transparent; background: var(--gold-text); -webkit-background-clip: text; background-clip: text; font-size: 1.05em; }
-  .sec-head p { color: var(--muted); max-width: 520px; }
-  .alt { background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 150, 40, .14), transparent 70%), var(--bg-2); }
 
-  /* Buttons: gold from the logo, ghost in gold line */
-  .btn { background-origin: border-box; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 28px; border: 1.5px solid var(--gold); border-radius: 999px; background: transparent; color: var(--gold-light); font: 700 13px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background .25s, background-position .4s, color .25s, border-color .25s, box-shadow .3s, transform .25s var(--ease); }
-  .btn:hover { background: rgba(226, 178, 76, .12); color: var(--fg); transform: translateY(-2px); }
-  .btn-solid { background: var(--gold-logo); background-size: 160% 100%; background-position: 0 0; border-color: transparent; color: #1A1206; box-shadow: 0 6px 24px -8px rgba(226, 178, 76, .6); }
-  .btn-solid:hover { background: var(--gold-logo); background-size: 160% 100%; background-position: 100% 0; color: #1A1206; box-shadow: 0 10px 34px -6px rgba(255, 210, 110, .75); }
-  .btn-sm { min-height: 40px; padding: 0 18px; font-size: 12px; }
+  /* Titles: chrome with a gold word */
+  .title { font: italic 900 clamp(38px, 6.4vw, 88px)/.92 var(--title); text-transform: uppercase; letter-spacing: -.01em;
+    background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 3px 0 rgba(0, 0, 0, .6)); }
+  .title .g { background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .kick { display: inline-block; font: 400 clamp(22px, 2.4vw, 30px)/1 var(--script); color: var(--gold-light); margin-bottom: 6px; }
+  .head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; margin-bottom: clamp(24px, 3vw, 40px); }
+  .head p { max-width: 380px; color: var(--muted); font-size: 15px; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; padding: 0 26px; border: 1.5px solid rgba(255, 255, 255, .35); border-radius: 999px; background: transparent; color: var(--fg); font: italic 700 15px/1 var(--title); letter-spacing: .06em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background .25s, border-color .25s, box-shadow .3s, transform .25s var(--ease); }
+  .btn:hover { border-color: var(--gold-light); transform: translateY(-2px); }
+  .btn-solid { background: var(--gold-logo); background-size: 160% 100%; border-color: transparent; color: #1A1206; box-shadow: 0 6px 24px -8px rgba(226, 178, 76, .7); }
+  .btn-solid:hover { background-position: 100% 0; box-shadow: 0 10px 34px -6px rgba(255, 210, 110, .8); }
+  .btn-sm { min-height: 40px; padding: 0 18px; font-size: 13px; }
   :focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
 
   /* Header */
-  .site-head { position: sticky; top: 0; z-index: 30; background: rgba(7, 6, 5, .82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); transition: background .3s; }
-  .site-head.scrolled { background: rgba(7, 6, 5, .94); }
-  .site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
-  .brand { display: inline-flex; align-items: center; gap: 12px; font: 600 15px var(--serif); letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: var(--fg); white-space: nowrap; }
-  .brand img { height: 38px; width: auto; display: block; }
+  .site-head { position: sticky; top: 0; z-index: 30; background: rgba(10, 10, 11, .86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 60px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font: italic 800 15px var(--title); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: var(--fg); white-space: nowrap; }
+  .brand img { height: 34px; width: auto; }
   .nav { display: flex; gap: 26px; list-style: none; padding: 0; }
-  .nav a { font: 600 11px var(--sans); letter-spacing: .16em; text-transform: uppercase; text-decoration: none; color: var(--muted); transition: color .2s; }
+  .nav a { font: 600 12px var(--sans); letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: var(--muted); transition: color .2s; }
   .nav a:hover { color: var(--gold-light); }
-  @media (max-width: 900px) { .nav { display: none; } }
+  @media (max-width: 860px) { .nav { display: none; } }
 
-  /* 1 · Hero: the key visual itself, then the event bar */
-  .hero { padding: 0 0 clamp(48px, 6vw, 80px); overflow: hidden; }
-  .kv { position: relative; margin: 0; }
-  .kv img { display: block; width: 100%; height: auto; }
-  .kv::after { content: ""; position: absolute; inset: auto 0 0; height: 6%; background: linear-gradient(transparent, var(--bg)); pointer-events: none; }
-  .hero-bar { position: relative; text-align: center; margin-top: clamp(16px, 2vw, 28px); }
-  .script { font: 400 clamp(30px, 4vw, 52px)/1.1 var(--script); background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 2px 14px rgba(226, 178, 76, .3)); }
-  .when { margin-top: 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 16px; font: 600 clamp(13px, 1.3vw, 16px)/1.4 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--fg); }
-  .when .date { font-family: var(--serif); font-weight: 700; letter-spacing: .1em; color: var(--gold-light); }
-  .when .sep { color: var(--gold); }
-  .hero .kicker { font: 400 clamp(26px, 3vw, 40px)/1.1 var(--script); background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .hero .eyebrow { margin: 8px 0 14px; }
-  .hero .sub { max-width: 600px; margin: 18px auto 0; color: var(--text); font-size: 17px; }
-  .hero .sub b { color: var(--gold-light); font-weight: 700; }
-  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-  .hero .cta { justify-content: center; }
-  .hero .tags { margin-top: 22px; }
+  /* 1 · Hero: key visual unchanged, then one line of facts */
+  .hero { padding: 0; }
+  .kv { position: relative; }
+  .kv img { width: 100%; height: auto; }
+  .kv::after { content: ""; position: absolute; inset: auto 0 0; height: 8%; background: linear-gradient(transparent, var(--bg)); pointer-events: none; }
+  .hero-bar { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px 28px; margin-top: clamp(12px, 1.6vw, 22px); padding-bottom: clamp(24px, 3vw, 36px); text-align: center; }
+  .when { font: italic 800 clamp(18px, 2vw, 26px)/1.2 var(--title); text-transform: uppercase; color: var(--fg); letter-spacing: .02em; }
+  .when .g { background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .when small { display: block; font: 500 13px/1.5 var(--sans); font-style: normal; letter-spacing: .08em; color: var(--muted); text-transform: none; }
 
-  /* Ticker band in molten gold */
-  .ticker { overflow: hidden; background: var(--gold-logo); color: #1A1206; transform: rotate(-1deg); margin: 0 -2vw; box-shadow: 0 0 40px rgba(226, 178, 76, .35); }
-  .ticker .track { display: flex; width: max-content; animation: tick 30s linear infinite; }
-  .ticker span { padding: 12px 0; font: italic 900 clamp(18px, 2.2vw, 28px)/1 var(--sans); letter-spacing: .02em; text-transform: uppercase; white-space: nowrap; }
-  .ticker span::after { content: "✦"; margin: 0 22px; font-size: .7em; vertical-align: .15em; font-style: normal; }
+  /* Offer ticker: the hook, always moving */
+  .ticker { overflow: hidden; background: var(--gold-logo); color: #1A1206; transform: rotate(-1.2deg); margin: 8px -2vw 0; box-shadow: 0 0 40px rgba(226, 178, 76, .3); }
+  .ticker .track { display: flex; width: max-content; animation: tick 28s linear infinite; }
+  .ticker span { padding: 12px 0; font: italic 900 clamp(18px, 2.2vw, 28px)/1 var(--title); text-transform: uppercase; white-space: nowrap; }
+  .ticker span::after { content: "◆"; margin: 0 24px; font-size: .55em; vertical-align: .25em; }
   @keyframes tick { to { transform: translateX(-50%); } }
 
-  /* 2 · Comeback story */
-  .story { text-align: center; background: radial-gradient(ellipse 70% 55% at 50% 100%, rgba(226, 140, 30, .16), transparent 70%); }
-  .story .eyebrow { margin-bottom: 22px; }
-  .quote { max-width: 980px; margin: 0 auto; font: 700 clamp(28px, 4.4vw, 60px)/1.12 var(--serif); text-transform: uppercase; color: var(--fg); text-wrap: balance; }
-  .quote em { font-style: normal; background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .quote .soft { color: var(--muted); }
-  .story-foot { display: grid; justify-items: center; gap: 18px; margin-top: clamp(32px, 5vw, 56px); }
-  .story-foot .diamond { font-size: clamp(56px, 8vw, 112px); }
-  .story .support { max-width: 560px; color: var(--muted); }
+  /* 2 · Guests: coverflow, tap to open */
+  .guests { overflow: hidden; background: radial-gradient(ellipse 60% 50% at 50% 60%, rgba(226, 150, 40, .14), transparent 70%); }
+  .flow { position: relative; height: clamp(380px, 40vw, 540px); perspective: 1400px; touch-action: pan-y; user-select: none; }
+  .g-card { position: absolute; left: 50%; bottom: 0; width: clamp(240px, 30vw, 380px); margin-left: calc(clamp(240px, 30vw, 380px) / -2); padding: 0; border: 0; background: none; cursor: pointer; transition: transform .7s var(--ease), opacity .7s var(--ease), filter .7s; text-align: center; }
+  .g-card .ring { position: absolute; left: 6%; right: 6%; bottom: 12%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(255, 214, 120, .35), rgba(226, 150, 40, .08) 60%, transparent 70%); border: 1px solid rgba(255, 214, 120, .35); }
+  .g-card img { position: relative; width: 100%; height: clamp(320px, 35vw, 470px); object-fit: contain; object-position: bottom; filter: drop-shadow(0 0 1px rgba(255, 220, 150, .6)) drop-shadow(0 20px 30px rgba(0, 0, 0, .6)); }
+  .g-card .tag { position: relative; display: inline-block; margin-top: -26px; padding: 8px 16px; border-radius: 999px; background: rgba(10, 10, 11, .88); border: 1px solid rgba(255, 214, 120, .4); font: italic 800 clamp(15px, 1.5vw, 19px)/1 var(--title); text-transform: uppercase; color: var(--fg); white-space: nowrap; }
+  .g-card .tag small { display: block; margin-top: 4px; font: 600 10px var(--sans); letter-spacing: .16em; color: var(--gold); }
+  .g-card[data-pos="0"] { transform: translateX(0) scale(1); z-index: 3; }
+  .g-card[data-pos="1"] { transform: translateX(78%) scale(.72) rotateY(-28deg); z-index: 2; opacity: .55; filter: brightness(.6); }
+  .g-card[data-pos="-1"] { transform: translateX(-78%) scale(.72) rotateY(28deg); z-index: 2; opacity: .55; filter: brightness(.6); }
+  .flow-nav { display: flex; justify-content: center; align-items: center; gap: 14px; margin-top: 18px; }
+  .flow-nav button.arr { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--fg); font-size: 18px; cursor: pointer; }
+  .flow-nav button.arr:hover { border-color: var(--gold); }
+  .dots { display: flex; gap: 8px; }
+  .dots i { width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, .25); transition: background .3s, width .3s; }
+  .dots i.on { width: 22px; border-radius: 4px; background: var(--gold); }
 
-  /* Diamond lettering: gold-set stones like the grill in the key visual */
-  .diamond { position: relative; display: inline-block; font-family: var(--diamond); font-weight: 400; text-transform: none; letter-spacing: 0; line-height: 1.15; padding: 0 .08em;
-    background:
-      linear-gradient(110deg, transparent 42%, rgba(255, 255, 255, .95) 50%, transparent 58%) 0 0 / 300% 100% no-repeat,
-      radial-gradient(circle at 35% 35%, #fff 0 18%, #f3ead2 30%, #b9a37a 52%, #6b4a12 70%, transparent 76%) 0 0 / .07em .07em,
-      radial-gradient(circle at 35% 35%, #fff 0 18%, #efe2c0 30%, #a88d5c 52%, #5a3d0c 70%, transparent 76%) .035em .035em / .07em .07em,
-      #C8902E;
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-    filter: drop-shadow(0 0 .6px #3a2606) drop-shadow(0 0 18px rgba(255, 200, 90, .35));
-    animation: diamondSweep 4.5s 1s ease-in-out infinite; }
-  @keyframes diamondSweep { 0% { background-position: 120% 0, 0 0, .035em .035em, 0 0; } 60%, 100% { background-position: -120% 0, 0 0, .035em .035em, 0 0; } }
-  .twinkle { position: absolute; font-family: var(--sans); font-size: .22em; line-height: 1; color: var(--gold-light); -webkit-text-fill-color: var(--gold-light); animation: twinkle 2.6s ease-in-out infinite; pointer-events: none; }
-  @keyframes twinkle { 0%, 100% { opacity: .25; transform: scale(.6); } 50% { opacity: 1; transform: scale(1); } }
+  /* 3 · Lineup: swipeable cards (photo or video) */
+  .lineup { background: linear-gradient(180deg, transparent, var(--bg-2) 30%, var(--bg-2) 70%, transparent); }
+  .rail { display: grid; grid-auto-flow: column; grid-auto-columns: clamp(230px, 24vw, 290px); gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px var(--gutter) 18px; margin: 0 calc(var(--gutter) * -1); scrollbar-width: none; }
+  .rail::-webkit-scrollbar { display: none; }
+  .act { position: relative; scroll-snap-align: start; aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden; background: var(--card); border: 1px solid var(--line); }
+  .act img, .act video { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+  .act:hover img, .act:hover video { transform: scale(1.06); }
+  .act::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(0, 0, 0, .88)); }
+  .act figcaption { position: absolute; z-index: 1; left: 18px; right: 18px; bottom: 16px; }
+  .act time { font: 700 11px var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-light); }
+  .act h3 { margin-top: 2px; font: italic 900 clamp(26px, 2.6vw, 34px)/.95 var(--title); text-transform: uppercase; color: var(--fg); }
+  .rail-nav { display: flex; gap: 10px; }
+  .rail-nav button { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--fg); font-size: 18px; cursor: pointer; }
+  .rail-nav button:hover { border-color: var(--gold); }
+  .extras { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; list-style: none; padding: 0; }
+  .extras li { padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px; font: 600 13px var(--sans); color: var(--text); background: var(--card); }
+  .extras li::before { content: "◆ "; color: var(--gold); font-size: 10px; }
 
-  /* 3 · Event info */
-  .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); }
-  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
-  .facts div { padding: 20px 20px 22px; background: var(--block); }
+  /* 4 · Offers: two banners */
+  .offers .grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(14px, 2vw, 24px); }
+  .deal { position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; gap: 22px; min-height: clamp(260px, 26vw, 340px); padding: clamp(24px, 3vw, 40px); border-radius: 24px; }
+  .deal h3 { font: italic 900 clamp(40px, 5vw, 72px)/.9 var(--title); text-transform: uppercase; }
+  .deal p { font-size: 15px; max-width: 360px; }
+  .deal .desc { margin-top: 14px; }
+  .deal .fine { margin-top: 10px; font-size: 12px; opacity: .75; }
+  .deal .btn { align-self: flex-start; }
+  .deal-a { background: var(--gold-logo); color: #1A1206; }
+  .deal-a .btn { background: #0A0A0B; color: var(--gold-light); border-color: #0A0A0B; }
+  .deal-b { background: linear-gradient(150deg, #1D1D21, #0E0E10); border: 1px solid rgba(255, 214, 120, .45); color: var(--text); }
+  .deal-b h3 { background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .deal-b h3 .g { background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .deal .big { position: absolute; right: -10px; bottom: -40px; font: italic 900 clamp(150px, 18vw, 240px)/1 var(--title); opacity: .1; pointer-events: none; }
+  .deal-a .big { color: #1A1206; }
+  .deal-b .big { color: var(--gold); }
+  .sweep::before { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 40%, rgba(255, 255, 255, .35) 50%, transparent 60%) -150% 0 / 250% 100% no-repeat; animation: sweep 4s 1s ease-in-out infinite; pointer-events: none; }
+  @keyframes sweep { 0% { background-position: 150% 0; } 50%, 100% { background-position: -150% 0; } }
+
+  /* 5 · Plan your day: facts + agenda that opens on tap */
+  .plan .grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(20px, 4vw, 56px); align-items: start; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .facts div { padding: 16px 18px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); }
   .facts dt { font: 700 10px/1.8 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
-  .facts dd { margin-top: 6px; font: 700 clamp(18px, 1.8vw, 22px)/1.2 var(--serif); color: var(--fg); }
-  .facts .tbd { font: italic 400 14px/1.4 var(--sans); color: var(--muted); }
-  .info-grid .cta { margin-top: 24px; }
-  .map { margin-top: 24px; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
-  .map iframe { width: 100%; height: 280px; border: 0; filter: grayscale(1) invert(.9) sepia(.5) contrast(.95); }
-  .happen h3 { font-size: clamp(22px, 2.2vw, 30px); margin-bottom: 14px; color: var(--gold-light); }
-  .happen ul { list-style: none; padding: 0; border-top: 1px solid var(--line); }
-  .happen li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 14px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 15px; }
-  .happen li::before { content: "✦"; color: var(--gold); line-height: 1.6; }
-  .happen b { font: 700 15px/1.3 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--fg); }
-  .happen li.offer-li { margin-top: 12px; padding: 16px; border: 0; border-radius: 14px; background: var(--gold-logo); color: #2A1D08; }
-  .happen li.offer-li::before { color: #2A1D08; }
-  .happen li.offer-li b { color: #1A1206; }
-  .happen li.offer-li a { font-weight: 700; }
+  .facts dd { font: italic 800 clamp(17px, 1.6vw, 21px)/1.2 var(--title); text-transform: uppercase; color: var(--fg); }
+  .facts .wide { grid-column: 1 / -1; }
+  .plan .cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .agenda-box { border-radius: 20px; background: var(--card); border: 1px solid var(--line); overflow: hidden; }
+  .agenda-box summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 22px; cursor: pointer; list-style: none; font: italic 900 clamp(22px, 2.4vw, 30px)/1 var(--title); text-transform: uppercase; color: var(--fg); }
+  .agenda-box summary::-webkit-details-marker { display: none; }
+  .agenda-box summary span { font: 600 12px var(--sans); letter-spacing: .12em; color: var(--gold-light); white-space: nowrap; }
+  .agenda-box summary span::after { content: " +"; }
+  .agenda-box[open] summary span::after { content: " −"; }
+  .agenda { list-style: none; padding: 0 22px 18px; margin: 0; }
+  .agenda li { display: grid; grid-template-columns: 118px 1fr; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
+  .agenda time { font: 700 11px/1.7 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--gold); }
+  .agenda b { color: var(--fg); font-weight: 600; }
+  .agenda li.hot b { color: var(--gold-light); }
+  .agenda li.quiet { color: var(--muted); }
+  .agenda-box[open] .agenda { animation: open .4s var(--ease); }
+  @keyframes open { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+  .agenda-note { padding: 0 22px 18px; font: italic 400 12px var(--sans); color: var(--muted); }
 
-  /* 4 · Who's coming */
-  .people { display: grid; max-width: 1000px; margin: 0 auto; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 2vw, 24px); }
-  .person { display: flex; flex-direction: column; text-align: center; }
-  .photo { position: relative; aspect-ratio: 3 / 4; border-radius: 18px; background: radial-gradient(circle at 50% 30%, rgba(226, 178, 76, .22), transparent 65%), var(--block); border: 1px solid var(--line); overflow: hidden; }
-  .photo::before { content: attr(data-n); position: absolute; z-index: 1; top: 12px; left: 16px; font: 700 clamp(34px, 3.4vw, 48px)/1 var(--serif); background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; opacity: .7; }
-  .photo::after { content: "Pulling up · 12.12"; z-index: 1; position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); padding: 6px 12px; border-radius: 999px; background: var(--gold-logo); color: #1A1206; font: 700 10px var(--sans); letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; }
-  .photo img { width: 100%; height: 100%; object-fit: cover; }
-  .photo .ph { position: absolute; inset: auto 12px 52px; font: italic 400 11px/1.4 var(--sans); color: var(--muted); }
-  .person h3 { margin-top: 16px; font-size: clamp(20px, 1.9vw, 26px); word-break: break-word; }
-  .person .role { margin-top: 4px; }
-  .person blockquote { margin: 10px 0 18px; font: 400 clamp(24px, 2.2vw, 30px)/1.1 var(--script); background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .person .btn { margin-top: auto; align-self: center; }
-
-  /* 5 · Agenda: a lit panel, like the night sky in the key visual */
-  #agenda { padding: calc(var(--space) * .6) 0; }
-  .panel { position: relative; overflow: hidden; padding: clamp(56px, 8vw, 100px) clamp(20px, 5vw, 64px) clamp(48px, 6vw, 80px); border: 1px solid var(--line); border-radius: 28px; text-align: center;
-    background: linear-gradient(180deg, rgba(7, 6, 5, .55), rgba(7, 6, 5, .92) 55%), url("/assets/kv-sky.webp") center top / cover no-repeat, var(--block); }
-  .panel-head, .agenda, .footnote, .advisory { position: relative; }
-  .panel .hash { font: 400 clamp(22px, 2.4vw, 32px) var(--script); color: var(--gold-light); }
-  .panel h2 { margin-top: 6px; font-size: clamp(30px, 4.6vw, 64px); background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .agenda { list-style: none; padding: 0; margin: clamp(32px, 4vw, 52px) auto 0; max-width: 720px; counter-reset: a; }
-  .agenda li { counter-increment: a; padding: 12px 0; border-bottom: 1px solid var(--line); }
-  .agenda li:last-child { border-bottom: 0; }
-  .agenda h3 { font: 600 clamp(17px, 1.9vw, 24px)/1.2 var(--sans); letter-spacing: .02em; text-transform: uppercase; color: var(--fg); }
-  .agenda h3::before { content: counter(a) ". "; color: var(--gold); }
-  .agenda li:nth-child(odd) h3 { font-weight: 800; }
-  .agenda time { display: block; margin-bottom: 2px; font: 700 11px var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
-  .agenda p { margin-top: 2px; color: var(--muted); font-size: 13px; }
-  .agenda li.quiet h3 { color: var(--muted); }
-  .footnote { margin-top: 24px; font: italic 400 12px var(--sans); color: var(--muted); }
-  .advisory { display: inline-flex; align-items: stretch; margin-top: 24px; border: 1px solid var(--gold); border-radius: 4px; font: 700 8px/1.3 var(--sans); letter-spacing: .08em; text-transform: uppercase; text-align: left; color: var(--gold-light); }
-  .advisory b { display: grid; place-items: center; padding: 0 7px; border-right: 1px solid var(--gold); font: 700 18px var(--serif); }
-  .advisory span { padding: 4px 7px; }
-
-  /* 6 · Offer + RSVP */
-  .offer-sec { overflow: hidden; background: radial-gradient(ellipse 60% 70% at 15% 40%, rgba(226, 140, 30, .22), transparent 70%), var(--bg); border-top: 1px solid var(--line); }
-  .offer-sec .bg-word { position: absolute; right: -2vw; top: 3vw; font: 900 clamp(120px, 22vw, 320px)/.8 var(--serif); color: transparent; -webkit-text-stroke: 1px rgba(226, 178, 76, .14); pointer-events: none; user-select: none; }
-  .offer-grid { position: relative; display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(40px, 6vw, 96px); align-items: start; }
-  .offer-sec h2 { margin-top: 16px; font-size: clamp(38px, 5.4vw, 76px); line-height: 1; }
-  .offer-sec h2 span { display: block; background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 2px 20px rgba(226, 178, 76, .35)); }
-  .offer-sec .lead { margin-top: 22px; font: 400 clamp(26px, 2.6vw, 34px)/1.15 var(--script); color: var(--gold-light); }
-  .offer-sec .body { margin-top: 12px; color: var(--text); }
-  .fine { margin-top: 14px; font: italic 400 12px var(--sans); color: var(--muted); }
-  .steps { list-style: none; padding: 0; margin-top: 32px; border-top: 1px solid var(--line); counter-reset: s; }
-  .steps li { counter-increment: s; display: grid; grid-template-columns: 56px 1fr; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--line); color: var(--fg); font: 600 16px/1.35 var(--sans); text-transform: uppercase; letter-spacing: .04em; }
-  .steps li::before { content: counter(s, decimal-leading-zero); font: 700 26px var(--serif); background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .steps .arrow { color: var(--gold); margin-left: 8px; }
-  .terms { margin-top: 26px; }
+  /* 6 · RSVP */
+  .rsvp { background: radial-gradient(ellipse 60% 70% at 50% 100%, rgba(226, 140, 30, .18), transparent 70%); }
+  .rsvp .grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 72px); align-items: center; }
+  .rsvp .lead { margin-top: 14px; color: var(--text); max-width: 440px; }
+  .terms { margin-top: 18px; }
   .terms summary { cursor: pointer; font: 700 11px var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); list-style: none; }
   .terms summary::-webkit-details-marker { display: none; }
   .terms summary::after { content: " +"; color: var(--gold); }
   .terms[open] summary::after { content: " −"; }
-  .terms ul { margin-top: 12px; padding-left: 18px; font-size: 13px; color: var(--muted); }
-  .terms li { margin: 4px 0; }
-  .form-card { position: relative; padding: clamp(24px, 4vw, 44px); border: 1px solid rgba(226, 178, 76, .45); border-radius: 24px; background: linear-gradient(160deg, rgba(40, 28, 10, .9), rgba(12, 9, 5, .96)); box-shadow: 0 0 0 1px rgba(0, 0, 0, .4), 0 30px 80px -30px rgba(226, 150, 40, .45); }
-
-  /* RSVP form (inline + popup share it) */
-  .rsvp-form { display: grid; gap: 22px; }
+  .terms ul { margin-top: 10px; padding-left: 18px; font-size: 13px; color: var(--muted); }
+  .form-card { padding: clamp(22px, 3.5vw, 40px); border: 1px solid rgba(226, 178, 76, .45); border-radius: 24px; background: linear-gradient(160deg, #1B1812, #0E0D0B); box-shadow: 0 30px 80px -30px rgba(226, 150, 40, .45); }
+  .rsvp-form { display: grid; gap: 20px; }
   .rsvp-form .intro { color: var(--muted); font-size: 14px; }
-  .rsvp-form h3 { font-size: clamp(26px, 2.8vw, 36px); background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .field { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 6px; row-gap: 8px; font: 700 10px var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
   .field .opt { letter-spacing: .04em; text-transform: none; font-weight: 400; color: var(--muted); }
-  .field input, .field select { flex: 1 0 100%; width: 100%; padding: 10px 0; border: 0; border-bottom: 1px solid rgba(226, 178, 76, .35); border-radius: 0; background: transparent; font: 400 16px var(--sans); letter-spacing: 0; text-transform: none; color: var(--fg); -webkit-appearance: none; appearance: none; transition: border-color .25s; }
+  .field input, .field select { flex: 1 0 100%; width: 100%; padding: 10px 0; border: 0; border-bottom: 1px solid rgba(226, 178, 76, .35); border-radius: 0; background: transparent; font: 400 16px var(--sans); letter-spacing: 0; text-transform: none; color: var(--fg); -webkit-appearance: none; appearance: none; }
   .field select { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23E2B24C'/%3E%3C/svg%3E") no-repeat right 4px center; padding-right: 24px; }
   .field option { color: #1A1206; background: #FFF7E6; }
   .field input:focus, .field select:focus { outline: none; border-bottom-color: var(--gold-light); }
   .field input[aria-invalid="true"] { border-bottom-color: #FF8A5B; border-bottom-style: dashed; }
-  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: end; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: end; }
   .consent { display: grid; grid-template-columns: 18px 1fr; gap: 12px; font-size: 13px; line-height: 1.55; color: var(--muted); }
   .consent input { margin: 3px 0 0; accent-color: var(--gold); width: 16px; height: 16px; }
   .rsvp-form .btn { width: 100%; }
@@ -251,70 +220,66 @@
   .msg.ok { padding: 16px; border: 1px solid var(--gold); border-radius: 12px; color: var(--fg); background: rgba(226, 178, 76, .12); }
   .msg.err { color: #FFB38F; font-weight: 600; }
 
-  /* Popup */
-  dialog.pop { width: min(560px, calc(100% - 32px)); max-height: calc(100% - 32px); padding: 0; border: 1px solid rgba(226, 178, 76, .5); border-radius: 24px; background: #0E0B07; color: var(--text); overflow: auto; }
-  dialog.pop::backdrop { background: rgba(0, 0, 0, .72); }
-  .pop-top { position: relative; padding: 34px clamp(22px, 5vw, 40px) 26px; text-align: center; background: linear-gradient(180deg, rgba(14, 11, 7, .4), #0E0B07), url("/assets/kv-sky.webp") center / cover; border-bottom: 1px solid var(--line); }
-  .pop-top h2 { margin-top: 10px; font-size: clamp(28px, 6vw, 40px); line-height: 1.02; color: var(--fg); }
-  .pop-top h2 span { display: block; background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .pop-top p { margin-top: 12px; color: var(--text); font-size: 14px; }
-  .pop-body { padding: 26px clamp(22px, 5vw, 40px) 32px; }
-  .pop-close { position: absolute; top: 8px; right: 8px; width: 44px; height: 44px; border: 0; background: none; color: var(--fg); font: 300 28px/1 var(--sans); cursor: pointer; }
+  /* Popups (RSVP + guest) */
+  dialog.pop { width: min(560px, calc(100% - 32px)); max-height: calc(100% - 32px); padding: 0; border: 1px solid rgba(226, 178, 76, .5); border-radius: 24px; background: #0E0E10; color: var(--text); overflow: auto; }
+  dialog.pop::backdrop { background: rgba(0, 0, 0, .78); }
+  .pop-top { position: relative; padding: 32px clamp(22px, 5vw, 40px) 22px; text-align: center; border-bottom: 1px solid var(--line); background: radial-gradient(ellipse 80% 100% at 50% 0%, rgba(226, 150, 40, .25), transparent 70%); }
+  .pop-top .title { font-size: clamp(32px, 7vw, 46px); }
+  .pop-top p { margin-top: 10px; color: var(--text); font-size: 14px; }
+  .pop-body { padding: 24px clamp(22px, 5vw, 40px) 30px; }
+  .pop-close { position: absolute; top: 8px; right: 8px; z-index: 2; width: 44px; height: 44px; border: 0; background: none; color: var(--fg); font: 300 28px/1 var(--sans); cursor: pointer; }
   .pop-later { display: block; margin: 14px auto 0; border: 0; background: none; font: 400 12px var(--sans); color: var(--muted); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .guest-pop { width: min(760px, calc(100% - 32px)); }
+  .guest-pop .in { display: grid; grid-template-columns: 1fr 1fr; align-items: end; background: radial-gradient(ellipse 70% 60% at 30% 70%, rgba(226, 150, 40, .25), transparent 70%); }
+  .guest-pop img { width: 100%; max-height: 70vh; object-fit: contain; object-position: bottom; }
+  .guest-pop .txt { padding: 32px 28px; align-self: center; }
+  .guest-pop .role { font: 700 11px var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+  .guest-pop h2 { margin: 6px 0 10px; font-size: clamp(32px, 5vw, 50px); }
+  .guest-pop blockquote { font: 400 clamp(24px, 3vw, 32px)/1.1 var(--script); color: var(--gold-light); margin-bottom: 20px; }
+  .guest-pop .txt .btn { margin: 0 8px 8px 0; }
 
-  /* 7 · FAQ + footer */
-  .faq { max-width: 860px; margin: 0 auto; border-top: 1px solid var(--line); }
-  .faq details { border-bottom: 1px solid var(--line); }
-  .faq summary { position: relative; padding: 20px 48px 20px 0; cursor: pointer; list-style: none; font: 600 clamp(16px, 1.7vw, 20px)/1.3 var(--sans); letter-spacing: .04em; text-transform: uppercase; color: var(--fg); transition: color .2s; }
-  .faq summary::-webkit-details-marker { display: none; }
-  .faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font: 400 28px var(--serif); color: var(--gold); transition: transform .3s var(--ease); }
-  .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
-  .faq summary:hover { color: var(--gold-light); }
-  .faq details p { padding: 0 48px 22px 0; color: var(--muted); max-width: 640px; }
+  /* Sticky offer bar: the hook stays on screen */
+  .dock { position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; gap: 12px 20px; padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom)); background: rgba(10, 10, 11, .94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid rgba(226, 178, 76, .4); transform: translateY(110%); transition: transform .4s var(--ease); }
+  .dock.show { transform: none; }
+  .dock p { font: italic 800 clamp(13px, 1.5vw, 17px)/1.2 var(--title); text-transform: uppercase; color: var(--fg); }
+  .dock p .g { background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-  .site-foot { padding: clamp(64px, 9vw, 110px) 0 32px; border-top: 1px solid var(--line); text-align: center; overflow: hidden; background: radial-gradient(ellipse 60% 80% at 50% 100%, rgba(226, 140, 30, .2), transparent 70%); }
-  .foot-logo { display: block; width: clamp(140px, 18vw, 200px); height: auto; margin: 0 auto 20px; }
-  .foot-mark { font-size: clamp(52px, 9vw, 140px); line-height: 1.1; }
-  .site-foot .tags { margin-top: 18px; }
-  .foot-addr { margin-top: 26px; font: 500 13px var(--sans); letter-spacing: .06em; color: var(--muted); }
-  .social { display: flex; justify-content: center; gap: 12px; margin-top: 18px; list-style: none; padding: 0; flex-wrap: wrap; }
-  .social a { display: inline-block; padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px; font: 700 12px var(--sans); letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: var(--fg); transition: border-color .2s, color .2s; }
+  /* Footer */
+  .site-foot { padding: clamp(48px, 6vw, 72px) 0 28px; border-top: 1px solid var(--line); text-align: center; }
+  .foot-logo { width: clamp(120px, 14vw, 170px); height: auto; margin: 0 auto 14px; }
+  .site-foot .tags { font: italic 500 13px var(--sans); color: var(--muted); }
+  .foot-addr { margin-top: 10px; font: 500 13px var(--sans); color: var(--muted); }
+  .social { display: flex; justify-content: center; gap: 10px; margin-top: 16px; list-style: none; padding: 0; flex-wrap: wrap; }
+  .social a { display: inline-block; padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px; font: 700 12px var(--sans); letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: var(--fg); }
   .social a:hover { border-color: var(--gold); color: var(--gold-light); }
-  .legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); font: 400 11px var(--sans); color: var(--muted); }
+  .legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line); font: 400 11px var(--sans); color: var(--muted); }
 
   /* Motion */
-  .js [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: var(--d, 0s); }
+  .js [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
   .js [data-reveal].in { opacity: 1; transform: none; }
-  .person .photo { transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s; }
-  .person:hover .photo { transform: translateY(-6px); border-color: rgba(226, 178, 76, .6); box-shadow: 0 20px 50px -24px rgba(226, 150, 40, .6); }
-  .faq details[open] p { animation: faqIn .4s var(--ease); }
-  @keyframes faqIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
   dialog.pop[open] { animation: popIn .4s var(--ease); }
-  dialog.pop[open]::backdrop { animation: fadeIn .4s ease; }
   @keyframes popIn { from { opacity: 0; transform: translateY(16px) scale(.98); } to { opacity: 1; transform: none; } }
-  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .js [data-reveal] { opacity: 1; transform: none; transition: none; }
-    *, *::before, *::after, dialog.pop[open]::backdrop { animation: none !important; transition: none !important; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
   }
 
-  /* Tablet */
-  @media (max-width: 1024px) {
-    .info-grid, .offer-grid { grid-template-columns: 1fr; }
+  @media (max-width: 900px) {
+    .plan .grid, .rsvp .grid, .offers .grid { grid-template-columns: 1fr; }
   }
-  /* Phone */
   @media (max-width: 600px) {
     body { font-size: 15px; }
-    .site-head .wrap { height: 58px; }
-    .brand { font-size: 12px; gap: 10px; }
-    .brand img { height: 32px; }
-    .hero-bar { margin-top: 0; }
-    .cta .btn { flex: 1 1 100%; }
-    .facts { grid-template-columns: 1fr; }
-    .people { grid-template-columns: 1fr; max-width: 360px; gap: 40px; }
-    .person .btn { align-self: stretch; padding: 0 8px; font-size: 11px; letter-spacing: .08em; }
+    .brand span { display: none; }
+    .hero-bar .btn { flex: 1 1 40%; }
+    .g-card[data-pos="1"] { transform: translateX(62%) scale(.62) rotateY(-28deg); }
+    .g-card[data-pos="-1"] { transform: translateX(-62%) scale(.62) rotateY(28deg); }
     .two { grid-template-columns: 1fr; }
+    .guest-pop .in { grid-template-columns: 1fr; }
+    .guest-pop img { max-height: 46vh; }
+    .guest-pop .txt { padding: 4px 22px 26px; text-align: center; }
+    .agenda li { grid-template-columns: 1fr; gap: 0; }
+    .dock { justify-content: space-between; }
   }
 </style>
 <script>document.documentElement.classList.add('js');</script>
@@ -323,13 +288,12 @@
 
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="/assets/logo-bj-mark.png" alt="" width="142" height="240">Brilliant Jewelers</a>
+    <a class="brand" href="#top"><img src="/assets/logo-bj-mark.png" alt="" width="142" height="240"><span>Brilliant Jewelers</span></a>
     <ul class="nav">
-      <li><a href="#story">The story</a></li>
-      <li><a href="#info">Event info</a></li>
-      <li><a href="#coming">Who's coming</a></li>
-      <li><a href="#agenda">Agenda</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#guests">Guests</a></li>
+      <li><a href="#lineup">Lineup</a></li>
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="#plan">Agenda</a></li>
     </ul>
     <button class="btn btn-solid btn-sm" type="button" data-open-rsvp>RSVP</button>
   </div>
@@ -337,164 +301,137 @@
 
 <main id="top">
 
-<!-- 1 · Hero: the campaign key visual -->
+<!-- 1 · Hero: the campaign key visual, unchanged -->
 <section class="hero">
-  <h1 class="sr-only">Shine Redefined</h1>
+  <h1 class="sr-only">Shine Redefined: Brilliant Jewelers Grand Opening, December 12</h1>
   <figure class="kv">
     <img src="/assets/kv-shine-redefined-1200.webp" srcset="/assets/kv-shine-redefined-1200.webp 1200w, /assets/kv-shine-redefined.webp 2400w" sizes="100vw" width="2400" height="1800" alt="Shine Redefined, Brilliant Jewelers Grand Opening Celebration: a football player, a rapper and a model sit on a giant gold and diamond grill in front of the store at sunset, with a sports car beside them.">
   </figure>
   <div class="wrap hero-bar">
-    <p class="kicker" data-reveal>Something's coming to Sharpstown.</p>
-    <p class="eyebrow" data-reveal>Brilliant Jewelers Grand Opening</p>
-    <p class="when" data-reveal><span class="date">12.12</span><span class="sep">·</span><span>300 Sharpstown Center, Houston, TX 77036</span></p>
-    <p class="sub" data-reveal>Sharpstown never dimmed. Join us December 12 for live music, a car show, and a one-day-only offer.</p>
-    <div class="cta" data-reveal>
-      <button class="btn btn-solid" type="button" data-open-rsvp>RSVP and claim your offer</button>
-      <a class="btn" href="https://maps.app.goo.gl/rG756HiFMuE4MmCT8" target="_blank" rel="noopener">Get directions</a>
+    <p class="when"><span class="g">Sat 12.12</span> · 10AM – 6PM<small>300 Sharpstown Center, Houston, TX 77036</small></p>
+    <button class="btn btn-solid" type="button" data-open-rsvp>RSVP now</button>
+    <a class="btn" href="https://maps.app.goo.gl/rG756HiFMuE4MmCT8" target="_blank" rel="noopener">Directions</a>
+  </div>
+  <div class="ticker" aria-hidden="true"><div class="track">
+    <span>Buy Upper, Get Lower FREE</span><span>50% Off Grillz</span><span>Live Hip-Hop</span><span>Lion Dance</span><span>Car Show</span><span>DJ</span>
+    <span>Buy Upper, Get Lower FREE</span><span>50% Off Grillz</span><span>Live Hip-Hop</span><span>Lion Dance</span><span>Car Show</span><span>DJ</span>
+  </div></div>
+</section>
+
+<!-- 2 · Guests -->
+<section class="guests" id="guests">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <div><span class="kick">Houston's own</span><h2 class="title">Pulling <span class="g">up</span></h2></div>
+      <p>Three Houston names, one day in Sharpstown. Tap a face to meet them.</p>
     </div>
-    <p class="tags" data-reveal>#ShineRedefined #BrilliantJewelers #Sharpstown</p>
+    <div class="flow" id="flow" data-reveal>
+      <button class="g-card" type="button"><span class="ring"></span><img src="/assets/kol-khalilvegas-cut.webp" alt="Khalilvegas in a skeleton sweater and iced chain, flashing a pink grill" width="1000" height="1350"><span class="tag">Khalilvegas<small>Houston rapper</small></span></button>
+      <button class="g-card" type="button"><span class="ring"></span><img src="/assets/kol-toxicissue-cut.webp" alt="toxicissue flashing her pink grill and throwing up hand signs" width="1000" height="1172"><span class="tag">toxicissue<small>Houston rapper</small></span></button>
+      <button class="g-card" type="button"><span class="ring"></span><img src="/assets/kol-xavier-toliver-cut.webp" alt="Xavier Toliver in his Huskies number 13 jersey with a black grill, holding his helmet" width="1000" height="1388"><span class="tag">Xavier Toliver<small>Football player</small></span></button>
+    </div>
+    <div class="flow-nav">
+      <button class="arr" type="button" data-flow="-1" aria-label="Previous guest">←</button>
+      <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+      <button class="arr" type="button" data-flow="1" aria-label="Next guest">→</button>
+    </div>
   </div>
 </section>
 
-
-<!-- 2 · Comeback story -->
-<section class="story" id="story">
+<!-- 3 · Lineup. Photos are temporary stock (Pexels) until the client sends real ones; a card can take a <video> instead of <img>. -->
+<section class="lineup" id="lineup">
   <div class="wrap">
-    <h2 class="eyebrow" data-reveal>Sharpstown was once a Houston icon.</h2>
-    <p class="quote" data-reveal>Sharpstown was once a <em>Houston icon.</em> <span class="soft">We're not here by accident.</span> We're here to write what comes <em>next.</em></p>
-    <div class="story-foot" data-reveal>
-      <p class="support">On December 12, Brilliant Jewelers opens its doors in the neighborhood with music, cars, and a thank-you offer for Sharpstown. Come be part of the next chapter.</p>
+    <div class="head" data-reveal>
+      <div><span class="kick">On the day</span><h2 class="title">The <span class="g">lineup</span></h2></div>
+      <div class="rail-nav"><button type="button" data-rail="-1" aria-label="Scroll left">←</button><button type="button" data-rail="1" aria-label="Scroll right">→</button></div>
+    </div>
+    <div class="rail" id="rail" data-reveal>
+      <figure class="act"><img src="/assets/act-hiphop.webp" alt="Rapper performing with a microphone" width="800" height="1000" loading="lazy"><figcaption><time>12PM · 4PM</time><h3>Live hip-hop</h3></figcaption></figure>
+      <figure class="act"><img src="/assets/act-lion-dance.webp" alt="Red lion dance performance in the street" width="800" height="1000" loading="lazy"><figcaption><time>11:40AM</time><h3>Lion dance</h3></figcaption></figure>
+      <figure class="act"><img src="/assets/act-car-show.webp" alt="Lowrider cars on show in the street" width="800" height="1000" loading="lazy"><figcaption><time>12:30PM · 4PM</time><h3>Car show</h3></figcaption></figure>
+      <figure class="act"><img src="/assets/act-dj.webp" alt="DJ mixing on turntables" width="800" height="1000" loading="lazy"><figcaption><time>All day</time><h3>DJ</h3></figcaption></figure>
+    </div>
+    <ul class="extras" data-reveal>
+      <li>Street dance</li><li>Bartender flair show</li><li>Welcome drinks &amp; bites</li><li>Free jewelry cleaning</li><li>Photo booth</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 · Offers -->
+<section class="offers" id="offers">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <div><span class="kick">December 12 only</span><h2 class="title">Grand opening <span class="g">deals</span></h2></div>
+    </div>
+    <div class="grid">
+      <article class="deal deal-a sweep" data-reveal>
+        <span class="big" aria-hidden="true">FREE</span>
+        <div><h3>Buy Upper.<br>Get Lower FREE.</h3><p class="desc">Buy an upper grill and your lower is on us, matched to the price of the upper.</p></div>
+        <div><button class="btn" type="button" data-open-rsvp>RSVP to claim</button><p class="fine">RSVP required. December 12, 2026 only.</p></div>
+      </article>
+      <article class="deal deal-b sweep" data-reveal>
+        <span class="big" aria-hidden="true">50%</span>
+        <div><h3><span class="g">50% off</span><br>grillz.</h3><p class="desc">Grand opening day pricing on grillz at Brilliant Jewelers.</p></div>
+        <div><button class="btn btn-solid" type="button" data-open-rsvp>RSVP now</button><p class="fine">December 12, 2026 only. Ask in store for details.</p></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- 3 · Event info -->
-<section class="alt" id="info">
+<!-- 5 · Plan your day -->
+<section class="plan" id="plan">
   <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <p class="num">Event info</p>
-      <h2>One day. One street. <em class="accent">One shine.</em></h2>
-    </div>
-    <div class="info-grid">
+    <div class="head" data-reveal><div><span class="kick">Plan your day</span><h2 class="title">Pull <span class="g">up</span></h2></div></div>
+    <div class="grid">
       <div data-reveal>
         <dl class="facts">
-          <div><dt>Date</dt><dd>Saturday, December 12, 2026</dd></div>
-          <div><dt>Time</dt><dd>10:00 AM – 6:00 PM</dd></div>
-          <div><dt>Place</dt><dd>300 Sharpstown Center, Houston, TX 77036</dd></div>
-          <div><dt>Parking</dt><dd class="tbd">Parking details to be added</dd></div>
+          <div><dt>Date</dt><dd>Sat, Dec 12</dd></div>
+          <div><dt>Time</dt><dd>10AM – 6PM</dd></div>
+          <div class="wide"><dt>Place</dt><dd>300 Sharpstown Center, Houston, TX 77036</dd></div>
         </dl>
         <div class="cta">
-          <a class="btn btn-solid" href="https://maps.app.goo.gl/rG756HiFMuE4MmCT8" target="_blank" rel="noopener">Get directions</a>
-          <a class="btn" href="#" id="add-cal">Add to calendar</a>
-        </div>
-        <div class="map">
-          <iframe title="Map: Brilliant Jewelers, 300 Sharpstown Center, Houston, TX 77036" src="https://maps.google.com/maps?q=300+Sharpstown+Center+Ste+1010A,+Houston,+TX+77036&amp;ll=29.7072411,-95.517191&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <a class="btn btn-sm" href="https://maps.app.goo.gl/rG756HiFMuE4MmCT8" target="_blank" rel="noopener">Directions</a>
+          <a class="btn btn-sm" href="#" id="add-cal">Add to calendar</a>
         </div>
       </div>
-      <div class="happen" data-reveal>
-        <h3>What's happening on the day</h3>
-        <ul>
-          <li><span><b>Live hip-hop:</b> a Houston artist set and a second Houston artist session in the afternoon.</span></li>
-          <li><span><b>Street dance:</b> high-energy performances to open the day and restart the afternoon.</span></li>
-          <li><span><b>Lion dance blessing:</b> a traditional performance to bless the new store.</span></li>
-          <li><span><b>Car show:</b> Houston car culture on display in two sessions.</span></li>
-          <li><span><b>DJ and bartender flair show:</b> the party starts at the door, with welcome drinks and finger food.</span></li>
-          <li><span><b>Free jewelry cleaning:</b> bring your pieces to the counter.</span></li>
-          <li><span><b>Photo booth:</b> show us your shine and tag #ShineRedefined.</span></li>
-          <li class="offer-li"><span><b>The offer:</b> Buy Upper, Get Lower FREE. <a href="#rsvp">RSVP to claim it.</a></span></li>
-        </ul>
-      </div>
+      <details class="agenda-box" data-reveal>
+        <summary>Full agenda <span>Tap to open</span></summary>
+        <ol class="agenda">
+          <li><time>10:00 – 10:30</time><span><b>Doors open.</b> DJ, bartender flair show, welcome drinks, free jewelry cleaning, photo booth</span></li>
+          <li><time>10:30 – 10:40</time><span><b>Street dance + ribbon cutting</b></span></li>
+          <li class="hot"><time>11:40 – 12:00</time><span><b>Lion dance + offer moment</b></span></li>
+          <li class="hot"><time>12:00 – 12:30</time><span><b>Houston artist live</b></span></li>
+          <li class="hot"><time>12:30 – 1:00</time><span><b>Car show, session 1</b></span></li>
+          <li class="quiet"><time>1:00 – 3:00</time><span>Shopping continues</span></li>
+          <li><time>3:00 – 4:00</time><span><b>Street dance</b></span></li>
+          <li class="hot"><time>4:00 – 5:00</time><span><b>Car show + Houston hip-hop artist</b></span></li>
+          <li><time>5:00 – 6:00</time><span><b>Closing and thank-you</b></span></li>
+        </ol>
+        <p class="agenda-note">Times may change. Check this page for updates.</p>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- 4 · Who's coming -->
-<section id="coming">
-  <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <p class="num">Who's coming</p>
-      <h2>Houston's own are <em class="accent">pulling up.</em></h2>
-      <p>Meet the faces of the day, and follow them to see what's coming.</p>
-    </div>
-    <div class="people">
-      <article class="person" data-reveal>
-        <div class="photo" data-n="01"><img src="/assets/kol-khalilvegas.webp" alt="Khalilvegas in a skeleton sweater and iced chain, reaching toward the camera with a pink grill, against a golden sunset sky" width="720" height="960" loading="lazy"></div>
-        <h3>Khalilvegas</h3>
-        <p class="eyebrow role">Houston rapper</p>
-        <blockquote>“Mid-bar, mid-store.”</blockquote>
-        <a class="btn btn-sm" href="https://www.instagram.com/khalilvegas/" target="_blank" rel="noopener">Follow on Instagram</a>
-      </article>
-      <article class="person" data-reveal>
-        <div class="photo" data-n="02"><img src="/assets/kol-toxicissue.webp" alt="toxicissue flashing her pink grill and throwing up hand signs, against a golden sunset sky" width="720" height="960" loading="lazy"></div>
-        <h3>toxicissue</h3>
-        <p class="eyebrow role">Houston rapper</p>
-        <blockquote>“Not yet, Houston.”</blockquote>
-        <a class="btn btn-sm" href="https://www.instagram.com/toxicissue/" target="_blank" rel="noopener">Follow on Instagram</a>
-      </article>
-      <article class="person" data-reveal>
-        <div class="photo" data-n="03"><img src="/assets/kol-xavier-toliver.webp" alt="Xavier Toliver in his Huskies number 13 jersey with a black grill, holding his helmet" width="720" height="960" loading="lazy"></div>
-        <h3>Xavier Toliver</h3>
-        <p class="eyebrow role">Football player</p>
-        <blockquote>“Game day's coming, Sharpstown.”</blockquote>
-        <a class="btn btn-sm" href="https://www.facebook.com/xavier.toliver.5" target="_blank" rel="noopener">Follow on Facebook</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- 5 · Agenda -->
-<section id="agenda">
-  <div class="wrap">
-    <div class="panel">
-      <div class="panel-head" data-reveal>
-        <p class="hash">Agenda · Saturday, December 12</p>
-        <h2>The full day, <em class="accent">at a glance.</em></h2>
-      </div>
-      <ol class="agenda" data-reveal>
-      <li><time>10:00 – 10:30 AM</time><h3>Welcome and Arrival</h3><p>DJ set, bartender flair show, welcome drinks and finger food, product display, free jewelry cleaning, photo booth</p></li>
-      <li><time>10:30 – 10:35 AM</time><h3>Street Dance Performance</h3><p>High-energy hip-hop dance opener</p></li>
-      <li><time>10:35 – 10:40 AM</time><h3>Ribbon Cutting</h3><p>Brilliant Jewelers officially opens</p></li>
-      <li><time>11:40 AM – 12:00 PM</time><h3>Lion Dance and Offer Moment</h3><p>A blessing performance, then the Buy Upper, Get Lower FREE moment, today only</p></li>
-      <li><time>12:00 – 12:30 PM</time><h3>Houston Artist Performance</h3><p>Opening hip-hop set</p></li>
-      <li><time>12:30 – 1:00 PM</time><h3>Car Show, Session 1</h3><p>Houston car culture on display</p></li>
-      <li class="quiet"><time>1:00 – 3:00 PM</time><h3>Midday Break</h3><p>Shopping and browsing continues while performances pause</p></li>
-      <li><time>3:00 – 4:00 PM</time><h3>Street Dance Performance</h3><p>Afternoon energy restart</p></li>
-      <li><time>4:00 – 5:00 PM</time><h3>Car Show and Houston Hip-Hop Artist</h3><p>Session 2, with live music as the backdrop</p></li>
-      <li><time>5:00 – 6:00 PM</time><h3>Closing Window</h3><p>Final push, thank-you moment, wind-down</p></li>
-      </ol>
-      <p class="footnote">Times may change. Check this page and our social accounts for updates.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 6 · Promotion + RSVP -->
-<section class="offer-sec" id="rsvp">
-  <div class="wrap offer-grid">
+<!-- 6 · RSVP -->
+<section class="rsvp" id="rsvp">
+  <div class="wrap grid">
     <div data-reveal>
-      <p class="eyebrow">The offer · December 12 only</p>
-      <h2>Buy Upper. <span>Get Lower FREE.</span></h2>
-      <p class="lead">One day only: December 12. RSVP to claim your offer.</p>
-      <p class="body">Buy an upper grill and your lower is on us, matched to the price of the upper. RSVP below to lock it in.</p>
-      <p class="fine">Offer valid December 12, 2026 only. RSVP required. See terms below.</p>
-      <ol class="steps">
-        <li><span>RSVP here<span class="arrow" aria-hidden="true">→</span></span></li>
-        <li><span>Show your confirmation at the store on December 12.</span></li>
-        <li><span>Buy your upper and get your lower free.</span></li>
-      </ol>
+      <span class="kick">Lock it in</span>
+      <h2 class="title">RSVP <span class="g">now</span></h2>
+      <p class="lead">Everyone is welcome. RSVP to claim Buy Upper, Get Lower FREE, then show your confirmation at the store on December 12.</p>
       <details class="terms">
         <summary>Terms</summary>
         <ul>
-          <li>Offer valid December 12, 2026 only, at the Brilliant Jewelers grand opening.</li>
-          <li>RSVP is required to claim the offer.</li>
-          <li>The free lower piece matches the price of the upper piece purchased.</li>
+          <li>Offers valid December 12, 2026 only, at the Brilliant Jewelers grand opening.</li>
+          <li>RSVP is required for Buy Upper, Get Lower FREE. The free lower matches the price of the upper.</li>
           <li>One offer per RSVP. Cannot be combined with other promotions.</li>
         </ul>
       </details>
     </div>
     <div class="form-card" data-reveal>
       <form class="rsvp-form" novalidate>
-        <h3>Claim your offer</h3>
-        <p class="intro">RSVP is required to get this offer. We'll send your confirmation by text and email.</p>
+        <p class="intro">We'll send your confirmation by text and email.</p>
         <label class="field">Full name<input type="text" name="name" autocomplete="name" required></label>
         <div class="two">
           <label class="field">Mobile number<input type="tel" name="phone" autocomplete="tel" inputmode="tel" required></label>
@@ -516,31 +453,11 @@
   </div>
 </section>
 
-<!-- 7 · FAQ -->
-<section id="faq">
-  <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <p class="num">FAQ</p>
-      <h2>Before you <em class="accent">pull up.</em></h2>
-    </div>
-    <div class="faq" data-reveal>
-      <details><summary>When and where is it?</summary><p>Saturday, December 12, 2026, from 10:00 AM to 6:00 PM at 300 Sharpstown Center, Houston, TX 77036.</p></details>
-      <details><summary>Do I need to RSVP?</summary><p>Everyone is welcome. RSVP is required to claim Buy Upper, Get Lower FREE.</p></details>
-      <details><summary>What is the offer?</summary><p>Buy an upper and get the lower free, matched to the price of the upper. December 12 only.</p></details>
-      <details><summary>What else is happening?</summary><p>Live hip-hop, street dance, a lion dance blessing, a car show, a DJ, a bartender flair show, free jewelry cleaning, and a photo booth.</p></details>
-      <details><summary>Will there be food and drinks?</summary><p>Yes. Welcome drinks and finger food are served at arrival.</p></details>
-      <details><summary>Who is coming?</summary><p>Khalilvegas, toxicissue, and Xavier Toliver, plus Houston performers.</p></details>
-      <details><summary>Can I bring friends?</summary><p>Yes. Bring your crew.</p></details>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer class="site-foot">
   <div class="wrap">
     <img class="foot-logo" src="/assets/logo-brilliant-jewelers.png" alt="Brilliant Jewelers" width="900" height="742" loading="lazy">
-    <p class="foot-mark diamond">Shine Redefined<span class="twinkle" aria-hidden="true" style="top:.1em;right:0">✦</span><span class="twinkle" aria-hidden="true" style="bottom:.3em;left:.15em;animation-delay:1.3s">✦</span></p>
     <p class="tags">#ShineRedefined #BrilliantJewelers #Sharpstown</p>
     <p class="foot-addr">Brilliant Jewelers · 300 Sharpstown Center, Houston, TX 77036</p>
     <ul class="social">
@@ -552,60 +469,144 @@
   </div>
 </footer>
 
+<!-- Sticky offer bar -->
+<div class="dock" id="dock">
+  <p><span class="g">Buy Upper, Get Lower FREE</span> · 50% off grillz · 12.12</p>
+  <button class="btn btn-solid btn-sm" type="button" data-open-rsvp>RSVP</button>
+</div>
+
+<!-- Guest popup -->
+<dialog class="pop guest-pop" id="guest-pop" aria-labelledby="guest-name">
+  <button class="pop-close" type="button" aria-label="Close" data-close>×</button>
+  <div class="in">
+    <img id="guest-img" src="" alt="">
+    <div class="txt">
+      <p class="role" id="guest-role"></p>
+      <h2 class="title" id="guest-name"></h2>
+      <blockquote id="guest-line"></blockquote>
+      <a class="btn btn-sm" id="guest-link" href="#" target="_blank" rel="noopener">Follow</a>
+      <button class="btn btn-solid btn-sm" type="button" data-open-rsvp>RSVP to meet them</button>
+    </div>
+  </div>
+</dialog>
+
 <!-- RSVP popup: opens on first visit and from every RSVP button -->
 <dialog class="pop" id="rsvp-pop" aria-labelledby="pop-title">
   <div class="pop-top">
-    <button class="pop-close" type="button" aria-label="Close" data-close-rsvp>×</button>
-    <p class="eyebrow">Shine Redefined · 12.12</p>
-    <h2 id="pop-title">Buy Upper. <span>Get Lower FREE.</span></h2>
-    <p>One day only: December 12. RSVP to claim your offer.</p>
+    <button class="pop-close" type="button" aria-label="Close" data-close>×</button>
+    <h2 class="title" id="pop-title">Buy Upper. <span class="g">Get Lower FREE.</span></h2>
+    <p>Plus 50% off grillz. December 12 only. RSVP to claim your offer.</p>
   </div>
   <div class="pop-body">
     <form class="rsvp-form" novalidate>
-      <p class="intro">RSVP is required to get this offer. We'll send your confirmation by text and email.</p>
       <label class="field">Full name<input type="text" name="name" autocomplete="name" required></label>
-        <div class="two">
-          <label class="field">Mobile number<input type="tel" name="phone" autocomplete="tel" inputmode="tel" required></label>
-          <label class="field">Email<input type="email" name="email" autocomplete="email" required></label>
-        </div>
-        <div class="two">
-          <label class="field">Preferred language <span class="opt">(optional)</span>
-            <select name="language"><option value="">Select</option><option>English</option><option>中文</option><option>Tiếng Việt</option><option>Español</option></select>
-          </label>
-          <label class="field">How did you hear about us? <span class="opt">(optional)</span>
-            <select name="source"><option value="">Select</option><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>A friend</option><option>Flyer</option><option>Other</option></select>
-          </label>
-        </div>
-        <label class="consent"><input type="checkbox" name="consent" required><span>I agree to receive event reminders from Brilliant Jewelers by text and email. Message and data rates may apply. Reply STOP to opt out.</span></label>
-        <button class="btn btn-solid" type="submit">Claim my offer</button>
-        <p class="msg" role="status" aria-live="polite"></p>
+      <div class="two">
+        <label class="field">Mobile number<input type="tel" name="phone" autocomplete="tel" inputmode="tel" required></label>
+        <label class="field">Email<input type="email" name="email" autocomplete="email" required></label>
+      </div>
+      <div class="two">
+        <label class="field">Preferred language <span class="opt">(optional)</span>
+          <select name="language"><option value="">Select</option><option>English</option><option>中文</option><option>Tiếng Việt</option><option>Español</option></select>
+        </label>
+        <label class="field">How did you hear about us? <span class="opt">(optional)</span>
+          <select name="source"><option value="">Select</option><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>A friend</option><option>Flyer</option><option>Other</option></select>
+        </label>
+      </div>
+      <label class="consent"><input type="checkbox" name="consent" required><span>I agree to receive event reminders from Brilliant Jewelers by text and email. Message and data rates may apply. Reply STOP to opt out.</span></label>
+      <button class="btn btn-solid" type="submit">Claim my offer</button>
+      <p class="msg" role="status" aria-live="polite"></p>
     </form>
-    <button class="pop-later" type="button" data-close-rsvp>Maybe later</button>
+    <button class="pop-later" type="button" data-close>Maybe later</button>
   </div>
 </dialog>
 
 <script>
-  // ===== RSVP popup =====
+  // ===== Popups =====
   var pop = document.getElementById('rsvp-pop');
+  var guestPop = document.getElementById('guest-pop');
   function openRsvp() {
+    if (guestPop.open) guestPop.close();
     if (typeof pop.showModal === 'function') { if (!pop.open) pop.showModal(); }
     else document.getElementById('rsvp').scrollIntoView();
   }
   document.querySelectorAll('[data-open-rsvp]').forEach(function (b) { b.addEventListener('click', openRsvp); });
-  document.querySelectorAll('[data-close-rsvp]').forEach(function (b) { b.addEventListener('click', function () { pop.close(); }); });
-  pop.addEventListener('click', function (e) { if (e.target === pop) pop.close(); });
-  document.querySelectorAll('a[href="#rsvp"]').forEach(function (a) {
-    a.addEventListener('click', function (e) { e.preventDefault(); openRsvp(); });
+  document.querySelectorAll('dialog.pop').forEach(function (d) {
+    d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+    d.querySelectorAll('[data-close]').forEach(function (b) { b.addEventListener('click', function () { d.close(); }); });
   });
-  // Show once per visit, shortly after the page opens
   (function () {
     var seen = false;
     try { seen = sessionStorage.getItem('sr-pop') === '1'; } catch (err) {}
     if (seen) return;
     setTimeout(function () {
-      openRsvp();
+      if (!guestPop.open) openRsvp();
       try { sessionStorage.setItem('sr-pop', '1'); } catch (err) {}
-    }, 1200);
+    }, 2500);
+  })();
+
+  // ===== Guests: coverflow + tap to open =====
+  var GUESTS = [
+    { name: 'Khalilvegas', role: 'Houston rapper', line: '“Mid-bar, mid-store.”', img: '/assets/kol-khalilvegas-cut.webp', link: 'https://www.instagram.com/khalilvegas/', via: 'Follow on Instagram' },
+    { name: 'toxicissue', role: 'Houston rapper', line: '“Not yet, Houston.”', img: '/assets/kol-toxicissue-cut.webp', link: 'https://www.instagram.com/toxicissue/', via: 'Follow on Instagram' },
+    { name: 'Xavier Toliver', role: 'Football player', line: '“Game day\'s coming, Sharpstown.”', img: '/assets/kol-xavier-toliver-cut.webp', link: 'https://www.facebook.com/xavier.toliver.5', via: 'Follow on Facebook' }
+  ];
+  (function () {
+    var cards = [].slice.call(document.querySelectorAll('.g-card'));
+    var dots = [].slice.call(document.querySelectorAll('.dots i'));
+    var n = cards.length, cur = 0, timer = null, x0 = null, moved = false;
+    function render() {
+      cards.forEach(function (c, i) {
+        var p = (i - cur + n) % n; if (p > n / 2) p -= n;
+        c.setAttribute('data-pos', p);
+        c.setAttribute('aria-label', GUESTS[i].name + ', open profile');
+      });
+      dots.forEach(function (d, i) { d.classList.toggle('on', i === cur); });
+    }
+    function go(step) { cur = (cur + step + n) % n; render(); }
+    function stop() { if (timer) clearInterval(timer); timer = null; }
+    function play() { stop(); if (!matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(function () { go(1); }, 3500); }
+    function openGuest(i) {
+      var g = GUESTS[i];
+      var img = document.getElementById('guest-img');
+      img.src = g.img; img.alt = cards[i].querySelector('img').alt;
+      document.getElementById('guest-name').textContent = g.name;
+      document.getElementById('guest-role').textContent = g.role;
+      document.getElementById('guest-line').textContent = g.line;
+      var a = document.getElementById('guest-link'); a.href = g.link; a.textContent = g.via;
+      stop();
+      if (typeof guestPop.showModal === 'function') guestPop.showModal(); else window.open(g.link);
+    }
+    cards.forEach(function (c, i) {
+      c.addEventListener('click', function () {
+        if (moved) return;
+        if (i !== cur) { cur = i; render(); play(); } else openGuest(i);
+      });
+    });
+    document.querySelectorAll('[data-flow]').forEach(function (b) { b.addEventListener('click', function () { go(+b.dataset.flow); play(); }); });
+    var flow = document.getElementById('flow');
+    flow.addEventListener('pointerdown', function (e) { x0 = e.clientX; moved = false; });
+    flow.addEventListener('pointerup', function (e) {
+      if (x0 === null) return; var dx = e.clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) { moved = true; go(dx < 0 ? 1 : -1); play(); setTimeout(function () { moved = false; }, 50); }
+    });
+    flow.addEventListener('mouseenter', stop); flow.addEventListener('mouseleave', play);
+    guestPop.addEventListener('close', play);
+    render(); play();
+  })();
+
+  // ===== Lineup rail arrows =====
+  (function () {
+    var rail = document.getElementById('rail');
+    document.querySelectorAll('[data-rail]').forEach(function (b) {
+      b.addEventListener('click', function () { rail.scrollBy({ left: +b.dataset.rail * (rail.firstElementChild.offsetWidth + 16), behavior: 'smooth' }); });
+    });
+  })();
+
+  // ===== Sticky offer bar: shows after the hero =====
+  (function () {
+    var dock = document.getElementById('dock'), hero = document.querySelector('.hero');
+    function onScroll() { dock.classList.toggle('show', hero.getBoundingClientRect().bottom < 60); }
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
   })();
 
   // ===== RSVP form (placeholder: connect to the team's form / SMS tool) =====
@@ -638,7 +639,7 @@
       'DTSTART:20261212T160000Z', 'DTEND:20261213T000000Z',
       'SUMMARY:Brilliant Jewelers Grand Opening — Shine Redefined',
       'LOCATION:300 Sharpstown Center\\, Houston\\, TX 77036',
-      'DESCRIPTION:Live music\\, a car show\\, and Buy Upper\\, Get Lower FREE. RSVP to claim the offer.',
+      'DESCRIPTION:Live hip-hop\\, lion dance\\, car show\\, DJ. Buy Upper\\, Get Lower FREE and 50% off grillz.',
       'END:VEVENT', 'END:VCALENDAR'
     ].join('\r\n');
     var a = document.createElement('a');
@@ -649,21 +650,9 @@
 
   // ===== Soft reveal on scroll =====
   (function () {
-    // Stagger: give list items and cards their own reveal, a beat apart
-    [['.hero [data-reveal]', .12], ['.facts > div', .08], ['.happen li', .06], ['.people .person', .12], ['.agenda li', .05], ['.steps li', .1], ['.faq details', .06]].forEach(function (g) {
-      document.querySelectorAll(g[0]).forEach(function (el, i) {
-        el.setAttribute('data-reveal', '');
-        el.style.setProperty('--d', (i * g[1]).toFixed(2) + 's');
-      });
-    });
-    ['.people', '.agenda', '.faq'].forEach(function (sel) { var el = document.querySelector(sel + '[data-reveal]'); if (el) el.removeAttribute('data-reveal'); });
-    var head = document.querySelector('.site-head');
-    function onScroll() { head.classList.toggle('scrolled', window.scrollY > 8); }
-    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
     var els = document.querySelectorAll('[data-reveal]');
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
-      els.forEach(function (el) { el.classList.add('in'); });
-      return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); }); return;
     }
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
