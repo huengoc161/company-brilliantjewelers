@@ -276,7 +276,7 @@
   .gz .pop-later { margin: 2px 0 0; text-align: left; }
   @media (max-width: 640px) {
     .gz { grid-template-columns: 1fr; }
-    .gz-art { min-height: 0; height: 230px; }
+    .gz-art { min-height: 0; height: 190px; }
     .gz-art img { position: absolute; inset: 12px; width: calc(100% - 24px); height: calc(100% - 24px); object-fit: contain; }
     .gz-txt { padding: 22px 22px 22px; gap: 10px; border-left: 0; border-top: 1px solid rgba(220, 232, 255, .12); text-align: center; align-items: center; }
     .gz .pop-later { text-align: center; }
@@ -556,7 +556,7 @@
 <dialog class="pop gz-pop" id="gz-pop" aria-labelledby="gz-title">
   <button class="pop-close" type="button" aria-label="Close" data-close>×</button>
   <div class="gz">
-    <div class="gz-art"><i></i><i></i><i></i><i></i><img src="/assets/grill-iced.webp" alt="Iced-out diamond grillz, upper and lower" width="603" height="583"></div>
+    <div class="gz-art"><i></i><i></i><i></i><i></i><img src="/assets/grillz-diamond.webp" alt="Iced-out diamond grillz, upper and lower" width="1100" height="494"></div>
     <div class="gz-txt">
       <p class="gz-k">Grand opening · Dec 12 only</p>
       <h2 class="gz-t" id="gz-title">Diamond<br>grillz</h2>
@@ -637,6 +637,8 @@
     setTimeout(function () {
       if (!guestPop.open && typeof gzPop.showModal === 'function') gzPop.showModal();
       try { sessionStorage.setItem('sr-pop', '1'); } catch (err) {}
+      // 3s after the promo, show the RSVP form
+      setTimeout(function () { if (!guestPop.open) openRsvp(); }, 3000);
     }, 2500);
   })();
 
