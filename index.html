@@ -637,8 +637,8 @@
     setTimeout(function () {
       if (!guestPop.open && typeof gzPop.showModal === 'function') gzPop.showModal();
       try { sessionStorage.setItem('sr-pop', '1'); } catch (err) {}
-      // 3s after the promo, show the RSVP form
-      setTimeout(function () { if (!guestPop.open) openRsvp(); }, 3000);
+      // 5s after the promo, show the RSVP form
+      setTimeout(function () { if (!guestPop.open) openRsvp(); }, 5000);
     }, 2500);
   })();
 
