@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PS63XHD9');</script>
+<!-- End Google Tag Manager -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Brilliant Jewelers Grand Opening | Shine Redefined, Dec 12</title>
@@ -371,6 +378,10 @@
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS63XHD9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <header class="site-head">
   <div class="wrap">
@@ -772,6 +783,9 @@
       fetch('/api/rsvp', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
         .then(function (r) { if (!r.ok) throw new Error(r.status); })
         .then(function () {
+          // Tracking signal for Tag Manager: only after a successful save, no personal details
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'rsvp_submit' });
           msg.className = 'msg ok';
           msg.textContent = OK;
           form.querySelectorAll('input, select').forEach(function (f) { f.disabled = true; });
