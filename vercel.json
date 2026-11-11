@@ -1,3 +1,16 @@
 {
-  "rewrites": [{ "source": "/shine-redefined", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/shine-redefined",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy.html"
+    }
+  ]
 }
