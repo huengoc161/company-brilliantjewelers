@@ -136,7 +136,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .flow { position: relative; height: clamp(520px, 46vw, 640px); perspective: 1400px; touch-action: pan-y; user-select: none; }
   .g-card { --w: clamp(240px, 22vw, 310px); position: absolute; left: 50%; bottom: 0; width: var(--w); margin-left: calc(var(--w) / -2); padding: 0; border: 0; background: none; cursor: pointer; transition: transform .7s var(--ease), opacity .7s var(--ease), filter .7s; text-align: center; }
   .g-card .frame { position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 22px; overflow: hidden; background: #000; border: 1.5px solid rgba(255, 200, 100, .55); box-shadow: 0 0 0 4px rgba(255, 170, 40, .08), 0 0 40px -6px rgba(255, 150, 30, .55), 0 30px 50px -20px rgba(0, 0, 0, .8); }
-  .g-card video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .g-card video, .g-card .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .g-card .frame::after { content: ""; position: absolute; inset: auto 0 0; height: 30%; background: linear-gradient(transparent, rgba(0, 0, 0, .7)); pointer-events: none; }
   .g-card .sound { position: absolute; z-index: 1; left: 50%; bottom: 14px; transform: translateX(-50%); padding: 8px 14px; border-radius: 999px; background: rgba(10, 10, 11, .75); border: 1px solid rgba(255, 214, 120, .5); font: 700 11px var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--gold-light); white-space: nowrap; opacity: 0; transition: opacity .4s; }
   .g-card[data-pos="0"] .sound { opacity: 1; }
@@ -145,6 +145,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .g-card[data-pos="0"] { transform: translateX(0) scale(1); z-index: 3; }
   .g-card[data-pos="1"] { transform: translateX(92%) scale(.82) rotateY(-22deg); z-index: 2; opacity: .9; filter: brightness(.85); }
   .g-card[data-pos="-1"] { transform: translateX(-92%) scale(.82) rotateY(22deg); z-index: 2; opacity: .9; filter: brightness(.85); }
+  .g-card[data-pos="2"] { transform: translateX(165%) scale(.68) rotateY(-28deg); z-index: 1; opacity: .6; filter: brightness(.7); }
+  .g-card[data-pos="-2"] { transform: translateX(-165%) scale(.68) rotateY(28deg); z-index: 1; opacity: .6; filter: brightness(.7); }
   .flow-nav { display: flex; justify-content: center; align-items: center; gap: 14px; margin-top: 18px; }
   .flow-nav button.arr { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--fg); font-size: 18px; cursor: pointer; }
   .flow-nav button.arr:hover { border-color: var(--gold); }
@@ -163,6 +165,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .act figcaption { position: absolute; z-index: 1; left: 18px; right: 18px; bottom: 16px; }
   .act time { font: 700 11px var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-light); }
   .act h3 { margin-top: 2px; font: italic 900 clamp(26px, 2.6vw, 34px)/.95 var(--title); text-transform: uppercase; color: var(--fg); }
+  a.act { display: block; color: inherit; text-decoration: none; }
+  .act .ig { display: inline-block; margin-top: 8px; font: 600 12px var(--sans); letter-spacing: .04em; color: var(--gold-light); }
+  .act .ig::before { content: "IG "; font-weight: 800; letter-spacing: .12em; color: var(--gold); }
   .act { border-color: rgba(255, 190, 80, .35); box-shadow: 0 0 0 1px rgba(255, 190, 80, .08), 0 18px 40px -20px rgba(255, 140, 20, .45); transition: border-color .3s, box-shadow .3s; }
   .act:hover { border-color: rgba(255, 210, 120, .9); box-shadow: 0 0 0 1px rgba(255, 210, 120, .5), 0 0 34px -4px rgba(255, 150, 30, .6); }
   .rail-nav { display: flex; gap: 10px; }
@@ -256,6 +261,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .pop-later { display: block; margin: 14px auto 0; border: 0; background: none; font: 400 12px var(--sans); color: var(--muted); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
   dialog.guest-pop { width: min(780px, calc(100% - 32px)); }
   .guest-pop .in { display: grid; grid-template-columns: 1fr 1fr; align-items: end; background: radial-gradient(ellipse 70% 60% at 30% 70%, rgba(226, 150, 40, .25), transparent 70%); }
+  .guest-pop #guest-img { display: block; width: 340px; height: min(604px, 78vh); object-fit: cover; align-self: start; background: #000; }
   .guest-pop video { display: block; width: 100%; max-height: 78vh; aspect-ratio: 9 / 16; object-fit: cover; background: #000; }
   .guest-pop .in { align-items: center; grid-template-columns: minmax(0, 340px) 1fr; }
   .guest-pop video { align-self: start; width: 340px; height: min(604px, 78vh); }
@@ -339,6 +345,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .two { grid-template-columns: 1fr; }
     .guest-pop .in { grid-template-columns: 1fr; }
     .guest-pop video { width: 100%; height: 52vh; max-height: 52vh; aspect-ratio: auto; }
+    .guest-pop #guest-img { width: 100%; height: 52vh; }
     .guest-pop .txt { padding: 4px 22px 26px; text-align: center; }
     .agenda li { grid-template-columns: 1fr; gap: 0; }
     .dock { justify-content: space-between; gap: 10px; }
@@ -425,10 +432,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button class="g-card" type="button"><span class="tag">Khalilvegas<small>Houston rapper</small></span><span class="frame"><video muted loop playsinline preload="none" poster="/assets/vid-khalilvegas.jpg" data-src="/assets/vid-khalilvegas.mp4" aria-label="Khalilvegas video"></video><span class="sound">🔊 Tap for sound</span></span></button>
       <button class="g-card" type="button"><span class="tag">toxicissue<small>Houston rapper</small></span><span class="frame"><video muted loop playsinline preload="none" poster="/assets/vid-toxicissue-card.jpg" data-src="/assets/vid-toxicissue.mp4" aria-label="toxicissue video"></video><span class="sound">🔊 Tap for sound</span></span></button>
       <button class="g-card" type="button"><span class="tag">Xavier Toliver<small>Football player</small></span><span class="frame"><video muted loop playsinline preload="none" poster="/assets/vid-xavier-toliver-card.jpg" data-src="/assets/vid-xavier-toliver.mp4" aria-label="Xavier Toliver video"></video><span class="sound">🔊 Tap for sound</span></span></button>
+      <button class="g-card" type="button"><span class="tag">DJgetitreddy<small>DJ</small></span><span class="frame"><img src="/assets/guest-dj-getitreddy.webp" alt="DJgetitreddy" width="720" height="1280" loading="lazy"><span class="sound">📷 Tap to open</span></span></button>
+      <button class="g-card" type="button"><span class="tag">DJ Bloom<small>DJ</small></span><span class="frame"><img src="/assets/guest-dj-bloom.webp" alt="DJ Bloom" width="720" height="1280" loading="lazy"><span class="sound">📷 Tap to open</span></span></button>
     </div>
     <div class="flow-nav">
       <button class="arr" type="button" data-flow="-1" aria-label="Previous guest">←</button>
-      <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       <button class="arr" type="button" data-flow="1" aria-label="Next guest">→</button>
       <button class="btn btn-sm teaser-btn" type="button" id="teaser">▶ Watch the teaser</button>
     </div>
@@ -446,7 +455,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <figure class="act"><img src="/assets/act-hiphop.webp" alt="Rapper performing with a microphone" width="800" height="1000" loading="lazy"><figcaption><time>12PM · 4PM</time><h3>Live hip-hop</h3></figcaption></figure>
       <figure class="act"><img src="/assets/act-lion-dance.webp" alt="Red lion dance performance in the street" width="800" height="1000" loading="lazy"><figcaption><time>11:40AM</time><h3>Lion dance</h3></figcaption></figure>
       <figure class="act"><img src="/assets/act-car-show.webp" alt="Lowrider cars on show in the street" width="800" height="1000" loading="lazy"><figcaption><time>12:30PM · 4PM</time><h3>Car show</h3></figcaption></figure>
-      <figure class="act"><img src="/assets/act-dj.webp" alt="DJ mixing on turntables" width="800" height="1000" loading="lazy"><figcaption><time>All day</time><h3>DJ</h3></figcaption></figure>
+      <a class="act" href="https://www.instagram.com/djgetitreddy/" target="_blank" rel="noopener" aria-label="DJgetitreddy on Instagram"><img src="/assets/act-dj-getitreddy.webp" alt="DJgetitreddy" width="800" height="1000" loading="lazy"><figcaption><time>All day · DJ</time><h3>DJgetitreddy</h3><span class="ig">@djgetitreddy</span></figcaption></a>
+      <a class="act" href="https://www.instagram.com/jasmine.likeaflower/" target="_blank" rel="noopener" aria-label="DJ Bloom on Instagram"><img src="/assets/act-dj-bloom.webp" alt="DJ Bloom" width="800" height="1000" loading="lazy"><figcaption><time>All day · DJ</time><h3>DJ Bloom</h3><span class="ig">@jasmine.likeaflower</span></figcaption></a>
     </div>
     <ul class="extras" data-reveal>
       <li>Bartender flair show</li><li>Welcome drinks &amp; bites</li><li>Free jewelry cleaning</li><li>Photo booth</li>
@@ -594,6 +604,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <button class="pop-close" type="button" aria-label="Close" data-close>×</button>
   <div class="in">
     <video id="guest-vid" playsinline controls preload="none"></video>
+    <img id="guest-img" alt="" hidden>
     <div class="txt">
       <p class="role" id="guest-role"></p>
       <h2 class="title" id="guest-name"></h2>
@@ -666,7 +677,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var GUESTS = [
     { name: 'Khalilvegas', role: 'Houston rapper', line: '“Mid-bar, mid-store.”', img: '/assets/kol-khalilvegas-cut.webp', vid: 'khalilvegas', link: 'https://www.instagram.com/khalilvegas/', via: 'Follow on Instagram' },
     { name: 'toxicissue', role: 'Houston rapper', line: '“Not yet, Houston.”', img: '/assets/kol-toxicissue-cut.webp', vid: 'toxicissue', link: 'https://www.instagram.com/toxicissue/', via: 'Follow on Instagram' },
-    { name: 'Xavier Toliver', role: 'Football player', line: '“Game day\'s coming, Sharpstown.”', img: '/assets/kol-xavier-toliver-cut.webp', vid: 'xavier-toliver', link: 'https://www.facebook.com/xavier.toliver.5', via: 'Follow on Facebook' }
+    { name: 'Xavier Toliver', role: 'Football player', line: '“Game day\'s coming, Sharpstown.”', img: '/assets/kol-xavier-toliver-cut.webp', vid: 'xavier-toliver', link: 'https://www.facebook.com/xavier.toliver.5', via: 'Follow on Facebook' },
+    { name: 'DJgetitreddy', role: 'DJ', line: '', photo: '/assets/guest-dj-getitreddy.webp', link: 'https://www.instagram.com/djgetitreddy/', via: 'Follow on Instagram' },
+    { name: 'DJ Bloom', role: 'DJ', line: '', photo: '/assets/guest-dj-bloom.webp', link: 'https://www.instagram.com/jasmine.likeaflower/', via: 'Follow on Instagram' }
   ];
   (function () {
     var cards = [].slice.call(document.querySelectorAll('.g-card'));
@@ -682,7 +695,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
       dots.forEach(function (d, i) { d.classList.toggle('on', i === cur); });
       cards.forEach(function (c, i) {
-        var v = c.querySelector('video');
+        var v = c.querySelector('video'); if (!v) return;
         if (i === cur && inView && !guestPop.open) { if (!v.src) v.src = v.dataset.src; v.play().catch(function () {}); }
         else v.pause();
       });
@@ -694,17 +707,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       showGuest(GUESTS[i]);
     }
     function showGuest(g) {
-      var v = document.getElementById('guest-vid');
-      v.poster = '/assets/vid-' + g.vid + '.jpg'; v.src = '/assets/vid-' + g.vid + '.mp4';
+      var v = document.getElementById('guest-vid'), im = document.getElementById('guest-img');
+      if (g.photo) { v.pause(); v.removeAttribute('src'); v.load(); v.hidden = true; im.src = g.photo; im.alt = g.name; im.hidden = false; }
+      else { im.hidden = true; v.hidden = false; v.poster = '/assets/vid-' + g.vid + '.jpg'; v.src = '/assets/vid-' + g.vid + '.mp4'; }
       v.setAttribute('aria-label', g.name + ' video');
       var a = document.getElementById('guest-link'); a.hidden = !g.link;
       document.getElementById('guest-name').textContent = g.name;
       document.getElementById('guest-role').textContent = g.role;
-      document.getElementById('guest-line').textContent = g.line;
+      var q = document.getElementById('guest-line'); q.textContent = g.line || ''; q.hidden = !g.line;
       if (g.link) { a.href = g.link; a.textContent = g.via; }
       stop();
-      cards.forEach(function (c) { c.querySelector('video').pause(); });
-      if (typeof guestPop.showModal === 'function') { guestPop.showModal(); v.play().catch(function () {}); } else if (g.link) window.open(g.link);
+      cards.forEach(function (c) { var cv = c.querySelector('video'); if (cv) cv.pause(); });
+      if (typeof guestPop.showModal === 'function') { guestPop.showModal(); if (!g.photo) v.play().catch(function () {}); } else if (g.link) window.open(g.link);
     }
     cards.forEach(function (c, i) {
       c.addEventListener('click', function () {
