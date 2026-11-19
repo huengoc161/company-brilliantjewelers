@@ -11,7 +11,8 @@ const SHEET_URL = process.env.RSVP_SHEET_URL || '';
 const clip = (v, n) => String(v == null ? '' : v).trim().slice(0, n);
 const keyOk = (req) => createHash('sha256').update(String(req.query.key || '')).digest('hex') === KEY_HASH;
 const storeReady = () => Boolean(process.env.BLOB_STORE_ID || process.env.BLOB_READ_WRITE_TOKEN || process.env.VERCEL_OIDC_TOKEN);
-const COLS = ['submittedAt', 'name', 'phone', 'email', 'language', 'source', 'consent'];
+const TRACK = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid'];
+const COLS = ['submittedAt', 'name', 'phone', 'email', 'language', 'source', 'consent'].concat(TRACK);
 const csvCell = (v) => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
 
 export default async function handler(req, res) {
@@ -30,6 +31,8 @@ export default async function handler(req, res) {
       source: clip(body.source, 40),
       consent: body.consent ? 'Yes' : 'No'
     };
+    // Which ad the guest came from (UTM tags on the ad link), for Joe's ad report
+    TRACK.forEach((k) => { record[k] = clip(body[k], 200); });
     if (!record.name || !record.phone || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(record.email) || record.consent !== 'Yes') {
       return res.status(400).json({ error: 'invalid' });
     }
