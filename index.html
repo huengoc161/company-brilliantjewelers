@@ -774,6 +774,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
   })();
 
+  // ===== Ad source (UTM): remember which ad brought the visitor, sent with the RSVP =====
+  // Kept 30 days in this browser, so a guest who comes back later still counts for that ad
+  var TRACK_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid'];
+  var adSource = (function () {
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem('sr-utm') || '{}') || {}; } catch (err) {}
+    if (!saved.t || Date.now() - saved.t > 30 * 864e5) saved = {};
+    var q = new URLSearchParams(location.search), fresh = {}, hit = false;
+    TRACK_KEYS.forEach(function (k) { var v = q.get(k); if (v) { fresh[k] = v.slice(0, 200); hit = true; } });
+    if (hit) {
+      // A new ad click replaces the old one, so the RSVP counts for the latest ad
+      fresh.t = Date.now();
+      saved = fresh;
+      try { localStorage.setItem('sr-utm', JSON.stringify(saved)); } catch (err) {}
+    }
+    return saved;
+  })();
+
   // ===== RSVP form: saved by /api/rsvp to the team's Google Sheet =====
   var OK = "You're in. See you December 12 at 300 Sharpstown Center. Show this confirmation at the store to claim Buy Upper, Get Lower FREE. #ShineRedefined";
   var ERR = 'Something went wrong. Check your details and try again.';
@@ -794,6 +812,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var data = {};
       ['name', 'phone', 'email', 'language', 'source'].forEach(function (k) { data[k] = form.elements[k].value; });
       data.consent = form.elements.consent.checked;
+      TRACK_KEYS.forEach(function (k) { data[k] = adSource[k] || ''; });
       var label = btn.textContent;
       btn.disabled = true;
       btn.textContent = 'Sending…';
