@@ -127,10 +127,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .highlights li { display: flex; align-items: center; font: 900 clamp(14px, 1.4vw, 24px)/1.2 "Cinzel", Georgia, serif; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
   .highlights li span { background: linear-gradient(100deg, #B8924A 0%, #E9CB66 30%, #FFF6D6 45%, #E9CB66 60%, #B8924A 100%) 0 0 / 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: shimmer 4.5s linear infinite; }
   .highlights li:nth-child(2n) span { animation-delay: -1.5s; }
-  .partner { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 18px; margin: 4px 0 18px; padding: 14px 22px; border: 1px solid rgba(255, 190, 80, .35); border-radius: 16px; background: linear-gradient(90deg, rgba(226, 150, 40, .04), rgba(226, 150, 40, .12), rgba(226, 150, 40, .04)); font: 500 clamp(12px, 1.1vw, 15px)/1.35 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: rgba(255, 246, 214, .75); text-align: center; }
-  .partner b { font-weight: 800; color: var(--gold-light); }
-  .partner img { height: clamp(28px, 2.6vw, 40px); width: auto; }
-  .partner .partner-face { width: clamp(52px, 4.4vw, 68px); height: auto; aspect-ratio: 4 / 5; border-radius: 10px; object-fit: cover; border: 1px solid rgba(255, 190, 80, .45); }
+  .partner { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: clamp(20px, 4vw, 56px); margin: clamp(28px, 4vw, 48px) 0 0; padding: clamp(20px, 3vw, 36px) clamp(20px, 4vw, 56px); border: 1px solid rgba(255, 190, 80, .35); border-radius: 20px; background: linear-gradient(90deg, rgba(226, 150, 40, .04), rgba(226, 150, 40, .12)); }
+  .partner p { margin: 0; }
+  .partner-lead { font: 500 clamp(13px, 1.2vw, 16px)/1.4 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: rgba(255, 246, 214, .75); }
+  .partner-name { margin-top: 6px !important; font: italic 900 clamp(34px, 4.2vw, 60px)/.95 var(--title); text-transform: uppercase; color: var(--gold-light); }
+  .partner-logo { display: block; margin-top: clamp(14px, 2vw, 22px); height: clamp(34px, 3.4vw, 52px); width: auto; }
+  .partner-photo { width: clamp(160px, 22vw, 300px); height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 20px; border: 1px solid var(--line); }
   .highlights li + li::before { content: ""; width: 7px; height: 7px; margin: 0 clamp(12px, 1.3vw, 22px); background: #E9CB66; transform: rotate(45deg); }
   @keyframes shimmer { from { background-position: 100% 0; } to { background-position: -150% 0; } }
   @keyframes tick { to { transform: translateX(-50%); } }
@@ -376,6 +378,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .extras { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 4px calc(var(--gutter) * -1) 0; padding: 0 var(--gutter); }
     .extras::-webkit-scrollbar { display: none; }
     .extras li { white-space: nowrap; }
+    .partner { grid-template-columns: 1fr 42%; gap: 16px; padding: 18px; }
+    .partner-photo { width: 100%; }
     .offers .grid { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 86%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter) 4px; gap: 12px; }
     .offers .grid::-webkit-scrollbar { display: none; }
     .deal { scroll-snap-align: start; min-height: 0; gap: 16px; padding: 22px; }
@@ -462,10 +466,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="act" href="https://www.instagram.com/djgetitreddy/" target="_blank" rel="noopener" aria-label="DJgetitreddy on Instagram"><img src="/assets/act-dj-getitreddy.webp" alt="DJgetitreddy" width="800" height="1000" loading="lazy"><figcaption><time>All day · DJ</time><h3>DJgetitreddy</h3><span class="ig">@djgetitreddy</span></figcaption></a>
       <a class="act" href="https://www.instagram.com/jasmine.likeaflower/" target="_blank" rel="noopener" aria-label="DJ Bloom on Instagram"><img src="/assets/act-dj-bloom.webp" alt="DJ Bloom" width="800" height="1000" loading="lazy"><figcaption><time>All day · DJ</time><h3>DJ Bloom</h3><span class="ig">@jasmine.likeaflower</span></figcaption></a>
     </div>
-    <p class="partner" data-reveal><img class="partner-face" src="/assets/dj-monstaa.webp" alt="DJ Monstaa" width="240" height="300" loading="lazy"><span>And the special companionship of <b>DJ Monstaa</b></span><img src="/assets/logo-tbmb-cream.png" alt="The Big Monstaa Brand LLC logo" width="600" height="157"></p>
     <ul class="extras" data-reveal>
       <li>Bartender flair show</li><li>Welcome drinks &amp; bites</li><li>Free jewelry cleaning</li><li>Photo booth</li>
     </ul>
+    <div class="partner" data-reveal>
+      <div class="partner-text">
+        <p class="partner-lead">And the special companionship of</p>
+        <p class="partner-name">DJ Monstaa</p>
+        <img class="partner-logo" src="/assets/logo-tbmb-cream.png" alt="The Big Monstaa Brand LLC logo" width="600" height="157" loading="lazy">
+      </div>
+      <img class="partner-photo" src="/assets/dj-monstaa.webp" alt="DJ Monstaa" width="640" height="800" loading="lazy">
+    </div>
   </div>
 </section>
 
